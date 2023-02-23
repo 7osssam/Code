@@ -12,7 +12,7 @@ int main() {
      scanf( "%d" , &arr[i]); // using array notation
      //scanf( "%d" , arr+i); //using pointer notation //
     }
-
+//test
     //of the following are equivalent ways of accessing the array elements
     //*(arr + i); scanf("%d", arr + i);   | printf("%d", *(arr + i));
     // *(i + arr); scanf("%d", i + arr);  | printf("%d", *(i + arr));
