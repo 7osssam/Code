@@ -1,49 +1,48 @@
-#include <stdio.h> // include the standard input output library
 
-// c program to set , clear , toggle , get a bit in a number
+#include <stdio.h>
 
-int main() { // main function
-int x, bitnum; // declare the variables
+  // Function to set the kth bit of num
+int setBit(int num, int k)
+{
+	return (num | (1 << k));  //  OR with 1
+}
 
-// c program to set a bit in a number //we use the OR operator to set a bit
-    printf("(set) enter X:"); // print the message 
-    scanf("%d",&x);// read the input from the user
+    // Function to clear the kth bit of num
+int clearBit(int num, int k)
+{
+	return (num & (~(1 << k))); //  AND with 1 complement
+}
 
-    printf("(set) enter bitnum:");  // print the message
-    scanf("%d",&bitnum);// read the input from the user
+  // Function to toggle the kth bit of num
+int toggleBit(int num, int k)
+{
+	return (num ^ (1 << k)); // XOR with 1
+}
 
-    x= x|(1<<bitnum); // set the bit
-    printf("the NEW X is %d", x);
+  // Function to find the kth bit of num
+int findBit(int num, int k)
+{
+	return ((num >> k) & 1);  //  Right shift k times and AND with 1
 
-// c program to clear a bit in a number //we use the AND operator to clear a bit
-    printf("(clear) enter X:"); // print the message
-    scanf("%d",&x);// read the input from the user
+}
 
-    printf("(clear) enter bitnum:"); // print the message
-    scanf("%d",&bitnum);// read the input from the user
 
-    x= x&~(1<<bitnum); //clear the bit
-    printf("the NEW X is %d", x);
+void bitOperations(int num, int k, int p)
+{
 
-// c program to toggle a bit in a number //we use the XOR operator to toggle a bit
-    printf("(toggle) enter X:"); // print the message
-    scanf("%d",&x);// read the input from the user
+	printf("K= %d bit of %d is %d\n", k, num, findBit(num, k));
 
-    printf("(toggle) enter bitnum:"); // print the message
-    scanf("%d",&bitnum);// read the input from the user
+	printf("Setting K(= %d)th bit modifies N to %d\n", k, setBit(num, k)); //
 
-    x= x^(1<<bitnum); //toggle the bit
-    printf("the NEW X is %d", x);
+	printf("Clearing K(= %d)th bit modifies N to %d\n", k, clearBit(num, k));
 
-// c program to get a bit in a number //we use the AND operator to get a bit
-    printf("(get) enter X:"); // print the message
-    scanf("%d",&x);// read the input from the user
+	printf("Toggling K(= %d)th bit modifies N to %d\n", k, toggleBit(num, k));
+}
 
-    printf("(get) enter bitnum:"); // print the message
-    scanf("%d",&bitnum);// read the input from the user
+int main()
+{
+	int num = 42, k = 1, p = 1;
+	bitOperations(num, k, p);  //  5 = 0101 // 42 = 101010 // 56 = 111000
 
-    x= x&(1<<bitnum); //get the bit
-    printf("the NEW X is %d", x); // print the result
-
-    return 0;
+	return 0;
 }

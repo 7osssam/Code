@@ -2,6 +2,12 @@
     "C_Cpp.errorSquiggles": "disabled",
     "C_Cpp.dimInactiveRegions": false,
     "files.associations": {
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "typeinfo": "c",
+        "stdio.h": "c",
+        "concepts": "c",
+        "cstdio": "c",
+        "type_traits": "c",
+        "new": "c"
     }
 }
