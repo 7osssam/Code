@@ -27,7 +27,6 @@ int main()
     // DestoBi(num);
     BitoDes(num);
     // printf("%d" , DestoBi(num));
-    // printf("%d" , DestoBi(num));
 
     return 0;
 }
