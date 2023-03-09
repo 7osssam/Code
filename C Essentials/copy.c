@@ -34,4 +34,6 @@ int main()
   fun();
   fun();
   fun();
+  fun();
+  fun();
 }
