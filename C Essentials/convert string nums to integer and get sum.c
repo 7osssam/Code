@@ -22,6 +22,7 @@ int *frame(char *str)
   }
   return num;
 }
+
 int main()
 {
   char str[] = "22 12 5 13";
