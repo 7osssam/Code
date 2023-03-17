@@ -11,7 +11,7 @@ int ones(int num)
     if (num & 1) // (num >> i ) & 1
       ones++;
 
-    num >>= 1; // num = num >>1
+    num >>= 1; // num = num >>1 ;
   }
   return ones;
 }
