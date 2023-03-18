@@ -4,7 +4,7 @@
 
 int ones(int num)
 {
-  int ones = 0, test; // ,zeros=0
+  int ones = 0, test;  // ,zeros=0
   for (size_t i = 0; i < INT_SIZE; i++)
   {
     // test = num&(1<<i);
