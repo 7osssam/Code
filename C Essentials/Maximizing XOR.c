@@ -2,7 +2,6 @@
 // https://www.hackerrank.com/challenges/maximizing-xor/problem
 
 #include <stdio.h>
-#include <stdlib.h>
 
 int max_xor(int l, int r)
 {
