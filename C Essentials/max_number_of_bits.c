@@ -5,13 +5,13 @@
 int max_bits(int num)
 {
 	int flag = 0, max = 0, zero_count = 0;
-	for (size_t i = 0; i < INT_SIZE; i++) // 0b1011010100011100001000
+	for (int i = 0; i < INT_SIZE; i++) // 0b1011010100011100001000
 	{
 		if (num >> i & 1) // ones
 		{
 			flag = 1;
-			if (zero_count > max) // will only set max if there is one
-				max = zero_count; //
+			if (zero_count > max) // will only set max if there is one before
+				max = zero_count; // set max
 			zero_count = 0;		  // reset zero count
 		}
 		else // zeros
