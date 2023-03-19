@@ -6,6 +6,5 @@
 int main()
 {
     printf("Hossam Mohamed\ngrade 100");
-
     return 0;
 }

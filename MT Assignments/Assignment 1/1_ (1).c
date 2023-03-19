@@ -7,7 +7,8 @@ int main()
 {
     int num1, num2; // Declaring two variables
 
-    scanf("%d%d", &num1, &num2); // Taking two integers from the user
+    printf("Enter two integers: "); // Printing a message
+    scanf("%d%d", &num1, &num2);    // Taking two integers from the user
 
     printf("The Result is: %d", ((num1 + num2) * 3) - 10); // Printing the result
 
