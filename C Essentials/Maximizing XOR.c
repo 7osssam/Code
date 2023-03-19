@@ -1,3 +1,6 @@
+// explaing this code
+// https://www.hackerrank.com/challenges/maximizing-xor/problem
+
 #include <stdio.h>
 #include <stdlib.h>
 
