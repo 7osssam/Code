@@ -9,5 +9,6 @@ int main()
     printf("Enter a char");
     scanf("%c", &c);
 
-    printf("Binary ASCII Value%d", c);
+    printf("Binary ASCII Value%d", c); // %d is for decimal values
+    return 0;
 }

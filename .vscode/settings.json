@@ -8,6 +8,8 @@
         "concepts": "c",
         "cstdio": "c",
         "type_traits": "c",
-        "new": "c"
+        "new": "c",
+        "cmath": "c",
+        "*.tcc": "c"
     }
 }
