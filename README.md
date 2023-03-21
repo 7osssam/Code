@@ -1,2 +1,4 @@
-# Problem-solving
-C Programming 
+
+## c
+
+Just a simple **C** repository nothing much :) 
