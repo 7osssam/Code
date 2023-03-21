@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int i =5;
+    printf("%d\t", sizeof(++i));
+    printf("i vakue is: %d", i);
+
+    return 0;
+}
+
+//output is 4 and i value is 5, because
+//the sizeof operator gives 2 or 4 depending 
+//upon the size of the compiler.
+//the ++i pre-increment has no effect
+//on the i value in this case.

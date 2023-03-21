@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <string.h>
+
+struct student_rec{
+    int data;
+    char name[20];
+    int semester;
+};
+
+
+    typedef struct student_rec STUDENT;//now the STUDENT variable is also of type struct
+  
+  STUDENT to_change(STUDENT st)
+{
+     st.data = 4;
+    strcpy(st.name ,"bindhu");
+    st.semester = 4;
+    return st;
+}  
+
+int main()
+{
+    STUDENT to_check(STUDENT);
+    STUDENT s;//s is also struct type of variable
+    s.data = 1;
+    strcpy(s.name , "chandru");
+    s.semester = 1;
+    printf("before the function call\n");
+    printf("the details in the structure are\n");
+    printf("data is %d\n", s.data);
+    printf("name is %s\n", s.name);
+    printf("semester is %d\n", s.semester);
+    printf("---------------------------\n");
+    s = to_change(s);//to change the values
+     printf("after the function call\n");
+    printf("the details in the structure are\n");
+    printf("data is %d\n", s.data);
+    printf("name is %s\n", s.name);
+    printf("semester is %d\n", s.semester);
+    
+   
+    return 0;
+}
+//this is more or less like the call by reference
+//and the values will change since there is a return type.
