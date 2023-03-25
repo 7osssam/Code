@@ -126,15 +126,14 @@ void pattern6()
 // *
 void pattern7()
 {
-    int i, j;
+    int i, j, x;
     for (j = 1; j <= 5; j++) // raws
     {
-        // we used the same logic as the previous pattern but we are printing the items in reverse order
-        // so we start from the last item in the raw and we print it until we reach the first item in the raw
-        for (i = 5; i >= j; i--) //! the numbr of items in the raw is equal to the raw number
+        for (int i = j; i <= 5; i++) // i = j as we need to print 5 stars in the 1st raw, 4 stars in the 2nd raw, 3 stars in the 3rd raw... etc
         {
             printf("* ");
         }
+
         printf("\n"); // new line
     }
 }
@@ -147,18 +146,34 @@ void pattern7()
 void pattern8()
 {
     int i, j;
+
+    // method 1     //time complexity: O(n^2)
+    // for (j = 1; j <= 5; j++) // raws
+    // {
+    //     for (i = 1; i <= 5; i++) // columns
+    //     {
+    //         if (i + j <= 5) //
+    //         {
+    //             printf("  ");
+    //         }
+    //         else
+    //         {
+    //             printf("* ");
+    //         }
+    //     }
+    //     printf("\n"); // new line
+    // }
+
+    // method 2     //time complexity: O(n^2) same as method 1 but it's more readable
     for (j = 1; j <= 5; j++) // raws
     {
-        for (i = 1; i <= 5; i++) // columns
+        for (i = j; i <= 5; i++) // printing the spaces
         {
-            if (i + j <= 5) //
-            {
-                printf("  ");
-            }
-            else
-            {
-                printf("* ");
-            }
+            printf("  ");
+        }
+        for (i = 0; i <= j; i++) // printing the stars
+        {
+            printf("* ");
         }
         printf("\n"); // new line
     }
@@ -185,18 +200,113 @@ void pattern9()
         printf("\n"); // new line
     }
 }
+
+// *
+//   *
+//     *
+//       *
+//         *
+//         *
+//       *
+//     *
+//   *
+// *
+
+void pattern10()
+{
+    int i, j; // j raws // i what inside the raws (columns)
+
+    // the first half of the pattern
+    for (j = 1; j <= 5; j++) // raws
+    {
+        for (i = 1; i <= j; i++)
+        {
+            if (j == i) // if we are in the last column
+            {
+                printf("* ");
+            }
+            else
+            {
+                printf("  ");
+            }
+        }
+        printf("\n"); // new line
+    }
+
+    for (j = 1; j <= 5; j++) // raws
+    {
+        for (i = j; i <= 5; i++)
+        {
+            if (i == 5) // if we are in the last column
+            {
+                printf("* ");
+            }
+            else
+            {
+                printf("  ");
+            }
+        }
+        printf("\n"); // new line
+    }
+}
+
+void pattern11()
+{
+    int i, j; // j raws // i what inside the raws (columns)
+    int k, l;
+    // the first half of the pattern
+    for (j = 1; j <= 5; j++) // raws
+    {
+        for (i = 1; i <= j; i++)
+        {
+            if (j == i) // if we are in the last column
+            {
+                printf("* ");
+            }
+            else
+            {
+                printf("  ");
+            }
+        }
+        int x = 0;
+        for (k = 5; k <= (k * 2) - 1; k--) // spaces in the middle
+        {
+            printf("$ ");
+        }
+
+        printf("\n"); // new line
+    }
+
+    for (j = 1; j <= 5; j++) // raws
+    {
+        for (i = j; i <= 5; i++)
+        {
+            if (i == 5) // if we are in the last column
+            {
+                printf("* ");
+            }
+            else
+            {
+                printf("  ");
+            }
+        }
+        printf("\n"); // new line
+    }
+}
 int main()
 {
-    // printf("Pattern 1: \n" );  pattern1();  printf("\n");
-    // printf("Pattern 2: \n" );  pattsern2();  printf("\n");
-    // printf("Pattern 3: \n" );  pattern3();  printf("\n");
-    // printf("Pattern 4: \n" );  pattern4();  printf("\n");
-    // printf("Pattern 5: \n" );  pattern5();  printf("\n");
-    // printf("Pattern 6: \n" );  pattern6();  printf("\n");
-    // printf("Pattern 7: \n" );  pattern7();  printf("\n");
-    // printf("Pattern 8: \n" );  pattern8();  printf("\n");
-    printf("Pattern 9: \n");
-    pattern9();
+    //  printf("Pattern 1: \n" );  pattern1();  printf("\n");
+    //  printf("Pattern 2: \n" );  pattern2();  printf("\n");
+    //  printf("Pattern 3: \n" );  pattern3();  printf("\n");
+    //  printf("Pattern 4: \n" );  pattern4();  printf("\n");
+    //  printf("Pattern 5: \n" );  pattern5();  printf("\n");
+    //  printf("Pattern 6: \n" );  pattern6();  printf("\n");
+    //  printf("Pattern 7: \n" );  pattern7();  printf("\n");
+    //  printf("Pattern 8: \n" );  pattern8();  printf("\n");
+    //  printf("Pattern 9: \n" );  pattern9();  printf("\n");
+    //  printf("Pattern 10:\n" );  pattern10(); printf("\n");
+    printf("Pattern 11: \n");
+    pattern11();
     printf("\n");
 
     return 0;
