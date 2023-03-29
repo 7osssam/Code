@@ -1,4 +1,4 @@
 
-## c
+## C
 
-Just a simple **C** repository nothing much :) 
+Just a simple **C** repository nothing much :)
