@@ -2,7 +2,7 @@
 
 int main()
 {
-    if(printf("Hi\t"))
+    if (printf("Hi\t"))
     {
         printf("hello\n");
     }
@@ -14,7 +14,7 @@ int main()
     return 0;
 }
 
-//output is Hi  hello, because
-//printf return type is Integer
-//and returns 3 because hi and an
-//escape charecter
+// output is Hi  hello, because
+// printf return type is Integer
+// and returns 3 because hi and an
+// escape charecter

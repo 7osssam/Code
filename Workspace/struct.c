@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "stdtypes.h"
+#include "std_types.h"
 
 typedef struct node
 {
     u32 data;
     struct node *nx;
-}node;
+} node;
 
 node *head = NULL;
 
-void add_first (u32 value)
+void add_first(u32 value)
 {
-    node *temp = (node*) malloc(sizeof(node));
+    node *temp = (node *)malloc(sizeof(node));
     temp->data = value;
     temp->nx = head;
     head = temp;
@@ -24,16 +24,15 @@ void print(void)
     {
         printf("list is empty \n");
     }
-     else
+    else
     {
         node *current = head;
-        while (current !=NULL)
+        while (current != NULL)
         {
             printf("%d\n", current->data);
-            current = current->nx ;
+            current = current->nx;
         }
         printf("NULL\n");
-
     }
 }
 
@@ -47,23 +46,23 @@ void delete_first(void)
 void delete_last(void)
 {
     node *current = head;
-    node *previous=head;
-        while (current->nx !=NULL)
-        {
-            previous=current;
-            current = current->nx ;
-        }
-    previous->nx=NULL;
+    node *previous = head;
+    while (current->nx != NULL)
+    {
+        previous = current;
+        current = current->nx;
+    }
+    previous->nx = NULL;
     free(current);
 }
 
 void sizeoflist(node *list)
 {
-    u8 count=0;
+    u8 count = 0;
     node *current = head;
-    while (current !=NULL)
+    while (current != NULL)
     {
-        current = current->nx ;
+        current = current->nx;
         count++;
     }
     printf("size of list is %d\n", count);
@@ -72,7 +71,7 @@ void sizeoflist(node *list)
 void search(u32 value)
 {
     node *current = head;
-    while (current !=NULL)
+    while (current != NULL)
     {
         if (current->data == value)
         {
@@ -81,26 +80,26 @@ void search(u32 value)
         }
         else
         {
-            current = current->nx ;
+            current = current->nx;
         }
     }
 }
 
 void add_last(u32 value)
 {
-    //create new node
-    node *temp = (node*) malloc(sizeof(node));
+    // create new node
+    node *temp = (node *)malloc(sizeof(node));
     temp->data = value;
     temp->nx = NULL;
-    //find last node
+    // find last node
     node *current = head;
-    while (current->nx !=NULL)
+    while (current->nx != NULL)
     {
-        current = current->nx ;
+        current = current->nx;
     }
-    current->nx = temp;
+    current->nx = temp; // add new node to last node nx pointer
 }
-void ChangeTxtToRED (void)
+void ChangeTxtToRED(void)
 {
     printf("\033[0;31m");
 }
@@ -113,14 +112,15 @@ int main()
     add_last(50);
     add_last(80);
     print();
-    //sizeoflist(head);
+    // sizeoflist(head);
     delete_first();
     print();
-    //sizeoflist(head);
-    //printf("Size of Node struct: %lu bytes\n", sizeof(node));
+    // sizeoflist(head);
+    // printf("Size of Node struct: %lu bytes\n", sizeof(node));
     search(20);
     delete_last();
-    ChangeTxtToRED();
+    // ChangeTxtToRED();
     print();
+
     return 0;
 }
