@@ -8,19 +8,20 @@
 
 #include <stdio.h>
 
-int main(void) {
+int main(void)
+{
 	/* variable declaration */
 	int a;
 
 	printf("Please Enter a Number : ");
-	scanf("%d",&a);
+	scanf("%d", &a);
 
 	/* check the condition and evaluating this condition */
-	if( a < 100 )
+	if (a < 100)
 	{
 		printf("\na is less than 100\n");
 	}
-	else if(a > 100)
+	else if (a > 100)
 	{
 		printf("\n a greater than 100\n");
 	}

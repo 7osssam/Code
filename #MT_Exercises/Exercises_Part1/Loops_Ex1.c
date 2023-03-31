@@ -9,15 +9,16 @@
 #include <stdio.h>
 
 /* function main begins program execution */
-int main( void )
+int main(void)
 {
 	int counter = 1; /* initialization */
-	while (counter <= 10 ) { /* repetition condition */
-		printf ( "counter = %d\n", counter ); /* display counter */
+	while (counter <= 10)
+	{									   /* repetition condition */
+		printf("counter = %d\n", counter); /* display counter */
 		++counter;
 	} /* end while */
 
-	printf("Last counter value = %d\n",counter);
+	printf("Last counter value = %d\n", counter);
 
 	return 0; /* indicate program ended successfully */
 } /* end function main */

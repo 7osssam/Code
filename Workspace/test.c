@@ -43,12 +43,29 @@ void trick5()
     printf("\nNot Equal");
   }
 }
+void trick6()
+{
+  int x, y;
+  x = 5;
+  switch (x)
+  {
+  case 3:
+    printf("\n3");
+
+  case 4:
+    printf("\n4");
+
+  case 5:
+    printf("\n5");
+  }
+}
 int main()
 {
   // trick1();
   // trick2();
   // trick3();
   // trick4();
-  trick5();
+  // trick5();
+  trick6();
   return 0;
 }
