@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"stdlib.h": "c",
+			"typeinfo": "c",
+			"stdio.h": "c",
+			"concepts": "c",
+			"cstdio": "c",
+			"type_traits": "c",
+			"new": "c",
+			"cmath": "c",
+			"*.tcc": "c"
+		}
+	}
+}
