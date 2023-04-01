@@ -9,17 +9,17 @@
 #include <stdio.h>
 
 /* function main begins program execution */
-int main( void )
+int main(void)
 {
 	int counter; /* define counter */
 
 	/* initialization, repetition condition, and increment are all included in the for statement header. */
-	for ( counter = 1; counter <= 10; counter++ )
+	for (counter = 1; counter <= 10; counter++)
 	{
-		printf ( "counter = %d\n", counter ); /* display counter */
-	} /* end for */
+		printf("counter = %d\n", counter); /* display counter */
+	}									   /* end for */
 
-	printf("Last counter value = %d\n",counter);
+	printf("Last counter value = %d\n", counter);
 
 	return 0; /* indicate program ended successfully */
 } /* end function main */

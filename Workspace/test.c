@@ -43,6 +43,7 @@ void trick5()
     printf("\nNot Equal");
   }
 }
+
 void trick6()
 {
   int x, y;
@@ -59,6 +60,19 @@ void trick6()
     printf("\n5");
   }
 }
+
+void trick7()
+{
+  int i = 0;
+  do
+  {
+    printf("\nenter negative number: ");
+    scanf("%d", &i);
+  } while (i >= 0);
+
+  printf("\nYAY! %d", i);
+}
+
 int main()
 {
   // trick1();
@@ -66,6 +80,7 @@ int main()
   // trick3();
   // trick4();
   // trick5();
-  trick6();
+  // trick6();
+  trick7();
   return 0;
 }

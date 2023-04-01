@@ -9,13 +9,14 @@
 #include <stdio.h>
 
 /* function main begins program execution */
-int main( void )
+int main(void)
 {
 	int counter = 1; /* initialize counter */
-	do {
-		printf( "counter = %d \n", counter ); /* display counter */
+	do
+	{
+		printf("counter = %d \n", counter); /* display counter */
 		counter++;
-	}while( counter <= 10 ); /* end do...while */
+	} while (counter <= 10); /* end do...while */
 
 	return 0; /* indicate program ended successfully */
 } /* end function main */
