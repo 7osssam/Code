@@ -10,6 +10,10 @@
 *.pif
 *.vb
 *.wsf
+
+# code-workspace files
+*.code-workspace 
+
 # .vscode folder
 .vscode/
 # .vscode files
