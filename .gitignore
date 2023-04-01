@@ -11,6 +11,9 @@
 *.vb
 *.wsf
 
+#pdf files
+*.pdf
+
 # code-workspace files
 *.code-workspace 
 
