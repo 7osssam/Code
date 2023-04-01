@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int fact(int num)
+int factorial(int num) // function to calculate factorial
 {
     int factorial = 1;
     for (int i = 1; i <= num; i++)
@@ -14,11 +14,14 @@ int fact(int num)
 
 int main()
 {
-    int num;
-    printf("Enter num:");
-    scanf("%d", &num);
+    int num; // declare variable
+    do
+    {
+        printf("Enter a postive number num:");
+        scanf("%d", &num);
+    } while (num < 0); // if num is negative (true), then loop again
 
-    printf("factorial = %d", fact(num));
+    printf("factorial = %d", factorial(num));
 
     return 0;
 }
