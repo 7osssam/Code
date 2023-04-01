@@ -6,7 +6,7 @@ int main()
 {
     int N = 100;
     int sum;
-    sum = (N * (N + 1)) / 2;
+    sum = (N * (N + 1)) / 2; // Sum of first N natural numbers without loop is N(N+1)/2
 
     printf("Sum 0 -> 100 is :%d", sum);
 

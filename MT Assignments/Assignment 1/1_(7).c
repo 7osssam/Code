@@ -5,22 +5,22 @@
 
 int main()
 {
-    int num1, num2, num3;
+    int num1, num2, num3, smallest; // Declare 3 numbers and the smallest number
 
     printf("Enter 3 numbers:");
-    scanf("%d%d%d", &num1, &num2, &num3);
+    scanf("%d%d%d", &num1, &num2, &num3); // Read 3 numbers from the user
 
-    if (num1 < num2 && num1 < num3)
+    smallest = num1; // Assume that the first number has the smallest value
+
+    if (num1 > num2) // Compare the smallest value with the second number
     {
-        printf("%d is the smallest", num1);
+        smallest = num2;
     }
-    else if (num2 < num1 && num2 < num3)
+    if (num1 > num3) // Compare the smallest value with the third number
     {
-        printf("%d is the smallest", num2);
+        smallest = num3;
     }
-    else if (num3 < num1 && num3 < num2)
-    {
-        printf("%d is the smallest", num3);
-    }
-    return 0;
+    printf("the samllest is %d", smallest); // Print the smallest number
+
+    return 0; // Indicate the program terminated successfully
 }

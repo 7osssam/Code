@@ -9,10 +9,10 @@ int main()
     float num1, num2, result;
     char op;
 
-    printf("Enter to numbers:");
+    printf("Enter 2 numbers:");
     scanf("%f%f", &num1, &num2);
 
-    printf("Enter operation (+ or - or * or /)");
+    printf("Enter operation (+ or - or * or /) ");
     scanf(" %c", &op); // added a space before %c to avoid skipping the first character
 
     switch (op)
