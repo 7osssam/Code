@@ -1,32 +1,47 @@
 // (13) Write a program that reads a positive integer and checks if it is a prime.
 
+// a prime number is a number that is divisible only by 1 and itself.
+// For example, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61 ...etc
+
+// 1 & 0 are not a prime number
+// all even numbers are not a prime number except 2
+// then we need to check if odd numbers only
+
 #include <stdio.h>
+#include <math.h>
 
-int isPrime(int num)
+int isPrime(int num) // optimized function to check if num is prime
 {
+    if (num == 2) // 2 is prime //! the only even prime number
+    {
+        return 1; // prime
+    }
 
-    int flag = 1; // prime by default
+    if (num == 0 || num == 1 || num % 2 == 0) // 0 and 1 are not prime and all even numbers are not prime except 2
+    {
+        return 0; // not prime
+    }
 
-    if (num == 0 || num == 1) // 0 and 1 are not prime
-        flag = 0;             // not prime
-
-    // num /2 is the largest number that can divide num
-    for (int i = 2; i <= num / 2; i++) // check if num is divisible by any number from 2 to num/2
+    // i = i + 2 to skip even numbers since all even numbers are not prime except 2
+    // sqrt(num) is the square root of num
+    for (int i = 3; i <= sqrt(num); i = i + 2) // alternatively, we can use i <= num / 2
     {
         if (num % i == 0)
         {
-            flag = 0; // not prime
+            return 0; // not prime
         }
     }
-    return flag;
+    return 1;
 }
 
 int main()
 {
-    // prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61 ...etc
     int num;
-    printf("Enter Positive Integer:");
-    scanf("%d", &num);
+    do
+    {
+        printf("Enter a postive number num:");
+        scanf("%d", &num);
+    } while (num < 0); // if num is negative (true), then loop again
 
     if (isPrime(num)) // if isPrime returns 1
     {
