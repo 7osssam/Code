@@ -61,16 +61,30 @@ void trick6()
   }
 }
 
+//         *
+//       * *
+//     * * *
+//   * * * *
+// * * * * *
+
 void trick7()
 {
-  int i = 0;
-  do
+  int i, j, k;
+  for (i = 1; i <= 10; i++) // raws
   {
-    printf("\nenter negative number: ");
-    scanf("%d", &i);
-  } while (i >= 0);
-
-  printf("\nYAY! %d", i);
+    for (j = 1; j <= 10; j++)
+    {
+      if (i == j || i + j == 11)
+      {
+        printf("* ");
+      }
+      else
+      {
+        printf("  ");
+      }
+    }
+    printf("\n");
+  }
 }
 
 int main()
