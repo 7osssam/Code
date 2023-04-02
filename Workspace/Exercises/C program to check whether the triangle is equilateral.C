@@ -1,4 +1,4 @@
-// file name:
+// file name: C program to check whether the triangle is equilateral.C
 
 #include <stdio.h>
 
