@@ -7,11 +7,11 @@
 void pattern1()
 {
     int i, j;
-    for (j = 1; j <= 4; j++) //! raws
+    for (i = 1; i <= 4; i++) //! raws
     {
-        for (i = 1; i <= 5; i++) //! whats inside the raw (we can call then columns but actually they are not)
+        for (j = 1; j <= 5; j++) //! whats inside the raw (we can call then columns but actually they are not)
         {
-            printf("%d ", i); // one raw of pattern
+            printf("%d ", j); // one raw of pattern
         }
         printf("\n"); // new line
     }
@@ -24,11 +24,11 @@ void pattern1()
 void pattern2()
 {
     int i, j;
-    for (j = 1; j <= 4; j++) // 4 rows
+    for (i = 1; i <= 4; i++) // 4 rows
     {
-        for (i = 1; i <= 5; i++)
+        for (j = 1; j <= 5; j++)
         {
-            printf("%d ", j); // j is the raw counter
+            printf("%d ", i); // i is the raw counter
         }
         printf("\n"); // new line
     }
@@ -41,9 +41,9 @@ void pattern2()
 void pattern3()
 {
     int i, j;
-    for (j = 1; j <= 4; j++) // 4 rows
+    for (i = 1; i <= 4; i++) // 4 rows
     {
-        for (i = 1; i <= 5; i++)
+        for (j = 1; j <= 5; j++)
         {
             printf("* ");
         }
@@ -59,11 +59,11 @@ void pattern3()
 void pattern4()
 {
     int i, j;
-    for (j = 1; j <= 5; j++) // 5 rows
+    for (i = 1; i <= 5; i++) // 5 rows
     {
-        for (i = 1; i <= 5; i++)
+        for (j = 1; j <= 5; j++)
         {
-            if (j == 1 || j == 5 || i == 1 || i == 5) // if we are in the first or last raw   or  first or last column
+            if (i == 1 || i == 5 || j == 1 || j == 5) // if we are in the first or last raw   or  first or last column
             {
                 printf("* ");
             }
@@ -84,11 +84,11 @@ void pattern4()
 void pattern5()
 {
     int i, j;
-    for (j = 1; j <= 5; j++) // 4 rows
+    for (i = 1; i <= 5; i++) // 4 rows
     {
-        for (i = 1; i <= 5; i++)
+        for (j = 1; j <= 5; j++)
         {
-            if (i == 2 && j == 3 || i == 3 && j == 2 || i == 3 && j == 4 || i == 4 && j == 3)
+            if (j == 2 && i == 3 || j == 3 && i == 2 || j == 3 && i == 4 || j == 4 && i == 3)
             { // here we are only excluding the spaces in the middle of the pattern
                 printf("  ");
             }
@@ -109,9 +109,9 @@ void pattern5()
 void pattern6()
 {
     int i, j;
-    for (j = 1; j <= 5; j++) // raws
+    for (i = 1; i <= 5; i++) // raws
     {
-        for (i = 1; i <= j; i++) //! the numbr of items in the raw is equal to the raw number
+        for (j = 1; j <= i; j++) //! the numbr of items in the raw is equal to the raw number
         {
             printf("* ");
         }
@@ -126,10 +126,10 @@ void pattern6()
 // *
 void pattern7()
 {
-    int i, j, x;
-    for (j = 1; j <= 5; j++) // raws
+    int i, j;
+    for (i = 1; i <= 5; i++) // raws
     {
-        for (int i = j; i <= 5; i++) // i = j as we need to print 5 stars in the 1st raw, 4 stars in the 2nd raw, 3 stars in the 3rd raw... etc
+        for (int j = i; j <= 5; j++) // j = i as we need to print 5 stars in the 1st raw, 4 stars in the 2nd raw, 3 stars in the 3rd raw... etc
         {
             printf("* ");
         }
@@ -148,35 +148,34 @@ void pattern8()
     int i, j;
 
     // method 1     //time complexity: O(n^2)
-    // for (j = 1; j <= 5; j++) // raws
-    // {
-    //     for (i = 1; i <= 5; i++) // columns
-    //     {
-    //         if (i + j <= 5) //
-    //         {
-    //             printf("  ");
-    //         }
-    //         else
-    //         {
-    //             printf("* ");
-    //         }
-    //     }
-    //     printf("\n"); // new line
-    // }
-
-    // method 2     //time complexity: O(n^2) same as method 1 but it's more readable
-    for (j = 1; j <= 5; j++) // raws
+    for (i = 1; i <= 5; i++) // raws
     {
-        for (i = j; i <= 5; i++) // printing the spaces
+        for (j = 1; j <= 5; j++) // columns
         {
-            printf("  ");
-        }
-        for (i = 0; i <= j; i++) // printing the stars
-        {
-            printf("* ");
+            if (j + i <= 5) //
+            {
+                printf("  ");
+            }
+            else
+            {
+                printf("* ");
+            }
         }
         printf("\n"); // new line
     }
+    // // method 2     //time complexity: O(n^2) same as method 1 but it's more readable
+    // for (i = 1; i <= 5; i++) // raws
+    // {
+    //     for (j = i; j <= 4; j++) // printing the spaces
+    //     {
+    //         printf("  ");
+    //     }
+    //     for (j = 1; j <= i; j++) // printing the stars
+    //     {
+    //         printf("* ");
+    //     }
+    //     printf("\n"); // new line
+    // }
 }
 
 //           *
@@ -186,14 +185,14 @@ void pattern8()
 //   * * * * * * * * *
 void pattern9()
 {
-    int i, j, k;
-    for (j = 1; j <= 5; j++) // raws
+    int i, j;
+    for (i = 1; i <= 5; i++) // raws
     {
-        for (i = j; i <= 5; i++) // printing the spaces
+        for (j = i; j <= 5; j++) // printing the spaces
         {
             printf("  ");
         }
-        for (k = 1; k <= (j * 2) - 1; k++) //! (j * 2) - 1 as we need to print 1 star in the 1st raw, 3 stars in the 2nd raw, 5 stars in the 3rd raw... etc
+        for (j = 1; j <= (i * 2) - 1; j++) //! (i * 2) - 1 ex: 1*2-1=1, 2*2-1=3, 3*2-1=5, 4*2-1=7, 5*2-1=9
         {
             printf("* ");
         }
@@ -214,14 +213,14 @@ void pattern9()
 
 void pattern10()
 {
-    int i, j; // j raws // i what inside the raws (columns)
+    int i, j; // i raws // j what inside the raws (columns)
 
     // the first half of the pattern
-    for (j = 1; j <= 5; j++) // raws
+    for (i = 1; i <= 5; i++) // raws
     {
-        for (i = 1; i <= j; i++)
+        for (j = 1; j <= i; j++)
         {
-            if (j == i) // if we are in the last column
+            if (i == j) // if we are in the last column
             {
                 printf("* ");
             }
@@ -232,12 +231,12 @@ void pattern10()
         }
         printf("\n"); // new line
     }
-
-    for (j = 1; j <= 5; j++) // raws
+    // the second half of the pattern
+    for (i = 1; i <= 5; i++) // raws
     {
-        for (i = j; i <= 5; i++)
+        for (j = i; j <= 5; j++)
         {
-            if (i == 5) // if we are in the last column
+            if (j == 5) // if we are in the last column
             {
                 printf("* ");
             }
@@ -250,16 +249,24 @@ void pattern10()
     }
 }
 
+// *                 *
+//   *             *
+//     *         *
+//       *     *
+//         * *
+//         * *
+//       *     *
+//     *         *
+//   *             *
+// *                 *
 void pattern11()
 {
-    int i, j; // j raws // i what inside the raws (columns)
-    int k, l;
-    // the first half of the pattern
-    for (j = 1; j <= 5; j++) // raws
+    int i, j;
+    for (i = 1; i <= 10; i++) // raws
     {
-        for (i = 1; i <= j; i++)
+        for (j = 1; j <= 10; j++) // columns
         {
-            if (j == i) // if we are in the last column
+            if (i == j || i + j == 11) // if we are in the diagonal OR (i == j || j == 10 - i + 1)
             {
                 printf("* ");
             }
@@ -268,31 +275,10 @@ void pattern11()
                 printf("  ");
             }
         }
-        int x = 0;
-        for (k = 5; k <= (k * 2) - 1; k--) // spaces in the middle
-        {
-            printf("$ ");
-        }
-
-        printf("\n"); // new line
-    }
-
-    for (j = 1; j <= 5; j++) // raws
-    {
-        for (i = j; i <= 5; i++)
-        {
-            if (i == 5) // if we are in the last column
-            {
-                printf("* ");
-            }
-            else
-            {
-                printf("  ");
-            }
-        }
-        printf("\n"); // new line
+        printf("\n");
     }
 }
+
 int main()
 {
     //  printf("Pattern 1: \n" );  pattern1();  printf("\n");
