@@ -9,14 +9,12 @@
 
 int main()
 {
-    int raws = 5;
-    for (int i = 1; i <= raws; i++)
+    int i, j;
+    for (i = 1; i <= 5; i++)
     {
-        // printf(" * ");
-        for (int j = 1; j <= i; j++)
+        for (j = 1; j <= i; j++)
         {
-            // printf(" * ");
-            printf(" %d ", i);
+            printf("* ");
         }
         printf("\n");
     }
