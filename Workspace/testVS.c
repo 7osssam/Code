@@ -46,44 +46,20 @@ void trick5()
 
 void trick6()
 {
-  int x, y;
-  x = 5;
-  switch (x)
+  int num, result;
+
+  printf("Enter ");
+  scanf("%d", &num);
+
+  switch (num % 2)
   {
-  case 3:
-    printf("\n3");
+  case 0:
+    printf("\nEVEN");
+    break;
 
-  case 4:
-    printf("\n4");
-
-  case 5:
-    printf("\n5");
-  }
-}
-
-//         *
-//       * *
-//     * * *
-//   * * * *
-// * * * * *
-
-void trick7()
-{
-  int i, j, k;
-  for (i = 1; i <= 10; i++) // raws
-  {
-    for (j = 1; j <= 10; j++)
-    {
-      if (i == j || i + j == 11)
-      {
-        printf("* ");
-      }
-      else
-      {
-        printf("  ");
-      }
-    }
-    printf("\n");
+  default:
+    printf("\nODD");
+    break;
   }
 }
 
@@ -94,7 +70,7 @@ int main()
   // trick3();
   // trick4();
   // trick5();
-  // trick6();
-  trick7();
+  trick6();
+
   return 0;
 }
