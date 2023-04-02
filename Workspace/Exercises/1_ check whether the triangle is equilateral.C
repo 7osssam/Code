@@ -1,5 +1,4 @@
-// file name: C program to check whether the triangle is equilateral.C
-
+// Title: check whether the triangle is equilateral
 #include <stdio.h>
 
 int main()

@@ -1,4 +1,4 @@
-
+// Title: check whether the triangle is isosceles or not
 #include <stdio.h>
 int main()
 {
