@@ -4,18 +4,18 @@
 
 int Power(int num, int power)
 {
-    int res = 1;
-    for (int i = 1; i <= power; i++)
+    int result = 1;                  // initial value of result is 1
+    for (int i = 1; i <= power; i++) // for loop to multiply the number with itself power times
     {
-        res = res * num; // res *= num;
+        result = result * num; // result *= num;
     }
 
-    return res;
+    return result; // return the result
 }
 int main()
 {
     int num, po;
-    printf("Enter the number then the power");
+    printf("Enter the number & the power:");
     scanf("%d%d", &num, &po);
 
     printf("%d power %d is = %d", num, po, Power(num, po));
