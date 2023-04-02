@@ -4,21 +4,20 @@
 
 int countDig(int num)
 {
-    int count = 0;
-    while (num != 0)
+    int count = 0;   // Initialize count to 0
+    while (num != 0) // Loop until num is not equal to 0
     {
-        count++;
-        num = num / 10;
+        count++;        // Increment count by 1
+        num = num / 10; // remove last digit
     }
     return count;
 }
 int main()
 {
-
     int num;
     printf("Enter Number:");
     scanf("%d", &num);
 
-    printf("this number has %d digits", countDig(num));
+    printf("This number has %d digits", countDig(num));
     return 0;
 }
