@@ -5,7 +5,7 @@
 int factorial(int num) // function to calculate factorial
 {
     int factorial = 1;
-    for (int i = 1; i <= num; i++)
+    for (int i = 2; i <= num; i++) // i = 1 is not required
     {
         factorial = factorial * i;
     }
