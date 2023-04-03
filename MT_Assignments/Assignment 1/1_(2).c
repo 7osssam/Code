@@ -5,6 +5,9 @@
 
 int main()
 {
-    printf("Hossam Mohamed\ngrade 100");
+    char name[15] = "Hossam Mohamed";
+    float grade = 95.3;
+    printf("my name is :%s\nmy grade : %f \n", name, grade);
+
     return 0;
 }
