@@ -10,6 +10,12 @@ int Power(int num, int power)
         result = result * num; // result *= num;
     }
 
+    // while (power != 0) // another way // time complexity is the same
+    // {
+    //     result *= num;
+    //     --power;
+    // }
+
     return result; // return the result
 }
 int main()
