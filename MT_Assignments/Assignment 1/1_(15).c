@@ -4,17 +4,14 @@
 
 int Power(int num, int power)
 {
-    int result = 1;                  // initial value of result is 1
-    for (int i = 1; i <= power; i++) // for loop to multiply the number with itself power times
-    {
-        result = result * num; // result *= num;
-    }
+    int result = 1; // initial value of result is 1
 
-    // while (power != 0) // another way // time complexity is the same
-    // {
-    //     result *= num;
-    //     --power;
-    // }
+    while (power != 0)
+    {
+        result *= num; // multiply the result by the number
+
+        power--; // decrement the power
+    }
 
     return result; // return the result
 }
