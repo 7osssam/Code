@@ -63,6 +63,30 @@ void trick6()
   }
 }
 
+unsigned int temperature(int x)
+{
+  if (x > 0 && x <= 30)
+  {
+    return 7;
+  }
+  else if (x > 30 && x <= 60)
+  {
+    return 5;
+  }
+  else if (x > 60 && x <= 90)
+  {
+    return 3;
+  }
+  else if (x > 90 && x < 100)
+  {
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
+}
+
 int main()
 {
   // trick1();
@@ -70,7 +94,13 @@ int main()
   // trick3();
   // trick4();
   // trick5();
-  trick6();
+  // trick6();
 
+  int x;
+
+  printf("Enter number ");
+  scanf("%d", &x);
+
+  printf("Time = %d", temperature(x));
   return 0;
 }
