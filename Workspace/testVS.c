@@ -67,6 +67,7 @@ unsigned int temperature(int x)
 {
   if (x > 0 && x <= 30)
   {
+    printf("hello\a");
     return 7;
   }
   else if (x > 30 && x <= 60)
@@ -96,11 +97,6 @@ int main()
   // trick5();
   // trick6();
 
-  int x;
-
-  printf("Enter number ");
-  scanf("%d", &x);
-
-  printf("Time = %d", temperature(x));
+  printf("hello\t\v world\a\b");
   return 0;
 }
