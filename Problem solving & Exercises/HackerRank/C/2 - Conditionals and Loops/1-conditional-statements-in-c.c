@@ -1,4 +1,4 @@
-//? hackerRank.com/challenges/conditional-statements-in-c/problem
+//? https://hackerRank.com/challenges/conditional-statements-in-c/problem
 
 #include <assert.h>
 #include <limits.h>
