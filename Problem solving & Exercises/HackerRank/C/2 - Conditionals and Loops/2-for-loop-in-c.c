@@ -1,4 +1,4 @@
-//? hackerrank.com/challenges/for-loop-in-c/problem
+//? https://hackerrank.com/challenges/for-loop-in-c/problem
 
 #include <stdio.h>
 #include <string.h>
