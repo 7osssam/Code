@@ -13,14 +13,16 @@ int main()
     // int *arr = (int*)calloc (n , sizeof(int)); // contiguous memory allocation for the array
     for (int i = 0; i < n; i++) // loop for taking input of the array
     {
+        // scanf( "%d" , arr+i); //using pointer notation
         scanf("%d", &arr[i]); // using array notation
-                              // scanf( "%d" , arr+i); //using pointer notation
 
         // sum = sum + *(arr + i); // using pointer notation
         sum = sum + arr[i]; // using array notation
+
+        // using array notation is more readable
     }
     free(arr); // freeing the memory
 
-    printf("%d", sum); // printing the sum
+    printf("%d", sum);
     return 0;
 }
