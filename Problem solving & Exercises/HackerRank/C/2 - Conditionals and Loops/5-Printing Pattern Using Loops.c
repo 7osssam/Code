@@ -19,10 +19,7 @@ int main()
 
         for (int j = 1; j <= row; j++)
         {
-            if (i == counter || j == counter || i == row || j == row)
-            {
-                printf("%d ", size);
-            }
+            printf("%d ", size);
         }
         printf("\n");
     }
