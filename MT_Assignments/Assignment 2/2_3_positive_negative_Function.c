@@ -1,4 +1,4 @@
-// Write a C Function that check if the number if positive or negative
+// 3 - Write a C Function that check if the number if positive or negative
 
 #include <stdio.h>
 
