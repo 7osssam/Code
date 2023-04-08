@@ -21,13 +21,13 @@ int main()
         scanf("%d", &arr[i]); // using array notation
     }
 
-    //! * Write the logic to reverse the array. */
+    //////////////!
     int temp = 0;
     for (i = 0; i < num / 2; i++)
     {
         Swap_Advanced(&arr[i], &arr[num - i - 1]);
     }
-
+    //////////////!
     for (i = 0; i < num; i++)
         printf("%d ", *(arr + i));
     return 0;
