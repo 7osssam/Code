@@ -1,4 +1,4 @@
-// Write a C Function that takes one character and checks if it alphabet or not.
+// 2 - Write a C Function that takes one character and checks if it alphabet or not.
 
 #include <stdio.h>
 
