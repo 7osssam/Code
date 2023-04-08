@@ -27,6 +27,11 @@ int main()
         result = num1 * num2;
         break;
     case '/':
+        if (num2 == 0)
+        {
+            printf("Error: division by zero");
+            break;
+        }
         result = num1 / num2;
         break;
 
