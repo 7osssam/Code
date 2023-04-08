@@ -1,4 +1,4 @@
-// Write a C Function that prints the cube of any number
+// 1 - Write a C Function that prints the cube of any number
 #include <stdio.h>
 
 long cube(int num)
