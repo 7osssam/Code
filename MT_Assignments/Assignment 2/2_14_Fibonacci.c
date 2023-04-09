@@ -6,8 +6,8 @@ int fib(int num)
 {
     // // Iterative approach
     // // time complexity: O(n)
-    // int first = 0, second = 1, next;
 
+    // int first = 0, second = 1, next;
     // for (int i = 0; i < num; i++)
     // {
     //     if (i <= 1) // because fib of 0 = 0 and fib of 1 = 1
@@ -25,6 +25,7 @@ int fib(int num)
 
     // Recursive approach
     // time complexity: O(2^n)
+
     if (num == 0) // base case
     {
         return 0;
