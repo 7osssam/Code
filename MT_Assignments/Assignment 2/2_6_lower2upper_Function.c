@@ -1,4 +1,4 @@
-// Write C Function that converts the any letter from lowercase to uppercase
+// 6 - Write C Function that converts the any letter from lowercase to uppercase
 
 #include <stdio.h>
 
