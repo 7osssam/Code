@@ -23,5 +23,11 @@ int main()
     // ternary operator if true (1) print ODD else (0) print EVEN
     CheckEvenOdd(num) ? printf("ODD") : printf("EVEN");
 
+    // equivalent to
+    // if (CheckEvenOdd(num) == 1)
+    //     printf("ODD");
+    // else
+    //     printf("EVEN");
+
     return 0;
 }
