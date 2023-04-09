@@ -10,7 +10,7 @@ char ConvertLower2Upper(char ch)
 
     // Return the same input letter if it is already uppercase
     if (ch >= 'A' && ch <= 'Z')
-        return ch;
+        return ch; // the same letter
 
     return 0; // return 0 when the input is not a letter
 }
