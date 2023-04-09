@@ -22,7 +22,7 @@ float SimpleCalculator(float num1, float num2, char op)
     case '/':
         if (num2 == 0)
         {
-            printf("Error: division by zero");
+            printf("Error: division by zero"); //! Error massage need some update
             return 0;
         }
         result = num1 / num2;
