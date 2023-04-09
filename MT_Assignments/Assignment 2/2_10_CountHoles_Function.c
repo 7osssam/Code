@@ -11,37 +11,42 @@
 
 #include <stdio.h>
 
-int CountHoles(int num)
+int CountHoles(int num) //
 {
+    char Count; // char is 1 byte no need to use int
     switch (num)
     {
+    // 1, 2, 3, 5 and 7 = 0 holes.
     case 1:
     case 2:
     case 3:
     case 5:
     case 7:
-        return 0;
+        Count = 0;
+        // return 0;
         break;
 
+    // 0, 4, 6, and 9 = 1 hole.
     case 0:
     case 4:
     case 6:
     case 9:
-        return 1;
+        Count = 1;
+        // return 1;
         break;
+
+    // 8 = 2 holes.
     case 8:
-        return 2;
-        break;
-    default:
-        return -1; // not a number
+        Count = 2;
+        // return 2;
         break;
     }
+    return Count;
 }
 
 int main()
 {
-    int num;
-    int mod;
+    int num, mod;
     int result = 0;
     printf("Enter a number: ");
     scanf("%d", &num);
@@ -50,10 +55,6 @@ int main()
     {
         mod = num % 10;
         result = result + CountHoles(mod);
-        if (result == -1)
-        {
-            printf("Wrong input");
-        }
 
         num = num / 10;
     }
