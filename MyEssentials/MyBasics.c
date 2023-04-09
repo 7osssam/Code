@@ -32,17 +32,17 @@ int isPowerOfTwo(int n) // time complexity: O(log n)
     return 1;
 }
 //! ========================== isPowerOfTwo_Advanced ===================  //
-int isPowerOfTwo_Advanced(int num)
+int isPowerOfTwo_Advanced(int num) // time complexity: O(1)
 {
-    if (num <= 0)
+    if (num <= 0) // 0 is not a power of 2 and negative numbers are not power of 2
         return 0;
 
-    if ((num & (num - 1)) == 0)
+    if ((num & (num - 1)) == 0) // if number is a power of 2, then it will have only 1 bit set
     {
-        return 1;
+        return 1; // number is a power of 2
     }
     else
     {
-        return 0;
+        return 0; // number is NOT a power of 2
     }
 }
