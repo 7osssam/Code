@@ -25,13 +25,13 @@
 
 // int isPowerOfTwo(int n) // time complexity: O(log n)
 // {
-//     if (n == 0) // 0 is not a power of 2
+//     if (n <= 0) // 0 is not a power of 2
 //     {
 //         return 0;
 //     }
 //     while (n != 1) // while number is not 1
 //     {
-//         if (n % 2 != 0) // if number is odd
+//         if (n % 2 != 0) // if number is not divisible by 2
 //         {
 //             return 0;
 //         }
@@ -54,12 +54,14 @@ int isPowerOfTwo_Advanced(int num) // time complexity: O(1)
         return 0; // number is NOT a power of 2
     }
 }
+
 int main()
 {
     int num;
 
     printf("Enter a number: ");
     scanf("%d", &num);
+
     if (isPowerOfTwo_Advanced(num))
     {
         printf("number is a power of 2");
