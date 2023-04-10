@@ -2,25 +2,26 @@
 #include <stdio.h>
 
 //////////////////////////////////////!
-int maximizingXor(int l, int r)
+int maxXOR(int L, int R)
 {
-    int MaxXOR = 0;              // declare maximum XOR variable
-    for (int i = l; i <= r; i++) // loop for the first number
+    int max = 0;
+    for (int i = L; i <= R; i++) // loop for the first number
     {
-        for (int j = i; j <= r; j++) // loop for the second number
+        for (int j = i; j < R; j++) // loop for the second number //* j = i to avoid duplicate values
         {
-            if ((i ^ j) > MaxXOR) // if the XOR of the two numbers is greater than the current maximum XOR
-                MaxXOR = i ^ j;   // update the maximum XOR
+            if ((i ^ j) > max) // if the XOR of the two numbers is greater than the current maximum XOR
+                max = i ^ j;   // update the maximum XOR
         }
     }
-    return MaxXOR;
+    return max;
 }
 //////////////////////////////////////!
 
 int main()
 {
-    int l, r;              // declare the range variables
-    scanf("%d%d", &l, &r); // take input of the range
-    printf("%d", maximizingXor(l, r));
+    int L, R;              // declare the range variables
+    scanf("%d%d", &L, &R); // take input of the range
+
+    printf("%d", maxXOR(L, R));
     return 0;
 }
