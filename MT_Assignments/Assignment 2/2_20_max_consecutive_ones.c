@@ -7,10 +7,10 @@ int maxOnes(int num)
 {
     int max = 0;
     int count = 0;
-    unsigned short mask = 0x8000; //
+    unsigned short mask = 0x8000; // 16 bits mask
     for (int i = 1; i <= SHORT_SIZE; i++)
     {
-        if ((num & mask) != 0) //
+        if ((num & mask) != 0) // if bit is 1
         {
             count++;
             if (count > max)
