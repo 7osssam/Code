@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #define INT_SIZE sizeof(int) * 8
 
-int max_bits(int num)
+int maxZerosbetween(int num)
 {
 	int flag = 0, max = 0, zero_count = 0;
 	for (int i = 0; i < INT_SIZE; i++) // 0b1011010100011100001000
@@ -28,6 +28,6 @@ int main()
 {
 
 	int num = 0b1011010100011100001000;
-	printf("max number zeros is %d", max_bits(num)); // 4
+	printf("max number zeros is %d", maxZerosbetween(num)); // 4
 	return 0;
 }
