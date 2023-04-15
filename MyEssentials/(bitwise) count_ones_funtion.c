@@ -64,7 +64,7 @@ int maxZerosbetween(int num)
     {
         if (num & mask) // the result is a any value other than 0 (1 bit) //!any value --> true
         {
-            // we only set max once we have a 0 bit after a 1 bit
+            //! we only set max once we have a 0 bit after a 1 bit
             if (count > max)
             {
                 max = count;
