@@ -1,1 +1,0 @@
-gcc -E test.c -o test.i
