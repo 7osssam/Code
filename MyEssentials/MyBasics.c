@@ -194,3 +194,28 @@ int maxZerosbetween(int num)
 // Max consecutive 1's 6
 // Max consecutive 0's 5
 // Max consecutive 0's between 1's 4
+
+//! ========================== Bit operations ====================================== //
+// Function to set the kth bit of num // 1 -> 1, 0 -> 1
+int setBit(int num, int k)
+{
+    return (num | (1 << k)); //  OR with 1
+}
+
+// Function to clear the kth bit of num // 0 -> 0, 1 -> 0
+int clearBit(int num, int k)
+{
+    return (num & (~(1 << k))); //  AND with 1 complement
+}
+
+// Function to toggle the kth bit of num // 0 -> 1, 1 -> 0
+int toggleBit(int num, int k)
+{
+    return (num ^ (1 << k)); // XOR with 1
+}
+
+// Function to find the kth bit of num
+int findBit(int num, int k)
+{
+    return ((num >> k) & 1); //  Right shift k times and AND with 1
+}
