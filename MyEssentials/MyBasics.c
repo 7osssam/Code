@@ -106,25 +106,8 @@ int isPowerOfThree(int num) // time complexity: O(log n)
     }
     return 1;
 }
-//! ========================== isPowerOfThree_Advanced ================== //
-int isPowerOfThree_Advanced(int num) // time complexity: O(1)
-{
-    if (num <= 0) // 0 is not a power of 3 and negative numbers are not power of 3
-        return 0;
 
-    if ((num % 3 == 0) && (num % 9 != 0)) // if number is a power of 3, then it will have only 1 bit set
-    {
-        return 1; // number is a power of 3
-    }
-    else
-    {
-        return 0; // number is NOT a power of 3
-    }
-}
-
-//! ==============================================================================//
-//!============================== Bit Manipulation ===============================//
-//! ==============================================================================//
+//?============================== Bit Manipulation =========================================================
 
 //! ========================== maxOnes ========================================== //
 // function to count the maximum number of consecutive 1's in an unsigned 32 bits integer
@@ -206,3 +189,8 @@ int maxZerosbetween(int num)
     }
     return max;
 }
+// test case
+// unsigned int num = 0b10110101000111000011111100100000;
+// Max consecutive 1's 6
+// Max consecutive 0's 5
+// Max consecutive 0's between 1's 4
