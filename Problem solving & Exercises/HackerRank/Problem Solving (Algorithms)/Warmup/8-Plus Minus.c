@@ -1,4 +1,5 @@
 //? https://www.hackerrank.com/challenges/plus-minus/problem
+// print the ratio of positive, negative and zero numbers in an array
 
 #include <stdio.h>
 #include <stdlib.h>
