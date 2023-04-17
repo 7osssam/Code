@@ -21,7 +21,7 @@ void BubbleSort(int *arr, int arr_size)
         // we added (....- step) because after every step the last element is sorted and we don't need to check it again
         for (int i = 0; i < arr_size - 1 - step; i++)
         {
-            if (arr[i] < arr[i + 1])
+            if (arr[i] > arr[i + 1])
             {
                 swap(&arr[i], &arr[i + 1]); // swap if the element is greater than the next element
 
