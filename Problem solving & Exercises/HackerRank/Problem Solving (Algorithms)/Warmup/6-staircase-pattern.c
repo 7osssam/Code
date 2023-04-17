@@ -1,4 +1,12 @@
 //? https://www.hackerrank.com/challenges/staircase/problem
+// print a staircase pattern
+//       #
+//      ##
+//     ###
+//    ####
+//   #####
+//  ######
+// #######
 #include <stdio.h>
 
 void pattern(int num)
