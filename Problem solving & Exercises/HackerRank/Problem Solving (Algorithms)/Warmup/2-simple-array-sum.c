@@ -1,5 +1,5 @@
 //? https://www.hackerrank.com/challenges/simple-array-sum/problem
-
+// sum of array elements
 #include <stdio.h>
 #include <stdlib.h>
 
