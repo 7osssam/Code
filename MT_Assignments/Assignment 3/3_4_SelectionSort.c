@@ -32,7 +32,7 @@ void SelectionSort(int *arr, int arr_size)
 int main()
 { // 1 2 3 4 5 6 7 7 8 9
 
-    int arr[10] = {9, 8, 7, 1, 3, 2, 4, 5, 6, 7};
+    int arr[] = {9, 8, 7, 1, 3, 2, 4, 5, 6, 7};
     int arr_size = sizeof(arr) / sizeof(arr[0]);
 
     // printf("Enter %d elements in the array to sort\n", arr_size);
