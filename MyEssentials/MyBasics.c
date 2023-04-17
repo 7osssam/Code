@@ -2,14 +2,14 @@
 #define INT_SIZE sizeof(unsigned int) * 8
 
 //! ========================== Swap advanced ==========================  //
-void Swap_Advanced(int *num1, int *num2) // with no temp variable
+void swapAdvanced(int *num1, int *num2) // with no temp variable
 {
     *num1 = *num1 + *num2; // add x and y and store in x
     *num2 = *num1 - *num2; // subtract y from x and store in y // x = x + y - y = x
     *num1 = *num1 - *num2; // subtract y from x and store in x // y = x + y - x = y
 }
 //! ========================== Swap ===================================  //
-void Swap(int *num1, int *num2) // using temp variable
+void swap(int *num1, int *num2) // using temp variable
 {
     int temp;
     temp = *num1;  // save the value of num1
@@ -162,9 +162,9 @@ int maxZeros(int num)
     return max;
 }
 
-//! ========================== maxZerosbetween ====================================== //
+//! ========================== maxZerosBetween ====================================== //
 // function to count the maximum number of consecutive 0's //!between 1’s in an unsigned 32 bits integer
-int maxZerosbetween(int num)
+int maxZerosBetween(int num)
 {
     int max = 0;
     int count = 0;
