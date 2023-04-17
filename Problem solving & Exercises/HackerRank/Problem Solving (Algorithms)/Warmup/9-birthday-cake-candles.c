@@ -1,5 +1,5 @@
 // ? https://www.hackerrank.com/challenges/birthday-cake-candles/problem
-
+// print the number of times the maximum number is repeated in the array
 #include <stdio.h>
 #include <stdlib.h>
 
