@@ -1,4 +1,5 @@
 //? https://www.hackerrank.com/challenges/solve-me-first/problem
+// sum of two integers
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
