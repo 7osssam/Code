@@ -1,5 +1,7 @@
 //? https://www.hackerrank.com/challenges/mini-max-sum/problem
-
+// find the minimum and maximum sums of 4 out of 5 numbers in an array
+// Todo: the minimum sum is the sum of all elements - maximum number
+// Todo: maximum sum is the sum of all elements - minimum number
 #include <stdio.h>
 #include <stdlib.h>
 #define arr_size 5
