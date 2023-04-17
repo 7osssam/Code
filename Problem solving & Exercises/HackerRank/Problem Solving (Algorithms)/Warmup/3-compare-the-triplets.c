@@ -1,4 +1,5 @@
 //? https://www.hackerrank.com/challenges/compare-the-triplets/problem
+// compareing two arrays and return the result in an array
 #include <stdio.h>
 
 int main()
