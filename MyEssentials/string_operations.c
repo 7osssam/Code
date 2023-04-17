@@ -79,7 +79,7 @@ void findlongestWord(char *str, char *word)
 	// }
 	for (i = 0; i < max; i++) //
 	{
-		word[i] = str[i + indexOfMax]; // copy the word from the string to the word
+		word[i] = str[indexOfMax + i]; // copy the word from the string to the word
 	}
 	word[i] = 0; //! null at the end
 }
