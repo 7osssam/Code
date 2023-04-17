@@ -1,4 +1,6 @@
 //? https://www.hackerrank.com/challenges/a-very-big-sum/problem
+// usage of long int to store the sum of the array elements
+
 #include <stdio.h>
 #include <stdlib.h>
 
