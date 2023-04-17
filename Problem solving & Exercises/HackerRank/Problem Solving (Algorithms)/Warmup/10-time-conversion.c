@@ -1,5 +1,6 @@
 //? https://www.hackerrank.com/challenges/time-conversion/problem
-
+// convert time from 12-hour AM/PM format to 24-hour format
+// Ex: from 07:05:45PM to 19:05:45
 #include <stdio.h>
 
 void TimeConvertion(char *str, char *str24)
