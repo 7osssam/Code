@@ -11,6 +11,7 @@ int freqOfChar(char *str, char ch)
         if (str[i] == ch)
             count++;
     }
+
     return count;
 }
 int main()
