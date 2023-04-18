@@ -270,6 +270,26 @@ void removeNonAlphabets(char *str) // remove all characters in a string expect a
     str[position] = '\0'; // !add null char at the end of the string
 }
 
+void stringConcatenate(char *str1, char *str2, char *strCON) // concatenate two strings
+{
+    int i;
+    int strCounter = 0; // counter for the new string
+
+    for (i = 0; str1[i] != '\0'; i++) // loop until the end of the first string
+    {
+        strCON[strCounter] = str1[i]; // copy the character from the first string to the new string
+        strCounter++;                 // increment the counter
+    }
+
+    for (i = 0; str2[i] != '\0'; i++) // loop until the end of the second string
+    {
+        strCON[strCounter] = str2[i]; // copy the character from the second string to the new string
+        strCounter++;                 // increment the counter
+    }
+
+    strCON[strCounter] = 0; //! null at the end
+}
+
 int main()
 {
     unsigned char str[100] = " 2  ahlyhse 2 2  ahmed   ali ererwerewwemjk mohamedmo@@412fdff";
