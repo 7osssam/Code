@@ -214,7 +214,7 @@ void intToSting(int num, unsigned char *str) // convert int to string
     }
 }
 
-unsigned char stringMostRepeatedChar(unsigned char *str)
+unsigned char stringMostRepeatedChar(unsigned char *str) // find the most repeated char in a string
 {
     int i, j;
     int Counter = 0, Max = 0;
@@ -241,6 +241,33 @@ unsigned char stringMostRepeatedChar(unsigned char *str)
     }
 
     return C;
+}
+
+int freqOfChar(unsigned char *str, char ch) // find the frequency of a char (user input) in a string
+{
+    int count = 0;
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        if (str[i] == ch)
+            count++;
+    }
+
+    return count;
+}
+
+void removeNonAlphabets(char *str) // remove all characters in a string expect alphabet
+{
+    int i, position = 0;
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')) // check if the char is alphabet
+        {
+            str[position] = str[i]; // add the char to the new string
+
+            position++; // increment the position
+        }
+    }
+    str[position] = '\0'; // !add null char at the end of the string
 }
 
 int main()
