@@ -83,7 +83,7 @@ void stringLower(unsigned char *str) // convert string to lower case
     }
 }
 
-int stringComp(unsigned char *str1, unsigned char *str2) // return 1 if equal and 0 if not equal (using index)
+int stringCompare(unsigned char *str1, unsigned char *str2) // return 1 if equal and 0 if not equal (using index)
 {
     int i, isEqual = 1; // equal by default
 
@@ -103,15 +103,21 @@ int stringComp(unsigned char *str1, unsigned char *str2) // return 1 if equal an
     return isEqual;
 }
 
-int stringComp2(unsigned char *str1, unsigned char *str2) // return 1 if equal and 0 if not equal (using pointers)
+int stringCompare2(unsigned char *str1, unsigned char *str2) // return 1 if equal and 0 if not equal (using pointers)
 {
+    int isEqual = 1; // equal by default
+
     while (*str1 != '\0' && *str2 != '\0' && *str1 == *str2) // loop until one of the strings is null or the characters are not equal
     {                                                        // if one of them is false the loop will stop
         // increment the pointer
         str1++;
         str2++;
     }
-    return (*str1 == 0 && *str2 == 0); // return 1 if both strings are null
+    if (*str1 != *str2) // if the characters are not equal (last character should be null on both strings)
+    {
+        isEqual = 0; // not equal
+    }
+    return isEqual;
 }
 
 void stringLongestWord(unsigned char *str, unsigned char *word) // find the longest word in a string and copy it to word array
