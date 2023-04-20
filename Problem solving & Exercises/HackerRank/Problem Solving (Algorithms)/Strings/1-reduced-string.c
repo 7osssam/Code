@@ -3,7 +3,7 @@
 // and return the new string. If the final string is empty, return "Empty String".
 #include <stdio.h>
 
-char *superReducedString(char *s) // return the new string
+char *superReducedString(char *s) // return the new string after removing the repeated characters
 {
     int i, j, newPos; // newPos is the new position of the character after removing the repeated characters
 
@@ -33,6 +33,16 @@ char *superReducedString(char *s) // return the new string
     }
 
     return s;
+
+    // to return the new string, we create a char pointer (in the main function) and assign it to the return value
+    // fro example:
+    // char s[100];
+    // char *s_new;
+
+    // gets(s);
+    // s_new = superReducedString(s);
+
+    // puts(s_new);
 }
 
 int main()
