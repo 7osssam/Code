@@ -1,14 +1,15 @@
 #include <stdio.h>
 #define INT_SIZE sizeof(unsigned int) * 8
 
-//! ========================== Swap advanced ==========================  //
+//! ========================== Swap (pointers) ==========================  //
 void swapAdvanced(int *num1, int *num2) // with no temp variable
 {
     *num1 = *num1 + *num2; // add x and y and store in x
     *num2 = *num1 - *num2; // subtract y from x and store in y // x = x + y - y = x
     *num1 = *num1 - *num2; // subtract y from x and store in x // y = x + y - x = y
 }
-//! ========================== Swap ===================================  //
+//?? using this method, there is a risk of overflow if the sum of the numbers is greater than the maximum value that can be stored by an integer.
+//! ========================== Swap (temp) ===================================  //
 void swap(int *num1, int *num2) // using temp variable
 {
     int temp;
