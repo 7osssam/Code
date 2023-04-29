@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define INT_SIZE sizeof(unsigned int) * 8
 
-//! ========================== Swap (pointers) ==========================  //
+//! ========================== Swap (using pointers) ==========================  //
 void swapAdvanced(int *num1, int *num2) // with no temp variable
 {
     *num1 = *num1 + *num2; // add x and y and store in x
@@ -17,6 +17,15 @@ void swap(int *num1, int *num2) // using temp variable
     *num1 = *num2; // assign the value of num2 to num1
     *num2 = temp;  // assign the saved value of num1 to num2
 }
+//! ========================== Swap (temp) ===================================  //
+void swapPointers(int **ptr1, int **ptr2) // using temp variable
+{
+    int *temp;
+    temp = *ptr1;  // save the value of ptr1 (address of num1) to temp
+    *ptr1 = *ptr2; // assign the value of ptr2 (address of num2) to ptr1
+    *ptr2 = temp;  // assign the saved value of ptr1 (address of num1) to ptr2 (address of num2)
+}
+
 //! ========================== Power of two ==============================  //
 int isPowerOfTwo(int n) // time complexity: O(log n)
 {
