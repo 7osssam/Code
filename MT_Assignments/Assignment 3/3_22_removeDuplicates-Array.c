@@ -27,15 +27,22 @@ int removeDuplicates(int *arr_old, int n_old, int *arr_new, int *n_new)
     {
         for (i = 0; i < n_old; i++)
         {
-            if (arr_old[i] == arr_old[i + 1])
-            {
-                continue;
-            }
-            else
+
+            if (arr_old[i] != arr_old[i + 1])
             {
                 arr_new[*n_new] = arr_old[i];
                 (*n_new)++;
             }
+
+            // if (arr_old[i] == arr_old[i + 1])
+            // {
+            //     continue;
+            // }
+            // else
+            // {
+            //     arr_new[*n_new] = arr_old[i];
+            //     (*n_new)++;
+            // }
         }
     }
     return 1;
