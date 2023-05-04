@@ -40,7 +40,9 @@ int main()
     unsigned char LowerValue;
     unsigned char UpperValue;
     unsigned char size = 0;
-    unsigned char OutputArray[255];
+    unsigned char OutputArray[256];
+    // 256 as all ascii characters are 256 characters
+    // we can create a global array and return it from the function instead of passing it as a parameter
 
     puts("Enter Upper and Lower Values");
     scanf("%d", &UpperValue);
