@@ -3,19 +3,12 @@
 #include <stdio.h>
 #define arr_size 10
 
-int main()
+int MinimumNum(int *ptr, int size)
 {
-    int arr[arr_size];
-    int *ptr = arr;
-    int mini = arr[0]; // initialize mini with the first element of the array
-
     int i;
-    for (i = 0; i < arr_size; i++)
-    {
-        scanf("%d", &ptr[i]);
-    }
+    int mini = ptr[0]; // initialize mini with the first element of the array
 
-    for (i = 0; i < arr_size; i++)
+    for (i = 0; i < size; i++)
     {
         if (ptr[i] < mini) // if the value of the element is less than mini
         {
@@ -25,5 +18,19 @@ int main()
         // ptr++; // point to the next element
     }
 
-    printf("mini: %d ", mini);
+    return mini;
+}
+
+int main()
+{
+    int arr[arr_size];
+    int *ptr = arr;
+
+    int i;
+    for (i = 0; i < arr_size; i++)
+    {
+        scanf("%d", &ptr[i]);
+    }
+
+    printf("The minimum number is %d", MinimumNum(ptr, arr_size));
 }
