@@ -20,7 +20,7 @@ void removeNonAlphabets(char *str) // remove all characters in a string expect a
 
 int main()
 {
-    char str[] = "A5hme@$D";
+    char str[] = "A5hme@$D A5hme@$D A5";
     puts(str);
     removeNonAlphabets(str);
     puts(str);
