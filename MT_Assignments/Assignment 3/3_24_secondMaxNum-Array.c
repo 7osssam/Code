@@ -10,14 +10,15 @@ int secondMax(int *arr)
 
     for (int i = 0; i < 10; i++)
     {
-        if (arr[i] > max)
+        if (arr[i] > max) // identify max value in array
         {
-            secMax = max;
-            max = arr[i];
+            secMax = max; // assign max value to secound max value
+            max = arr[i]; // assign new max value
         }
-        else if (arr[i] > secMax && arr[i] < max)
+        // if number is greater than secound max and less than max
+        else if (arr[i] > secMax && arr[i] < max) // identify secound max value in array
         {
-            secMax = arr[i];
+            secMax = arr[i]; // assign new secound max value
         }
     }
 
