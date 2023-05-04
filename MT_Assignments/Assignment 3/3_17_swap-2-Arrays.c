@@ -6,7 +6,7 @@ int * Swap (int a_size,int *a,int b_size,int *b)
 
 #include <stdio.h>
 
-void Swap(int a_size, int *a, int b_size, int *b)
+int *Swap(int a_size, int *a, int b_size, int *b)
 {
     int temp;
     for (int i = 0; i < b_size; i++)
@@ -15,6 +15,11 @@ void Swap(int a_size, int *a, int b_size, int *b)
         a[i] = b[i];
         b[i] = temp;
     }
+    return a;
+    /* =======================================
+    we don't need to return anything, we are changing the values of the arrays directly
+    but it's in the requirements of the question
+    ======================================= */
 }
 
 int main()
