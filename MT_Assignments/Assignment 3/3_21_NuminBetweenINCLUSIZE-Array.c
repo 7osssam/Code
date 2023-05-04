@@ -28,7 +28,8 @@ unsigned char *NuminBetweenINCLUSIZE(unsigned char LowerValue, unsigned char Upp
     }
     else
     {
-        for (int i = UpperValue; i >= LowerValue; i--)
+        // include the upper and lower values
+        for (int i = UpperValue; i >= LowerValue; i--) // the only difference between this and the previous one
         {
             OutputArray[*size] = i;
             (*size)++;
@@ -41,7 +42,9 @@ int main()
     unsigned char LowerValue;
     unsigned char UpperValue;
     unsigned char size = 0;
-    unsigned char OutputArray[255];
+    unsigned char OutputArray[256];
+    // 256 as all ascii characters are 256 characters
+    // we can create a global array and return it from the function instead of passing it as a parameter
 
     puts("Enter Upper and Lower Values");
     scanf("%d", &UpperValue);
