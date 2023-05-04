@@ -4,22 +4,42 @@
 #include <stdio.h>
 void stringConcatenate(char *str1, char *str2, char *strCON)
 {
-    int i;
-    int strCounter = 0; // counter for the new string
+    //! concatenate str2 to str1 means str1 = str1 + str2 not adding them in a new string
+    int i, j;
+    /* This loop is to store the length of str1 in i
+     * It just counts the number of characters in str1
+     * You can also use strlen instead of this.
+     */
+    for (i = 0; str1[i] != '\0'; ++i)
+        ;
 
-    for (i = 0; str1[i] != '\0'; i++) // loop until the end of the first string
+    /* This loop would concatenate the string str2 at
+     * the end of str1
+     */
+    for (j = 0; str2[j] != '\0'; ++j, ++i)
     {
-        strCON[strCounter] = str1[i]; // copy the character from the first string to the new string
-        strCounter++;                 // increment the counter
+        str1[i] = str2[j];
     }
+    /* \0 represents end of string */
+    str1[i] = '\0';
 
-    for (i = 0; str2[i] != '\0'; i++) // loop until the end of the second string
-    {
-        strCON[strCounter] = str2[i]; // copy the character from the second string to the new string
-        strCounter++;                 // increment the counter
-    }
+    //============== old solution ==============
+    // int i;
+    // int strCounter = 0; // counter for the new string
 
-    strCON[strCounter] = 0; //! null at the end
+    // for (i = 0; str1[i] != '\0'; i++) // loop until the end of the first string
+    // {
+    //     strCON[strCounter] = str1[i]; // copy the character from the first string to the new string
+    //     strCounter++;                 // increment the counter
+    // }
+
+    // for (i = 0; str2[i] != '\0'; i++) // loop until the end of the second string
+    // {
+    //     strCON[strCounter] = str2[i]; // copy the character from the second string to the new string
+    //     strCounter++;                 // increment the counter
+    // }
+
+    // strCON[strCounter] = 0; //! null at the end
 }
 int main()
 {
