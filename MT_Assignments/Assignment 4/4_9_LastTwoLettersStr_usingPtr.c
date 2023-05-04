@@ -13,6 +13,7 @@ int main()
 
     while (*Ptr != '\0') // while the pointer doesn't point to the null character
     {
+        // here we are just moving the pointer to the last character
         Ptr++;
     }
 
