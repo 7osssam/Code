@@ -52,12 +52,10 @@ void TurnON(VEHICLE_t *data)
     }
 }
 
-/// @brief  Turn off the vehicle engine and reset the vehicle data to zero
-/// @param data  pointer to the vehicle data structure
 void TurnOFF(VEHICLE_t *data)
 {
     /***********************
-     no need to set the DATA values to 0 because the menu only appears when the engine is ON but this
+    no need to set the DATA values to 0 because the menu only appears when the engine is ON but this
     will keep the code more readable and the simulation more realistic
     ************************/
 
