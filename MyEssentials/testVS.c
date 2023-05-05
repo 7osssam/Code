@@ -46,7 +46,7 @@ void trick5()
 
 void trick6()
 {
-  int num, result;
+  int num;
 
   printf("Enter ");
   scanf("%d", &num);
@@ -63,40 +63,52 @@ void trick6()
   }
 }
 
-unsigned int temperature(int x)
+void trick7() // unserstanding pointers and arrays
 {
-  if (x > 0 && x <= 30)
+
+  int arr[5] = {1, 2, 3, 4, 5};
+  int *ptr = arr;
+
+  for (int i = 0; i < 5; i++)
   {
-    printf("hello\a");
-    return 7;
-  }
-  else if (x > 30 && x <= 60)
-  {
-    return 5;
-  }
-  else if (x > 60 && x <= 90)
-  {
-    return 3;
-  }
-  else if (x > 90 && x < 100)
-  {
-    return 1;
-  }
-  else
-  {
-    return 0;
+    // printf("%d ", arr[i]);
+
+    // printf("%d ", *(arr + i));
+
+    // printf("%d ", ptr[i]);
+
+    // printf("%d ", *(ptr + i));
+
+    // printf("%d ", *ptr);
+    // ptr++;
+
+    // printf("%d ", *arr);
+    // arr++; // can't increment array name because it is constant pointer to first element of array
   }
 }
-int linear_search(int *arr, int size, int element)
+
+void SwapPointers(int **P2ptr1, int **P2ptr2)
 {
-  for (int i = 0; i < size; i++)
-  {
-    if (arr[i] == element)
-    {
-      return i;
-    }
-  }
-  return -1;
+  int *temp;
+  // printf("\nfuc %d %p\n", **P2ptr1, *P2ptr1);
+  // printf("fuc %d %p", **P2ptr2, *P2ptr2);
+
+  temp = *P2ptr1;
+  *P2ptr1 = *P2ptr2;
+  *P2ptr2 = temp;
+}
+
+int fun1(int num)
+{
+  return 1;
+}
+int fun2(int num)
+{
+  return 2;
+}
+int fun3(int num)
+{
+  return 3;
 }
 
 int main()
@@ -107,28 +119,54 @@ int main()
   // trick4();
   // trick5();
   // trick6();
-  // int arr[5] = {1, 2, 3, 4, 5};
 
-  // int result = linear_search(arr, 5, 7);
-  // if (result == -1)
-  // {
-  //   printf("not found");
-  // }
-  // else
-  // {
-  //   printf("element in index %d", result);
-  // }
+  // array of pointers
+  // int arr[3][3];
 
-  int arr[3][3];
+  // printf("arr[0] %p \n", arr[0]);
+  // printf("arr[0]+1  %p \n\n", arr[0] + 1);
 
-  printf("arr[0] %p \n", arr[0]);
-  printf("arr[0]+1  %p \n\n", arr[0] + 1);
+  // printf("arr[1] %p \n", arr[1]);
+  // printf("arr[2] %p \n\n", arr[2]);
 
-  printf("arr[1] %p \n", arr[1]);
-  printf("arr[2] %p \n\n", arr[2]);
+  // printf("arr %p \n", arr);
+  // printf("arr +1 %p \n\n", arr + 1);
 
-  printf("arr %p \n", arr);
-  printf("arr +1 %p \n\n", arr + 1);
+  //! pointer to pointer
+  // int x = 10;    // 4 bytes
+  // int *ptr = &x; // 8 bytes
 
-  return 0;
+  // int **ptr2 = &ptr; // 8 bytes
+
+  // printf("x     = %d\n", x);
+  // printf("&x    = %p\n", &x);
+  // printf("ptr   = %p\n", ptr);
+  // printf("&ptr  = %p\n", &ptr);
+  // printf("ptr2  = %p\n", ptr2);
+  // printf("&ptr2 = %p\n", &ptr2);
+
+  //! pointer of pointer
+  // int x = 6;
+  // int y = 7;
+
+  // int *ptr1 = &x;
+  // int *ptr2 = &y;
+
+  // printf("%d %p\n", *ptr1, ptr1);
+  // printf("%d %p", *ptr2, ptr2);
+
+  // SwapPointers(&ptr1, &ptr2);
+
+  // printf("\n%d %p\n", *ptr1, ptr1);
+  // printf("%d %p", *ptr2, ptr2);
+
+  void *ptr1;
+  int *ptr2;
+
+  printf("%p %p\n", ptr1, ptr2);
+
+  ptr1++;
+  ptr2++;
+
+  printf("%p %p", ptr1, ptr2);
 }
