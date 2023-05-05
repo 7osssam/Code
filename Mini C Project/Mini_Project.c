@@ -1,19 +1,23 @@
 /*
  ============================================================================
  Name        : Mini_Project.c
+ version     : 2.0
  Author      : Hossam Muhammad
  Description :  C Project - Vehicle Control System for MT Embedded Systems Diploma
+
  ============================================================================
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "Dashboard.h" // include the dashboard source file
+#include "Dashboard.h" // include the dashboard header file
 
 int main()
 {
 	char option; // option entered by the user
+
+	VEHICLE_t DATA = {OFF, OFF, OFF, 0, 25, 90}; // initialize the vehicle data with default values
 
 	while (1) // infinite loop to keep the program running
 	{
@@ -30,20 +34,21 @@ int main()
 
 		switch (option)
 		{
-
 		case 'A':
 		case 'a':
-			TurnON();
+			TurnON(&DATA); // call the TurnON function to turn on the engine
+
 			break;
 
 		case 'B':
 		case 'b':
-			TurnOFF();
+			TurnOFF(&DATA); // call the TurnOFF function to turn off the engine
 			break;
 
 		case 'C':
 		case 'c':
-			Quit(); // call the Quit function to exit the program
+			// Quit(); // old implementation
+			return 0; // exit the program with no errors (0)
 			break;
 
 		default:
