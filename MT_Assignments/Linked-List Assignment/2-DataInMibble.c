@@ -15,7 +15,7 @@ typedef struct node
 
 node *head = NULL;
 
-int DataInMibble(void)
+int findMiddleNode(void)
 {
     if (head == NULL)
     {
@@ -57,17 +57,9 @@ void insertAtHead(int num)
 
 int main()
 {
-    insertAtHead(60);
-    insertAtHead(5);
-    insertAtHead(23);
-
-    insertAtHead(50);
-    insertAtHead(60);
-
-    insertAtHead(10);
-    insertAtHead(3);
     insertAtHead(11);
+    insertAtHead(13);
     DisplayList();
     printf("\n");
-    printf("Middle node is %d", DataInMibble());
+    printf("Middle node is %d", findMiddleNode());
 }
