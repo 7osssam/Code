@@ -10,11 +10,12 @@ void swap(int *num1, int *num2)
 
 void BubbleSort(int *arr, int arr_size)
 {
-  for (int step = 0; step < arr_size - 1; step++) // loop for steps //
+  for (int step = 0; step < arr_size - 1; step++) // loop for steps
   {
     int isSorted = 1; // sorted by default
 
     // we added (....- step) because after every step the last element is sorted and we don't need to check it again
+    // - 1 to not go out of bounds in the last step so if size = 5, then we will have 4 steps (0,1,2,3)
     for (int i = 0; i < arr_size - 1 - step; i++)
     {
       if (arr[i] > arr[i + 1])
