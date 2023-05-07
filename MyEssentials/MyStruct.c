@@ -53,42 +53,24 @@ void insertAtPosition(int num, int position)
     temp->data = num;
     temp->nxPtr = NULL;
 
-    if (head == NULL && position == 1)
+    if (head == NULL && position == 0)
     { // Case 1: Inserting at the beginning of an empty list
         head = temp;
         return;
     }
 
-    if (head == NULL && position != 1)
+    if (head == NULL && position != 0)
     { // Case 2: Inserting at any position in an empty list
         printf("List is empty. Cannot insert at position %d.\n", position);
         return;
     }
 
-    if (position == 1)
+    if (position == 0)
     { // Case 3: Inserting at the beginning of a non-empty list
         temp->nxPtr = head;
         head = temp;
         return;
     }
-
-    int i;
-    node *current = head;
-    node *previous = head;
-    for (i = 1; i < position && current != NULL; i++)
-    {
-        previous = current;
-        current = current->nxPtr;
-    }
-
-    if (current == NULL && position > i)
-    { // Case 4: Inserting at a position beyond the end of the list
-        printf("List has only %d elements. Cannot insert at position %d.\n", i, position);
-        return;
-    }
-
-    previous->nxPtr = temp;
-    temp->nxPtr = current;
 }
 
 void DisplayList(void)
@@ -186,7 +168,7 @@ int Nth_ElementFromEnd(int num)
     */
 }
 
-int DataInMibble(void)
+int findMiddleNode(void)
 {
     if (head == NULL)
     {
@@ -204,7 +186,7 @@ int DataInMibble(void)
     return SlowPtr->data;
 }
 
-int SumOfLink(void)
+int SumOfList(void)
 {
     int sum = 0;
     node *ptr = head;
@@ -216,8 +198,13 @@ int SumOfLink(void)
     return sum;
 }
 
-int MaxOfLink(void)
+int MaxOfList(void)
 {
+    if (head == NULL)
+    {
+        printf("Linked List is empty");
+        return -1;
+    }
     int max = head->data;
     node *ptr = head;
     while (ptr != NULL)
