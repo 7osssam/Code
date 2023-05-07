@@ -24,19 +24,19 @@ void insertAtPosition(int num, int position)
     temp->data = num;
     temp->nxPtr = NULL;
 
-    if (head == NULL && position == 1)
+    if (head == NULL && position == 0)
     { // Case 1: Inserting at the beginning of an empty list
         head = temp;
         return;
     }
 
-    if (head == NULL && position != 1)
+    if (head == NULL && position != 0)
     { // Case 2: Inserting at any position in an empty list
         printf("List is empty. Cannot insert at position %d.\n", position);
         return;
     }
 
-    if (position == 1)
+    if (position == 0)
     { // Case 3: Inserting at the beginning of a non-empty list
         temp->nxPtr = head;
         head = temp;
@@ -46,7 +46,7 @@ void insertAtPosition(int num, int position)
     int i;
     node *current = head;
     node *previous = head;
-    for (i = 1; i < position && current != NULL; i++)
+    for (i = 0; i < position && current != NULL; i++)
     {
         previous = current;
         current = current->nxPtr;
@@ -94,7 +94,7 @@ int main()
     insertAtHead(3);
     insertAtHead(11);
     DisplayList();
-    insertAtPosition(15, 4);
+    insertAtPosition(15, 1);
     printf("\n");
     DisplayList();
 }
