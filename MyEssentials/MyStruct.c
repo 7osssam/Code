@@ -218,6 +218,92 @@ int MaxOfList(void)
     return max;
 }
 
+void deleteFirst(void)
+{
+    if (head == NULL)
+    {
+        printf("Linked List is empty");
+        return;
+    }
+    node *temp = head;
+    head = head->nxPtr;
+    free(temp);
+}
+
+void deleteLast(void)
+{
+    if (head == NULL)
+    {
+        printf("Linked List is empty");
+        return;
+    }
+    node *current = head;
+    node *previous = head;
+    while (current->nxPtr != NULL)
+    {
+        previous = current;
+        current = current->nxPtr;
+    }
+    previous->nxPtr = NULL;
+    free(current);
+}
+
+void deleteAtPosition(int position)
+{
+    if (head == NULL)
+    {
+        printf("Linked List is empty");
+        return;
+    }
+    node *current = head;
+    node *previous = head;
+    while (position != 0)
+    {
+        previous = current;
+        current = current->nxPtr;
+        position--;
+    }
+    previous->nxPtr = current->nxPtr;
+    free(current);
+}
+
+void deleteList(void)
+{
+    if (head == NULL)
+    {
+        printf("Linked List is empty");
+        return;
+    }
+    node *current = head;
+    node *next = head;
+    while (current != NULL)
+    {
+        next = current->nxPtr;
+        free(current);
+        current = next;
+    }
+    head = NULL;
+}
+
+void reverseList(void)
+{
+    if (head == NULL)
+    {
+        printf("Linked List is empty");
+        return;
+    }
+    node *current = head;
+    node *previous = NULL;
+    node *next = NULL;
+    while (current != NULL)
+    {
+        next = current->nxPtr;
+        current->nxPtr = previous;
+        previous = current;
+        current = next;
+    }
+    head = previous;
+}
 int main()
 {
     insertAtHead(1);
@@ -229,6 +315,9 @@ int main()
     DisplayList();
 
     insertAtPosition(100, 3);
+    DisplayList();
+
+    reverseList();
     DisplayList();
     // printf("%d\n", SizeofList());
     //  SearchList(55);
