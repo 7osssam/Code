@@ -4,9 +4,9 @@
 //! ========================== Swap (using pointers) ==========================  //
 void swapAdvanced(int *num1, int *num2) // with no temp variable
 {
-    *num1 = *num1 + *num2; // add x and y and store in x
-    *num2 = *num1 - *num2; // subtract y from x and store in y // x = x + y - y = x
-    *num1 = *num1 - *num2; // subtract y from x and store in x // y = x + y - x = y
+    *num1 = *num1 ^ *num2;
+    *num2 = *num1 ^ *num2;
+    *num1 = *num1 ^ *num2;
 }
 //?? using this method, there is a risk of overflow if the sum of the numbers is greater than the maximum value that can be stored by an integer.
 //! ========================== Swap (temp) ===================================  //
@@ -118,6 +118,34 @@ int isPowerOfThree(int num) // time complexity: O(log n)
 }
 
 //?============================== Bit Manipulation =========================================================
+
+//! ========================== countSetBits (ones) ========================================== //
+// function to count the number of 1's in an unsigned 32 bits integer
+int countOnes(int num)
+{
+    int count = 0;
+    unsigned int mask = 0x80000000;     // 32 bits mask
+    for (int i = 1; i <= INT_SIZE; i++) // loop through all bits
+    {
+        if (num & mask) // the result is a any value other than 0 (1 bit) //!any value --> true
+        {
+            count++;
+        }
+        mask = mask >> 1; // shift mask to the right
+    }
+    return count;
+}
+// another way to count the number of 1's in an unsigned 32 bits integer
+int countSetBits(unsigned int num) // using Brian Kernighan’s Algorithm
+{
+    int count = 0;
+    while (num) // or num != 0
+    {
+        num = num & (num - 1);
+        count++;
+    }
+    return count;
+}
 
 //! ========================== maxOnes ========================================== //
 // function to count the maximum number of consecutive 1's in an unsigned 32 bits integer
