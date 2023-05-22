@@ -46,17 +46,20 @@ int isPowerOfTwo(int n) // time complexity: O(log n)
 //! ========================== isPowerOfTwo_Advanced ======================  //
 int isPowerOfTwo_Advanced(int num) // time complexity: O(1)
 {
-    if (num <= 0) // 0 is not a power of 2 and negative numbers are not power of 2
-        return 0;
+    // if (num <= 0) // 0 is not a power of 2 and negative numbers are not power of 2
+    //     return 0;
 
-    if ((num & (num - 1)) == 0) // if number is a power of 2, then it will have only 1 bit set
-    {
-        return 1; // number is a power of 2
-    }
-    else
-    {
-        return 0; // number is NOT a power of 2
-    }
+    // if ((num & (num - 1)) == 0) // if number is a power of 2, then it will have only 1 bit set
+    // {
+    //     return 1; // number is a power of 2
+    // }
+    // else
+    // {
+    //     return 0; // number is NOT a power of 2
+    // }
+
+    // num will check if num == 0 and !(num & (num - 1)) will check if num is a power of 2 or not
+    return (num && !(num & (num - 1))); // ( num && ) is to check if num == 0 or not
 }
 //! ========================== fibonacci of nth ============================  //
 int fibOfN(int num)
@@ -142,9 +145,33 @@ int countSetBits(unsigned int num) // using Brian Kernighan’s Algorithm
     while (num) // or num != 0
     {
         num = num & (num - 1);
-        count++;
+        count++; // number os iterations = number of 1's
     }
     return count;
+}
+//! ========================== reverseBits ========================================== //
+// Function to reverse bits of a given integer
+int reverseBits(int n)
+{
+    int pos = INT_SIZE - 1; // maintains shift
+
+    // store reversed bits of `n`. Initially, all bits are set to 0
+    int reverse = 0;
+
+    // do till all bits are processed
+    while (pos >= 0 && n)
+    {
+        // if the current bit is 1, then set the corresponding bit in the result
+        if (n & 1)
+        {
+            reverse = reverse | (1 << pos);
+        }
+
+        n >>= 1; // drop current bit (divide by 2)
+        pos--;   // decrement shift by 1
+    }
+
+    return reverse;
 }
 
 //! ========================== maxOnes ========================================== //
