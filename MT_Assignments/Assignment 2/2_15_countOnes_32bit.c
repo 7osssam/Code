@@ -7,7 +7,8 @@
 int countOnes32(unsigned int num)
 {
     // unsigned 32-bit integer
-    unsigned int mask = 0x80000000; // binary: 1000 0000 0000 0000 0000 0000 0000 0000
+    // unsigned int mask = 0x80000000; // binary: 1000 0000 0000 0000 0000 0000 0000 0000
+    unsigned int mask = 1; // binary: 0000 0000 0000 0000 0000 0000 0000 0001
     int count = 0;
 
     for (int i = 0; i < INT_SIZE; i++)
@@ -17,7 +18,8 @@ int countOnes32(unsigned int num)
             count++;
         }
 
-        mask = mask >> 1;
+        // mask = mask >> 1;
+        mask = mask << 1;
     }
 
     // another approach
