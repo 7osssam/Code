@@ -127,14 +127,17 @@ int isPowerOfThree(int num) // time complexity: O(log n)
 int countOnes(int num)
 {
     int count = 0;
-    unsigned int mask = 0x80000000;     // 32 bits mask
+    // unsigned int mask = 0x80000000;     // 32 bits mask
+    unsigned int mask = 1; // this mask is more readable
+
     for (int i = 1; i <= INT_SIZE; i++) // loop through all bits
     {
         if (num & mask) // the result is a any value other than 0 (1 bit) //!any value --> true
         {
             count++;
         }
-        mask = mask >> 1; // shift mask to the right
+        // mask = mask >> 1; // shift mask to the right
+        mask = mask << 1; // shift mask to the left
     }
     return count;
 }
@@ -180,7 +183,8 @@ int maxOnes(int num)
 {
     int max = 0;
     int count = 0;
-    unsigned int mask = 0x80000000;     // 32 bits mask
+    // unsigned int mask = 0x80000000;     // 32 bits mask
+    unsigned int mask = 1;              // 32 bits mask
     for (int i = 1; i <= INT_SIZE; i++) // loop through all bits
     {
         if (num & mask) // the result is a any value other than 0 (1 bit) //!any value --> true
@@ -195,7 +199,8 @@ int maxOnes(int num)
         {
             count = 0; // reset count
         }
-        mask = mask >> 1; // shift mask to the right
+        // mask = mask >> 1; // shift mask to the right
+        mask = mask << 1; // shift mask to the left
     }
     return max;
 }
@@ -207,7 +212,8 @@ int maxZeros(int num)
     // so we only need to loop through all its bits
     int max = 0;
     int count = 0;
-    unsigned int mask = 0x80000000;     // 32 bits mask
+    // unsigned int mask = 0x80000000;     // 32 bits mask
+    unsigned int mask = 1;              // 32 bits mask
     for (int i = 1; i <= INT_SIZE; i++) // loop through all bits
     {
         if (num & mask) // the result is a any value other than 0 (1 bit) //!any value --> true
@@ -222,7 +228,8 @@ int maxZeros(int num)
                 max = count;
             }
         }
-        mask = mask >> 1; // shift mask to the right
+        // mask = mask >> 1; // shift mask to the right
+        mask = mask << 1; // shift mask to the left
     }
     return max;
 }
@@ -233,7 +240,8 @@ int maxZerosBetween(int num)
 {
     int max = 0;
     int count = 0;
-    unsigned int mask = 0x80000000; // 32 bits mask
+    // unsigned int mask = 0x80000000; // 32 bits mask
+    unsigned int mask = 1; // 32 bits mask
     for (int i = 1; i <= INT_SIZE; i++)
     {
         if (num & mask) // the result is a any value other than 0 (1 bit) //!any value --> true
@@ -250,7 +258,8 @@ int maxZerosBetween(int num)
             count++;
         }
 
-        mask = mask >> 1;
+        // mask = mask >> 1;
+        mask = mask << 1;
     }
     return max;
 }
