@@ -32,19 +32,6 @@ unsigned char Reverse_8Bits(unsigned char num)
     }
     return rev;
 }
-void test(int num)
-{
-    int count = 0;
-    while (num)
-    {
-        count++;
-        num >>= 1;
-    }
-    for (int i = 0; i < count; i++)
-    {
-    }
-}
-
 int main()
 {
 
