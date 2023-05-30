@@ -32,7 +32,7 @@ int main()
     unsigned short num;
 
     // printf("Enter a number: ");
-    scanf("%d", &num);
+    scanf("%hu", &num); // %hu : format specifier for unsigned short
 
     printf("%d", maxOnes(num));
 
