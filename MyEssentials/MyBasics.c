@@ -121,26 +121,64 @@ int isPowerOfThree(int num) // time complexity: O(log n)
 }
 
 //?============================== Bit Manipulation =========================================================
+/******************************************************************
+ * Masking Techniques:
+ *
+ * unsigned int maskMSB = 1 << (sizeof(num) * 8 - 1); // (Loop from MSB) and use mask >>= 1
+ * - on using this method, we can just check if the mask is 0 or not to know if we have reached the end of the number
+ * - it's better to use this method for PrintBinary function to print the binary number in the correct order
+ * - on using this method, we will have to loop while(mask) and use mask >>= 1
+ *
+ * unsigned int maskLSB = 1;                          // (Loop from LSB) and use mask <<= 1
+ * - on using this method, we will have to loop using sizeof(num) * 8 times (using a for loop) to reach the end of the number
+ *   where in the previous method, we will loop only until the mask is 0
+ *******************************************************************/
+
+//! ========================== PrintBinary ========================================== //
+void PrintBinary(unsigned char num)
+{
+    // print the binary number is reverse order (wrong order)
+    // int i;
+    // unsigned int mask = 1;
+    // for (i = 0; i < sizeof(char) * 8; i++)
+    // {
+    //     if (num & mask)
+    //         printf("1");
+    //     else
+    //         printf("0");
+    //     mask <<= 1;
+    // }
+
+    unsigned int mask = 1 << (sizeof(num) * 8 - 1);
+    while (mask)
+    {
+        if (num & mask)
+            printf("1");
+        else
+            printf("0");
+        mask >>= 1;
+    }
+    printf("\n");
+}
 
 //! ========================== countSetBits (ones) ========================================== //
 // function to count the number of 1's in an unsigned 32 bits integer
 int countOnes(int num)
 {
     int count = 0;
-    // unsigned int mask = 0x80000000;     // 32 bits mask
-    unsigned int mask = 1; // this mask is more readable
+    unsigned int mask = 1u << (sizeof(num) * 8u - 1u); // mask to check the MSB bit
 
-    for (int i = 1; i <= INT_SIZE; i++) // loop through all bits
+    while (mask)
     {
         if (num & mask) // the result is a any value other than 0 (1 bit) //!any value --> true
         {
             count++;
         }
-        // mask = mask >> 1; // shift mask to the right
-        mask = mask << 1; // shift mask to the left
+        mask >>= 1; // shift mask to the right
     }
     return count;
 }
+
 // another way to count the number of 1's in an unsigned 32 bits integer
 int countSetBits(unsigned int num) // using Brian Kernighan’s Algorithm
 {
@@ -148,44 +186,39 @@ int countSetBits(unsigned int num) // using Brian Kernighan’s Algorithm
     while (num) // or num != 0
     {
         num = num & (num - 1);
-        count++; // number os iterations = number of 1's
+        count++; // number of iterations = number of 1's
     }
     return count;
 }
+
 //! ========================== reverseBits ========================================== //
 // Function to reverse bits of a given integer
-int reverseBits(int n)
+unsigned char Reverse_8Bits(unsigned char num)
 {
-    int pos = INT_SIZE - 1; // maintains shift
-
-    // store reversed bits of `n`. Initially, all bits are set to 0
-    int reverse = 0;
-
-    // do till all bits are processed
-    while (pos >= 0 && n)
+    unsigned int rev = 0;
+    // for (int i = 0; i < sizeof(num) * 8; i++) // old method
+    while (num)
     {
-        // if the current bit is 1, then set the corresponding bit in the result
-        if (n & 1)
+        rev <<= 1;
+        if (num & 1) // if LSB is 1
         {
-            reverse = reverse | (1 << pos);
+            rev |= 1; // set 1 in rev
         }
-
-        n >>= 1; // drop current bit (divide by 2)
-        pos--;   // decrement shift by 1
+        num >>= 1;
     }
-
-    return reverse;
+    return rev;
 }
-
 //! ========================== maxOnes ========================================== //
 // function to count the maximum number of consecutive 1's in an unsigned 32 bits integer
 int maxOnes(int num)
 {
     int max = 0;
     int count = 0;
-    // unsigned int mask = 0x80000000;     // 32 bits mask
-    unsigned int mask = 1;              // 32 bits mask
-    for (int i = 1; i <= INT_SIZE; i++) // loop through all bits
+    unsigned int mask = 1u << (sizeof(num) * 8u - 1u);
+
+    // unsigned int mask = 1;              // 32 bits mask
+    // for (int i = 1; i <= INT_SIZE; i++) // old method
+    while (mask)
     {
         if (num & mask) // the result is a any value other than 0 (1 bit) //!any value --> true
         {
@@ -199,8 +232,7 @@ int maxOnes(int num)
         {
             count = 0; // reset count
         }
-        // mask = mask >> 1; // shift mask to the right
-        mask = mask << 1; // shift mask to the left
+        mask >>= 1; // shift mask to the right
     }
     return max;
 }
@@ -208,28 +240,32 @@ int maxOnes(int num)
 // function to count the maximum number of consecutive 0's in an unsigned 32 bits integer
 int maxZeros(int num)
 {
-    // this function doesn't work if with numbers that take less than 32 bits because it will count the leading 0's
-    // so we only need to loop through all its bits
     int max = 0;
     int count = 0;
-    // unsigned int mask = 0x80000000;     // 32 bits mask
-    unsigned int mask = 1;              // 32 bits mask
-    for (int i = 1; i <= INT_SIZE; i++) // loop through all bits
+    unsigned int mask = 1u << (sizeof(num) * 8u - 1u);
+
+    unsigned char leadingZeroFlag = 0; // flag to check if the first bit is 0 or not
+
+    // unsigned int mask = 1; | for (int i = 1; i <= INT_SIZE; i++) // old method
+    while (mask)
     {
         if (num & mask) // the result is a any value other than 0 (1 bit) //!any value --> true
         {
-            count = 0; // reset count
+            count = 0;           // reset count
+            leadingZeroFlag = 1; // set flag to 1
         }
-        else if ((num & mask) == 0) // if bit is exactly 0
+        else // if bit is exactly 0
         {
-            count++;
-            if (count > max)
+            if (leadingZeroFlag == 1) // only count zeros after the first 1
             {
-                max = count;
+                count++;
+                if (count > max)
+                {
+                    max = count;
+                }
             }
         }
-        // mask = mask >> 1; // shift mask to the right
-        mask = mask << 1; // shift mask to the left
+        mask >>= 1; // shift mask to the right
     }
     return max;
 }
@@ -240,9 +276,11 @@ int maxZerosBetween(int num)
 {
     int max = 0;
     int count = 0;
-    // unsigned int mask = 0x80000000; // 32 bits mask
-    unsigned int mask = 1; // 32 bits mask
-    for (int i = 1; i <= INT_SIZE; i++)
+    unsigned int mask = 1u << (sizeof(num) * 8u - 1u);
+
+    // unsigned int mask = 1; // 32 bits mask
+    // for (int i = 1; i <= INT_SIZE; i++)
+    while (mask)
     {
         if (num & mask) // the result is a any value other than 0 (1 bit) //!any value --> true
         {
@@ -253,13 +291,12 @@ int maxZerosBetween(int num)
             }
             count = 0; // then we reset count
         }
-        else if ((num & mask) == 0) // if bit is exactly 0
+        else // if bit is exactly 0
         {
             count++;
         }
 
-        // mask = mask >> 1;
-        mask = mask << 1;
+        mask >>= 1;
     }
     return max;
 }
