@@ -12,6 +12,7 @@
 
 int isPrime(int num) // optimized function to check if num is prime
 {
+    int i;
     if (num == 2) // 2 is prime //! the only even prime number
     {
         return 1; // prime
@@ -24,7 +25,7 @@ int isPrime(int num) // optimized function to check if num is prime
 
     // i = i + 2 to skip even numbers since all even numbers are not prime except 2
     // sqrt(num) is the square root of num
-    for (int i = 3; i <= sqrt(num); i = i + 2) // alternatively, we can use i <= num / 2
+    for (i = 3; i <= sqrt(num); i = i + 2) // alternatively, we can use i <= num / 2
     {
         if (num % i == 0)
         {
