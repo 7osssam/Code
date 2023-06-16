@@ -1,7 +1,6 @@
 #include <stdio.h>
-#define INT_SIZE sizeof(unsigned int) * 8
 
-//! ========================== Swap (using pointers) ==========================  //
+//! ========================== Swap (using pointers) ==============================  //
 void swapAdvanced(int *num1, int *num2) // with no temp variable
 {
     *num1 = *num1 ^ *num2;
@@ -9,7 +8,7 @@ void swapAdvanced(int *num1, int *num2) // with no temp variable
     *num1 = *num1 ^ *num2;
 }
 //?? using this method, there is a risk of overflow if the sum of the numbers is greater than the maximum value that can be stored by an integer.
-//! ========================== Swap (temp) ===================================  //
+//! ========================== Swap (temp) =========================================  //
 void swap(int *num1, int *num2) // using temp variable
 {
     int temp;
@@ -17,7 +16,7 @@ void swap(int *num1, int *num2) // using temp variable
     *num1 = *num2; // assign the value of num2 to num1
     *num2 = temp;  // assign the saved value of num1 to num2
 }
-//! ========================== Swap (temp) ===================================  //
+//! ========================== SwapPointers (temp) =================================  //
 void swapPointers(int **ptr1, int **ptr2) // using temp variable
 {
     int *temp;
@@ -26,7 +25,7 @@ void swapPointers(int **ptr1, int **ptr2) // using temp variable
     *ptr2 = temp;  // assign the saved value of ptr1 (address of num1) to ptr2 (address of num2)
 }
 
-//! ========================== Power of two ==============================  //
+//! ========================== Power of two ========================================  //
 int isPowerOfTwo(int n) // time complexity: O(log n)
 {
     if (n <= 0) // 0 is not a power of 2
@@ -43,28 +42,15 @@ int isPowerOfTwo(int n) // time complexity: O(log n)
     }
     return 1;
 }
-//! ========================== isPowerOfTwo_Advanced ======================  //
-int isPowerOfTwo_Advanced(int num) // time complexity: O(1)
+//! ========================== isPowerOfTwo (bitwise) ==============================  //
+int isPowerOfTwo_(int num) // time complexity: O(1)
 {
-    // if (num <= 0) // 0 is not a power of 2 and negative numbers are not power of 2
-    //     return 0;
-
-    // if ((num & (num - 1)) == 0) // if number is a power of 2, then it will have only 1 bit set
-    // {
-    //     return 1; // number is a power of 2
-    // }
-    // else
-    // {
-    //     return 0; // number is NOT a power of 2
-    // }
-
     // num will check if num == 0 and !(num & (num - 1)) will check if num is a power of 2 or not
     return (num && !(num & (num - 1))); // ( num && ) is to check if num == 0 or not
 }
 //! ========================== fibonacci of nth ============================  //
-int fibOfN(int num)
+int fibOfN(int num) // Recursive approach
 {
-    // Recursive approach
     // time complexity: O(2^n)
 
     if (num == 0) // base case
@@ -79,9 +65,8 @@ int fibOfN(int num)
 }
 
 //! ========================== fibonacci sequence ===========================  //
-void printFibonacci(int num)
+void printFibonacci(int num) // Iterative approach
 {
-    // Iterative approach
     // time complexity: O(n)
     int first = 0, second = 1, next;
 
@@ -116,6 +101,32 @@ int isPowerOfThree(int num) // time complexity: O(log n)
             return 0;
         }
         num /= 3; // divide number by 3
+    }
+    return 1;
+}
+
+//! ========================== isPrime ================================ //
+int isPrime(int num) // optimized function to check if num is prime
+{
+    int i;
+    if (num == 2) // 2 is prime //! the only even prime number
+    {
+        return 1; // prime
+    }
+
+    if (num == 0 || num == 1 || num % 2 == 0) // 0 and 1 are not prime and all even numbers are not prime except 2
+    {
+        return 0; // not prime
+    }
+
+    // i = i + 2 to skip even numbers since all even numbers are not prime except 2
+    // sqrt(num) is the square root of num
+    for (i = 3; i <= sqrt(num); i = i + 2) // alternatively, we can use i <= num / 2
+    {
+        if (num % i == 0)
+        {
+            return 0; // not prime
+        }
     }
     return 1;
 }
@@ -329,4 +340,28 @@ int toggleBit(int num, int k)
 int findBit(int num, int k)
 {
     return ((num >> k) & 1); //  Right shift k times and AND with 1
+}
+
+//! ========================== MSB ====================================== //
+// Function to find the MSB one bit of num
+// The MSB of any number is also the nearest power of 2 to that number
+int findMSB_one(int num) // left most 1 bit
+{
+    unsigned int r = 0; // r will be lg(v)
+    while (num >>= 1)
+    {
+        r++;
+    }
+    return r;
+    // this will return only the position (index) of the MSB
+    // Ex: 0b10000 --> 4
+    // we can later use this value to find the MSB by shifting 1 to the left by r
+}
+//! ========================== LSB ====================================== //
+// Function to find the LSB one bit of num
+int findLSB_one(int num) // right most 1 bit
+{
+    return (num & (-num)); // AND with 2's complement
+    // this will return the value of the LSB
+    // Ex: 0b10000
 }
