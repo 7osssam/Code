@@ -3,10 +3,10 @@
 // Ex: from 07:05:45PM to 19:05:45
 #include <stdio.h>
 
-void TimeConvertion(char *str, char *str24)
+char *TimeConvertion(const char *str)
 {
-    int i;       // index
-    int num = 0; // number of hours
+    int i;                            // index
+    static char str24[] = "HH:MM:SS"; // for example HH:MM:SS ++ '\0
 
     for (i = 2; i < 8; i++) // copy the minutes and seconds from str to str24
     {
@@ -26,6 +26,7 @@ void TimeConvertion(char *str, char *str24)
             str24[1] = str[1];
         }
     }
+
     if (str[8] == 'P')
     {
         if (str[0] == '1' && str[1] == '2')
@@ -35,6 +36,7 @@ void TimeConvertion(char *str, char *str24)
         }
         else
         {
+            int num = 0;            // number of hours
             for (i = 0; i < 2; i++) // loop until : is found
             {
                 num = num * 10;           // multiply the number by 10 to shift the number to the left
@@ -46,16 +48,17 @@ void TimeConvertion(char *str, char *str24)
             str24[1] = (num % 10) + '0'; // get the second digit of the number of hours and add it to index 1
         }
     }
+
+    return str24;
 }
+
 int main()
 {
     char str[] = "HH:MM:SSAM"; // for example HH:MM:SSAM + '\0
-    char str24[] = "HH:MM:SS"; // for example HH:MM:SS ++ '\0
 
-    gets(str);
-    TimeConvertion(str, str24);
+    fgets(str, 10, stdin); // read from stdin
 
-    puts(str24);
+    puts(TimeConvertion(str));
 
     return 0;
 }
