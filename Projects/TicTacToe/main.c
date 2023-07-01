@@ -4,8 +4,9 @@ extern char playground[3][3];
 extern char Turn;
 extern int position;
 
-int main()
+int main(void)
 {
+
     int empty_positions = 9;
     do
     {
@@ -27,3 +28,7 @@ int main()
 
     printf("It's a draw!\n"); // if the loop ends and no winner is found (we don't exit the program)
 }
+
+//
+// test
+//  1. test the render_playground function
