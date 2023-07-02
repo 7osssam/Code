@@ -1,5 +1,14 @@
-//? https://www.hackerrank.com/challenges/camelcase/problem/
-// count the number of words starting with a capital letter in a string (CamelCase)
+/*
+ ? Link: https://www.hackerrank.com/challenges/camelcase/problem/
+ * Difficulty: Easy
+ * Name:  CamelCase
+ *
+ * Tags: Algorithms, Strings
+ *
+ * Notes:
+ * count the number of words starting with a capital letter in a string (CamelCase)
+ *
+ */
 #include <stdio.h>
 
 int CamelCase(char const *str) // Function to count the number of words starting with a capital letter in a string
