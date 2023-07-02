@@ -1,6 +1,15 @@
-//? https://www.hackerrank.com/challenges/caesar-cipher-1/problem
-// this problem is about shifting the letters of a string by a certain number of places in the alphabet
-// if the shift is greater than 26, then the shift is the remainder of the division of the shift by 26
+/*
+ ? Link: https://www.hackerrank.com/challenges/caesar-cipher-1/problem
+ * Difficulty: Easy
+ * Name: Caesar Cipher
+ *
+ * Tags: Algorithms, Strings
+ *
+ * Notes:
+ * - This problem is about shifting the letters of a string by a certain number of places in the alphabet.
+ * - If the shift is greater than 26, then the shift is the remainder of the division of the shift by 26.
+ *
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
