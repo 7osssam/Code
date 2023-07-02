@@ -224,7 +224,7 @@ unsigned char stringMostRepeatedChar(unsigned char *str) // find the most repeat
 {
 	int i, j;
 	int Counter = 0, Max = 0;
-	unsigned char C;
+	unsigned char C = 0;
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		for (j = i + 1; str[j] != '\0'; j++)
