@@ -1,7 +1,17 @@
-//? https://www.hackerrank.com/challenges/funny-string/problem
-// if the absolute difference between the ASCII values of the characters in
-// the reverse of the string is the same as the absolute difference between the ASCII values
-// of the characters in the original string, then it is funny. Otherwise, it is not.
+/*
+ ? Link: https://www.hackerrank.com/challenges/funny-string/problem
+ * Difficulty: Easy
+ * Name: Funny String
+ *
+ * Tags: Algorithms, Strings
+ *
+ * Notes:
+ * if the absolute difference between the ASCII values of the characters in
+ * the reverse of the string is the same as the absolute difference between the ASCII values
+ * of the characters in the original string, then it is funny. Otherwise, it is not.
+ *
+ */
+
 #include <math.h>
 
 #include <stdio.h>
