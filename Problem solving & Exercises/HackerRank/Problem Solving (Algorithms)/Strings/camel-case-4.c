@@ -1,9 +1,29 @@
-//? https://www.hackerrank.com/challenges/three-month-preparation-kit-camel-case/problem
-
+/*
+ ? Link: https://www.hackerrank.com/challenges/three-month-preparation-kit-camel-case/problem
+ * Difficulty: Hard
+ * Name:  CamelCase 4
+ *
+ * Tags: Algorithms, Strings
+ *
+ * Examples:
+ * S;M;plasticCup() 		--> plastic cup
+ * C;V;mobile phone 		--> mobilePhone
+ * C;C;coffee machine 		--> CoffeeMachine
+ * S;C;LargeSoftwareBook 	--> large software book
+ * C;M;white sheet of paper --> whiteSheetOfPaper()
+ * S;V;pictureFrame 		--> picture frame
+ *
+ * Notes:
+ * S = split mode
+ * C = combine mode
+ *
+ * V = variable -> lowerCamelCase
+ * M = method 	-> lowerCamelCase + ()
+ * C = class 	-> UpperCamelCase
+ */
 #include <stdio.h>
 #include <string.h>
 
-// Split mode: LargeSoftwareBook --> large software book
 char *splitMode(char *str)
 {
 	static char CleanStr[100];
@@ -33,7 +53,6 @@ char *splitMode(char *str)
 	return CleanStr;
 }
 
-// Combine mode: plasticCup() --> plastic cup
 char *combineMode(char *str, char type)
 {
 	static char CleanStr[100];
