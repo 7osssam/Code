@@ -45,7 +45,7 @@ int main()
 
 	for (int i = 0; i < stringList_count; i++)
 	{
-		stringList[i] = malloc(10240 * sizeof(char)); // 10240 is the maximum length of a string
+		stringList[i] = malloc(20 * sizeof(char)); // 20 is the maximum length of a string (in the problem description)
 
 		scanf("%s", stringList[i]);
 	}
@@ -58,7 +58,7 @@ int main()
 
 	for (int i = 0; i < queries_count; i++)
 	{
-		queries[i] = malloc(10240 * sizeof(char));
+		queries[i] = malloc(20 * sizeof(char)); // 20 is the maximum length of a string (in the problem description)
 
 		scanf("%s", queries[i]);
 	}
