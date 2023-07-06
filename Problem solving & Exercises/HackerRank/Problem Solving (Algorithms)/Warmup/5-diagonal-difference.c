@@ -11,24 +11,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int diagonalDifference(int n, int **arr)
+int diagonalDifference(int arr_rows, int arr_columns, int **arr)
 {
-	int sum = 0;
-	for (int i = 0; i < n; i++) // loop through the array
+	int right = 0;
+	int left = 0;
+	// int sum = 0;
+	for (int i = 0; i < arr_rows; i++)
 	{
-		for (int j = 0; j < n; j++)
+		for (int j = 0; j < arr_columns; j++)
 		{
-			if (i == j) // if the index of the array is equal to the index of the array
+			if (i == j)
 			{
-				sum = sum + arr[i][j]; // add the element to the sum
+				// sum = sum + arr[i][j];
+				right = right + arr[i][j];
 			}
-			if (i == n - j - 1) // n - j - 1 is the index of the array from the end
+			if (i + j == arr_rows - 1)
 			{
-				sum = sum - arr[i][j]; // subtract the element from the sum
+				// sum = sum - arr[i][j];
+				left = left + arr[i][j];
 			}
 		}
 	}
-	return abs(sum); // return the absolute value of the sum
+	return (abs(right - left));
 }
 
 int main()
@@ -48,7 +52,7 @@ int main()
 		}
 	}
 
-	int result = diagonalDifference(n, arr);
+	int result = diagonalDifference(n, n, arr);
 
 	printf("%d\n", result);
 
