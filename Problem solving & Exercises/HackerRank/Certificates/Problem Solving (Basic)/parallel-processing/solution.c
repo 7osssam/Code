@@ -1,47 +1,49 @@
-#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-long compare(void *a, void *b)
+// Comparison function for qsort to sort integers in descending order
+int compare(const void *x, const void *y)
 {
-	return *(long *)b - *(long *)a;
+	return *(const int *)y - *(const int *)x;
 }
 
-long minTime(int files_count, int *files, int numCores, int limit)
+long long minTime(int files_count, int *files, int numCores, int limit)
 {
-	long total = 0; // total time
-	int NumOfMax = 0;
+	long long total = 0;
+	int divisible_count = 0;
+	int *divisible_files = malloc(files_count * sizeof(int));
 
-	long *max = (long *)calloc(NumOfMax, sizeof(long)); // allocate memory for max
-
+	// Iterate through files to identify divisible files and calculate total time
 	for (int i = 0; i < files_count; i++)
 	{
 		if (files[i] % numCores == 0)
 		{
-			NumOfMax++;
-			max = (long *)realloc(max, NumOfMax * sizeof(long));
-
-			max[NumOfMax - 1] = files[i];
-			continue;
-		}
-		total += files[i];
-	}
-
-	// sort max in descending order
-	qsort(max, NumOfMax, sizeof(long), compare);
-
-	for (int i = 0; i < NumOfMax; i++)
-	{
-		if (i < limit)
-		{
-			total += (max[i] / numCores);
+			divisible_files[divisible_count] = files[i];
+			divisible_count++;
 		}
 		else
 		{
-			total += max[i];
+			total += files[i];
 		}
 	}
-	free(max);
+
+	// Check if the limit exceeds the actual count of divisible files
+	if (limit > divisible_count)
+	{
+		limit = divisible_count;
+	}
+
+	// Sort the divisible_files array in descending order
+	qsort(divisible_files, divisible_count, sizeof(int), compare);
+
+	// Calculate the total time considering the limit
+	for (int i = 0; i < limit; i++)
+	{
+		total += divisible_files[i] / numCores;
+	}
+
+	free(divisible_files);
+
 	return total;
 }
 
@@ -50,8 +52,9 @@ int main()
 	int files_count;
 	scanf("%d", &files_count);
 
-	int *files = (int *)malloc(files_count * sizeof(int));
+	int *files = malloc(files_count * sizeof(int));
 
+	// Read the file sizes
 	for (int i = 0; i < files_count; i++)
 	{
 		scanf("%d", &files[i]);

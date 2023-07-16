@@ -1,20 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 long *findSum(int numbers_count, int *numbers, int queries_rows, int queries_columns, int **queries, int *result_count)
 {
 	long *result = (long *)malloc(queries_rows * sizeof(long));
 
-	long Sum[numbers_count + 1];	 // prefix sum
-	long ZeroSum[numbers_count + 1]; // prefix sum of zeros
+	long *Sum = (long *)malloc((numbers_count + 1) * sizeof(long));
 	Sum[0] = 0;
-	ZeroSum[0] = 0;
 
 	for (int i = 0; i < numbers_count; i++)
 	{
 		Sum[i + 1] = Sum[i] + numbers[i];
-
-		// if the current number is zero, then increase the zero sum by 1
-		ZeroSum[i + 1] = ZeroSum[i] + (numbers[i] == 0);
 	}
 
 	for (int i = 0; i < queries_rows; i++)
@@ -23,9 +19,10 @@ long *findSum(int numbers_count, int *numbers, int queries_rows, int queries_col
 		int r = queries[i][1]; // end
 		int x = queries[i][2]; // the x
 
-		result[i] = Sum[r] - Sum[l - 1] + x * (ZeroSum[r] - ZeroSum[l - 1]);
+		result[i] = Sum[r] - Sum[l - 1] + x * (r - l + 1 - (Sum[r] - Sum[l - 1]));
 	}
 
+	free(Sum);
 	*result_count = queries_rows;
 	return result;
 }

@@ -1,24 +1,26 @@
-#include <stdio.h>	// For printf, scanf functions
-#include <stdlib.h> // For malloc, realloc, free functions
-#include <string.h> // For strcmp function
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-int compare(const char **a, const char **b)
+// Comparison function for qsort
+int compare(const void *a, const void *b)
 {
-	return strcmp(*a, *b);
+	return strcmp(*(const char **)a, *(const char **)b);
 }
 
 char **mostActive(int customers_count, char **customers, int *result_count)
 {
-	char **str = NULL;
-	int strSize = 0;
-	int counter = 0;
-	int i;
-
 	qsort(customers, customers_count, sizeof(char *), compare);
 
-	for (i = 0; i < customers_count; i++)
+	char **str = NULL;
+	int strSize = 0;
+	int counter = 1;
+
+	// Iterate over each customer
+	for (int i = 1; i <= customers_count; i++)
 	{
-		if (i > 0 && strcmp(customers[i], customers[i - 1]) == 0)
+		// Check if the current customer is the same as the previous one
+		if (i < customers_count && strcmp(customers[i], customers[i - 1]) == 0)
 		{
 			counter++;
 		}
@@ -27,18 +29,11 @@ char **mostActive(int customers_count, char **customers, int *result_count)
 			if (counter >= customers_count * 0.05)
 			{
 				strSize++;
-				str = (char **)realloc(str, strSize * sizeof(char *));
+				str = realloc(str, strSize * sizeof(char *));
 				str[strSize - 1] = customers[i - 1];
 			}
-			counter = 1;
+			counter = 1; // Reset the counter
 		}
-	}
-
-	if (counter >= customers_count * 0.05)
-	{
-		strSize++;
-		str = (char **)realloc(str, strSize * sizeof(char *));
-		str[strSize - 1] = customers[i - 1];
 	}
 
 	*result_count = strSize;
@@ -56,15 +51,12 @@ int main()
 		char name[25];
 		fgets(name, sizeof(name), stdin);
 
-		// Allocate memory and copy the name to the customers array
-		customers[i] = (char *)malloc((strlen(name) + 1) * sizeof(char));
-		strcpy(customers[i], name);
+		customers[i] = strdup(name);
 	}
 
 	int result_count;
 	char **result = mostActive(customers_count, customers, &result_count);
 
-	printf("\n");
 	for (int i = 0; i < result_count; i++)
 	{
 		printf("%s", result[i]);

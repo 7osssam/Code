@@ -8,6 +8,7 @@ int mostBalancedPartition(int parent_count, int *parent, int files_size_count, i
 	{
 		files_size[parent[i]] += files_size[i];
 	}
+
 	// for testing
 	// for (int i = 0; i < parent_count; i++)
 	//{
@@ -19,8 +20,6 @@ int mostBalancedPartition(int parent_count, int *parent, int files_size_count, i
 	for (int i = 1; i < files_size_count; i++)
 	{
 		int diff = abs(files_size[0] - (2 * files_size[i])); // 2 * files_size[i] = sum of all files sizes - files_size[i]
-
-		// mindiff = (diff < mindiff) ? diff : mindiff;
 
 		if (diff < mindiff)
 		{

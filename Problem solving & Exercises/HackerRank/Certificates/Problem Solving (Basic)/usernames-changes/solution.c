@@ -4,32 +4,22 @@
 
 int compare_chars(const void *a, const void *b)
 {
-
 	return *(char *)a - *(char *)b;
 }
 
 char **possibleChanges(int usernames_count, char **usernames, int *result_count)
 {
-
 	char **result = (char **)malloc(usernames_count * sizeof(char *));
 
 	for (int i = 0; i < usernames_count; i++)
 	{
+		char *temp = strdup(usernames[i]); // duplicate the string
 
-		// plus 1 for the null terminator
-		char *temp = (char *)malloc(strlen(usernames[i]) + 1 * sizeof(char));
-
-		strcpy(temp, usernames[i]);								// copy the string to temp
 		qsort(temp, strlen(temp), sizeof(char), compare_chars); // sort the string
 
-		if (strcmp(usernames[i], temp)) // if the string is not equal to the sorted string
-		{
-			result[i] = "YES";
-		}
-		else
-		{
-			result[i] = "NO";
-		}
+		// Compare the sorted string with the original string and store the result
+		result[i] = strcmp(usernames[i], temp) ? "YES" : "NO";
+
 		free(temp);
 	}
 
@@ -40,15 +30,14 @@ char **possibleChanges(int usernames_count, char **usernames, int *result_count)
 int main()
 {
 	int usernames_count;
-	scanf("%d", &usernames_count);
-	getchar(); // Consume the newline character after scanf
+	scanf("%d\n", &usernames_count);
 
 	char **usernames = (char **)malloc(usernames_count * sizeof(char *));
 	for (int i = 0; i < usernames_count; i++)
 	{
-		usernames[i] = (char *)malloc(100 * sizeof(char)); // Assuming maximum username length of 100
-		fgets(usernames[i], 100, stdin);
-		usernames[i][strlen(usernames[i]) - 1] = '\0'; // Remove the trailing newline character
+		usernames[i] = (char *)malloc(101 * sizeof(char)); // Increased to 101 to accommodate the null terminator
+		fgets(usernames[i], 101, stdin);
+		usernames[i][strcspn(usernames[i], "\n")] = '\0'; // Remove the trailing newline character
 	}
 
 	int result_count = 0;

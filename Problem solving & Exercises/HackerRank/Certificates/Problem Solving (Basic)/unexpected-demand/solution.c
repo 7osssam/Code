@@ -12,18 +12,12 @@ int filledOrders(int order_count, int *order, int k)
 
 	int filledCounter = 0;
 
-	for (int i = 0; i < order_count; i++)
+	for (int i = 0; i < order_count && k >= order[i]; i++)
 	{
-		if (order[i] <= k) // if order is less than or equal to k, then fill it
-		{
-			filledCounter++; // increase filledCounter
-			k -= order[i];	 // remove the order from k
-		}
-		else
-		{
-			break; // if order is greater than k, then break the loop
-		}
+		filledCounter++;
+		k -= order[i];
 	}
+
 	return filledCounter;
 }
 

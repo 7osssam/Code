@@ -49,7 +49,7 @@ int main()
 	for (int i = 0; i < labels_count; i++)
 	{
 		labels[i] = (char *)malloc(10 * sizeof(char)); // Assuming the maximum label length is 10 characters
-		scanf("%s", labels[i]);
+		scanf("%10s", labels[i]);
 	}
 
 	int dailyCount;

@@ -1,49 +1,72 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+
+// Function to count the frequency of characters in a string
+void countCharacters(const char *str, int *freq)
+{
+	while (*str)
+	{
+		freq[*str - 'a']++; // Increment the frequency of the corresponding character
+		str++;
+	}
+}
 
 int stringAnagram(char **dictionary, int dictionaryCount, char **query, int queryCount)
 {
-	int result[queryCount];
-	int i, j, k;
+	int *result = (int *)calloc(queryCount, sizeof(int));
+
+	// Precompute character frequencies for each word in the dictionary
+	int **dictFreq = (int **)malloc(dictionaryCount * sizeof(int *));
+	for (int i = 0; i < dictionaryCount; i++)
+	{
+		dictFreq[i] = (int *)calloc(26, sizeof(int));
+		countCharacters(dictionary[i], dictFreq[i]);
+	}
 
 	// Iterate over each query
-	for (i = 0; i < queryCount; i++)
+	for (int i = 0; i < queryCount; i++)
 	{
-		result[i] = 0;
 		int queryLen = strlen(query[i]);
-
-		// Sort the characters of the query string
-		char sortedQuery[queryLen + 1];
-		strcpy(sortedQuery, query[i]);
-		qsort(sortedQuery, queryLen, sizeof(char), strcmp);
+		int *queryFreq = (int *)calloc(26, sizeof(int));
+		countCharacters(query[i], queryFreq);
 
 		// Iterate over each word in the dictionary
-		for (j = 0; j < dictionaryCount; j++)
+		for (int j = 0; j < dictionaryCount; j++)
 		{
-			int dictLen = strlen(dictionary[j]);
-
 			// Check if the lengths of query and dictionary word are equal
-			if (dictLen == queryLen)
+			if (strlen(dictionary[j]) == queryLen)
 			{
-				// Sort the characters of the dictionary word
-				char sortedDict[dictLen + 1];
-				strcpy(sortedDict, dictionary[j]);
-				qsort(sortedDict, dictLen, sizeof(char), strcmp);
-
-				// Check if the sorted characters of query and dictionary word are equal
-				if (strcmp(sortedQuery, sortedDict) == 0)
+				// Compare character frequencies
+				int k;
+				for (k = 0; k < 26; k++)
 				{
-					result[i]++;
+					if (dictFreq[j][k] != queryFreq[k])
+						break;
 				}
+
+				if (k == 26)
+					result[i]++; // Increment the result counter if the words are anagrams
 			}
 		}
+
+		free(queryFreq);
 	}
 
 	// Print the result
-	for (k = 0; k < queryCount; k++)
+	for (int i = 0; i < queryCount; i++)
 	{
-		printf("%d\n", result[k]);
+		printf("%d\n", result[i]);
 	}
+
+	free(result);
+
+	// Free the allocated memory
+	for (int i = 0; i < dictionaryCount; i++)
+	{
+		free(dictFreq[i]);
+	}
+	free(dictFreq);
 
 	return 0;
 }
@@ -58,7 +81,7 @@ int main()
 	for (int i = 0; i < dictionaryCount; i++)
 	{
 		dictionary[i] = (char *)malloc(16 * sizeof(char));
-		scanf("%s", dictionary[i]);
+		scanf("%15s", dictionary[i]);
 	}
 
 	int queryCount;
@@ -69,7 +92,7 @@ int main()
 	for (int i = 0; i < queryCount; i++)
 	{
 		query[i] = (char *)malloc(16 * sizeof(char));
-		scanf("%s", query[i]);
+		scanf("%15s", query[i]);
 	}
 
 	// Call the stringAnagram function

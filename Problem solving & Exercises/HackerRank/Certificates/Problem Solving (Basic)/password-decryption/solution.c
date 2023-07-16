@@ -52,7 +52,7 @@ char *decryptPassword(char *s)
 
 	return password; // Return the decrypted password string
 }
-function int main()
+int main()
 {
 	char s[10005]; // Input string
 
