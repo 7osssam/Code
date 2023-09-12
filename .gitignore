@@ -10,6 +10,11 @@ MT_Exercises/
 
 # Interviews folder
 Interviews/
+
+# icons 
+*.ini
+*.ico
+
 ########################################################!
 
 ### Executable ###
