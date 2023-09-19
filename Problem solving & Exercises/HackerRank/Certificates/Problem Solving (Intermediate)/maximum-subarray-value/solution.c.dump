@@ -1,0 +1,1127 @@
+<?xml version="1.0"?>
+<dumps language="cpp">
+  <platform name="Native" char_bit="8" short_bit="16" int_bit="32" long_bit="32" long_long_bit="64" pointer_bit="64"/>
+  <rawtokens>
+    <file index="0" name="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c"/>
+    <tok fileIndex="0" linenr="1" column="1" str="#"/>
+    <tok fileIndex="0" linenr="1" column="2" str="include"/>
+    <tok fileIndex="0" linenr="1" column="10" str="&lt;limits.h&gt;"/>
+    <tok fileIndex="0" linenr="2" column="1" str="#"/>
+    <tok fileIndex="0" linenr="2" column="2" str="include"/>
+    <tok fileIndex="0" linenr="2" column="10" str="&lt;stdio.h&gt;"/>
+    <tok fileIndex="0" linenr="3" column="1" str="#"/>
+    <tok fileIndex="0" linenr="3" column="2" str="include"/>
+    <tok fileIndex="0" linenr="3" column="10" str="&lt;stdlib.h&gt;"/>
+    <tok fileIndex="0" linenr="5" column="1" str="// Macro for finding the maximum of two values"/>
+    <tok fileIndex="0" linenr="6" column="1" str="#"/>
+    <tok fileIndex="0" linenr="6" column="2" str="define"/>
+    <tok fileIndex="0" linenr="6" column="9" str="max"/>
+    <tok fileIndex="0" linenr="6" column="12" str="("/>
+    <tok fileIndex="0" linenr="6" column="13" str="a"/>
+    <tok fileIndex="0" linenr="6" column="14" str=","/>
+    <tok fileIndex="0" linenr="6" column="16" str="b"/>
+    <tok fileIndex="0" linenr="6" column="17" str=")"/>
+    <tok fileIndex="0" linenr="6" column="19" str="("/>
+    <tok fileIndex="0" linenr="6" column="20" str="("/>
+    <tok fileIndex="0" linenr="6" column="21" str="a"/>
+    <tok fileIndex="0" linenr="6" column="22" str=")"/>
+    <tok fileIndex="0" linenr="6" column="24" str="&gt;"/>
+    <tok fileIndex="0" linenr="6" column="26" str="("/>
+    <tok fileIndex="0" linenr="6" column="27" str="b"/>
+    <tok fileIndex="0" linenr="6" column="28" str=")"/>
+    <tok fileIndex="0" linenr="6" column="30" str="?"/>
+    <tok fileIndex="0" linenr="6" column="32" str="("/>
+    <tok fileIndex="0" linenr="6" column="33" str="a"/>
+    <tok fileIndex="0" linenr="6" column="34" str=")"/>
+    <tok fileIndex="0" linenr="6" column="36" str=":"/>
+    <tok fileIndex="0" linenr="6" column="38" str="("/>
+    <tok fileIndex="0" linenr="6" column="39" str="b"/>
+    <tok fileIndex="0" linenr="6" column="40" str=")"/>
+    <tok fileIndex="0" linenr="6" column="41" str=")"/>
+    <tok fileIndex="0" linenr="7" column="1" str="// Macro for finding the minimum of two values"/>
+    <tok fileIndex="0" linenr="8" column="1" str="#"/>
+    <tok fileIndex="0" linenr="8" column="2" str="define"/>
+    <tok fileIndex="0" linenr="8" column="9" str="min"/>
+    <tok fileIndex="0" linenr="8" column="12" str="("/>
+    <tok fileIndex="0" linenr="8" column="13" str="a"/>
+    <tok fileIndex="0" linenr="8" column="14" str=","/>
+    <tok fileIndex="0" linenr="8" column="16" str="b"/>
+    <tok fileIndex="0" linenr="8" column="17" str=")"/>
+    <tok fileIndex="0" linenr="8" column="19" str="("/>
+    <tok fileIndex="0" linenr="8" column="20" str="("/>
+    <tok fileIndex="0" linenr="8" column="21" str="a"/>
+    <tok fileIndex="0" linenr="8" column="22" str=")"/>
+    <tok fileIndex="0" linenr="8" column="24" str="&lt;"/>
+    <tok fileIndex="0" linenr="8" column="26" str="("/>
+    <tok fileIndex="0" linenr="8" column="27" str="b"/>
+    <tok fileIndex="0" linenr="8" column="28" str=")"/>
+    <tok fileIndex="0" linenr="8" column="30" str="?"/>
+    <tok fileIndex="0" linenr="8" column="32" str="("/>
+    <tok fileIndex="0" linenr="8" column="33" str="a"/>
+    <tok fileIndex="0" linenr="8" column="34" str=")"/>
+    <tok fileIndex="0" linenr="8" column="36" str=":"/>
+    <tok fileIndex="0" linenr="8" column="38" str="("/>
+    <tok fileIndex="0" linenr="8" column="39" str="b"/>
+    <tok fileIndex="0" linenr="8" column="40" str=")"/>
+    <tok fileIndex="0" linenr="8" column="41" str=")"/>
+    <tok fileIndex="0" linenr="10" column="1" str="// Function to calculate the maximum square of subarray values"/>
+    <tok fileIndex="0" linenr="11" column="1" str="long"/>
+    <tok fileIndex="0" linenr="11" column="6" str="maxSubarrayValue"/>
+    <tok fileIndex="0" linenr="11" column="22" str="("/>
+    <tok fileIndex="0" linenr="11" column="23" str="int"/>
+    <tok fileIndex="0" linenr="11" column="27" str="n"/>
+    <tok fileIndex="0" linenr="11" column="28" str=","/>
+    <tok fileIndex="0" linenr="11" column="30" str="int"/>
+    <tok fileIndex="0" linenr="11" column="34" str="*"/>
+    <tok fileIndex="0" linenr="11" column="35" str="arr"/>
+    <tok fileIndex="0" linenr="11" column="38" str=")"/>
+    <tok fileIndex="0" linenr="12" column="1" str="{"/>
+    <tok fileIndex="0" linenr="13" column="2" str="long"/>
+    <tok fileIndex="0" linenr="13" column="7" str="MAX"/>
+    <tok fileIndex="0" linenr="13" column="11" str="="/>
+    <tok fileIndex="0" linenr="13" column="13" str="0"/>
+    <tok fileIndex="0" linenr="13" column="14" str=";"/>
+    <tok fileIndex="0" linenr="15" column="2" str="// Negate odd-indexed elements"/>
+    <tok fileIndex="0" linenr="16" column="2" str="for"/>
+    <tok fileIndex="0" linenr="16" column="6" str="("/>
+    <tok fileIndex="0" linenr="16" column="7" str="int"/>
+    <tok fileIndex="0" linenr="16" column="11" str="i"/>
+    <tok fileIndex="0" linenr="16" column="13" str="="/>
+    <tok fileIndex="0" linenr="16" column="15" str="1"/>
+    <tok fileIndex="0" linenr="16" column="16" str=";"/>
+    <tok fileIndex="0" linenr="16" column="18" str="i"/>
+    <tok fileIndex="0" linenr="16" column="20" str="&lt;"/>
+    <tok fileIndex="0" linenr="16" column="22" str="n"/>
+    <tok fileIndex="0" linenr="16" column="23" str=";"/>
+    <tok fileIndex="0" linenr="16" column="25" str="i"/>
+    <tok fileIndex="0" linenr="16" column="27" str="+="/>
+    <tok fileIndex="0" linenr="16" column="30" str="2"/>
+    <tok fileIndex="0" linenr="16" column="31" str=")"/>
+    <tok fileIndex="0" linenr="17" column="2" str="{"/>
+    <tok fileIndex="0" linenr="18" column="3" str="arr"/>
+    <tok fileIndex="0" linenr="18" column="6" str="["/>
+    <tok fileIndex="0" linenr="18" column="7" str="i"/>
+    <tok fileIndex="0" linenr="18" column="8" str="]"/>
+    <tok fileIndex="0" linenr="18" column="10" str="="/>
+    <tok fileIndex="0" linenr="18" column="12" str="-"/>
+    <tok fileIndex="0" linenr="18" column="13" str="arr"/>
+    <tok fileIndex="0" linenr="18" column="16" str="["/>
+    <tok fileIndex="0" linenr="18" column="17" str="i"/>
+    <tok fileIndex="0" linenr="18" column="18" str="]"/>
+    <tok fileIndex="0" linenr="18" column="19" str=";"/>
+    <tok fileIndex="0" linenr="19" column="2" str="}"/>
+    <tok fileIndex="0" linenr="21" column="2" str="long"/>
+    <tok fileIndex="0" linenr="21" column="7" str="maxSoFar"/>
+    <tok fileIndex="0" linenr="21" column="16" str="="/>
+    <tok fileIndex="0" linenr="21" column="18" str="arr"/>
+    <tok fileIndex="0" linenr="21" column="21" str="["/>
+    <tok fileIndex="0" linenr="21" column="22" str="0"/>
+    <tok fileIndex="0" linenr="21" column="23" str="]"/>
+    <tok fileIndex="0" linenr="21" column="24" str=";"/>
+    <tok fileIndex="0" linenr="22" column="2" str="long"/>
+    <tok fileIndex="0" linenr="22" column="7" str="currMax"/>
+    <tok fileIndex="0" linenr="22" column="15" str="="/>
+    <tok fileIndex="0" linenr="22" column="17" str="arr"/>
+    <tok fileIndex="0" linenr="22" column="20" str="["/>
+    <tok fileIndex="0" linenr="22" column="21" str="0"/>
+    <tok fileIndex="0" linenr="22" column="22" str="]"/>
+    <tok fileIndex="0" linenr="22" column="23" str=";"/>
+    <tok fileIndex="0" linenr="23" column="2" str="long"/>
+    <tok fileIndex="0" linenr="23" column="7" str="currMin"/>
+    <tok fileIndex="0" linenr="23" column="15" str="="/>
+    <tok fileIndex="0" linenr="23" column="17" str="arr"/>
+    <tok fileIndex="0" linenr="23" column="20" str="["/>
+    <tok fileIndex="0" linenr="23" column="21" str="0"/>
+    <tok fileIndex="0" linenr="23" column="22" str="]"/>
+    <tok fileIndex="0" linenr="23" column="23" str=";"/>
+    <tok fileIndex="0" linenr="24" column="2" str="long"/>
+    <tok fileIndex="0" linenr="24" column="7" str="minSoFar"/>
+    <tok fileIndex="0" linenr="24" column="16" str="="/>
+    <tok fileIndex="0" linenr="24" column="18" str="arr"/>
+    <tok fileIndex="0" linenr="24" column="21" str="["/>
+    <tok fileIndex="0" linenr="24" column="22" str="0"/>
+    <tok fileIndex="0" linenr="24" column="23" str="]"/>
+    <tok fileIndex="0" linenr="24" column="24" str=";"/>
+    <tok fileIndex="0" linenr="26" column="2" str="// Calculate maximum and minimum subarray values"/>
+    <tok fileIndex="0" linenr="27" column="2" str="for"/>
+    <tok fileIndex="0" linenr="27" column="6" str="("/>
+    <tok fileIndex="0" linenr="27" column="7" str="int"/>
+    <tok fileIndex="0" linenr="27" column="11" str="i"/>
+    <tok fileIndex="0" linenr="27" column="13" str="="/>
+    <tok fileIndex="0" linenr="27" column="15" str="1"/>
+    <tok fileIndex="0" linenr="27" column="16" str=";"/>
+    <tok fileIndex="0" linenr="27" column="18" str="i"/>
+    <tok fileIndex="0" linenr="27" column="20" str="&lt;"/>
+    <tok fileIndex="0" linenr="27" column="22" str="n"/>
+    <tok fileIndex="0" linenr="27" column="23" str=";"/>
+    <tok fileIndex="0" linenr="27" column="25" str="i"/>
+    <tok fileIndex="0" linenr="27" column="26" str="++"/>
+    <tok fileIndex="0" linenr="27" column="28" str=")"/>
+    <tok fileIndex="0" linenr="28" column="2" str="{"/>
+    <tok fileIndex="0" linenr="29" column="3" str="if"/>
+    <tok fileIndex="0" linenr="29" column="6" str="("/>
+    <tok fileIndex="0" linenr="29" column="7" str="currMax"/>
+    <tok fileIndex="0" linenr="29" column="15" str="&lt;"/>
+    <tok fileIndex="0" linenr="29" column="17" str="0"/>
+    <tok fileIndex="0" linenr="29" column="18" str=")"/>
+    <tok fileIndex="0" linenr="30" column="3" str="{"/>
+    <tok fileIndex="0" linenr="31" column="4" str="currMax"/>
+    <tok fileIndex="0" linenr="31" column="12" str="="/>
+    <tok fileIndex="0" linenr="31" column="14" str="arr"/>
+    <tok fileIndex="0" linenr="31" column="17" str="["/>
+    <tok fileIndex="0" linenr="31" column="18" str="i"/>
+    <tok fileIndex="0" linenr="31" column="19" str="]"/>
+    <tok fileIndex="0" linenr="31" column="20" str=";"/>
+    <tok fileIndex="0" linenr="32" column="3" str="}"/>
+    <tok fileIndex="0" linenr="33" column="3" str="else"/>
+    <tok fileIndex="0" linenr="34" column="3" str="{"/>
+    <tok fileIndex="0" linenr="35" column="4" str="currMax"/>
+    <tok fileIndex="0" linenr="35" column="12" str="="/>
+    <tok fileIndex="0" linenr="35" column="14" str="max"/>
+    <tok fileIndex="0" linenr="35" column="17" str="("/>
+    <tok fileIndex="0" linenr="35" column="18" str="arr"/>
+    <tok fileIndex="0" linenr="35" column="21" str="["/>
+    <tok fileIndex="0" linenr="35" column="22" str="i"/>
+    <tok fileIndex="0" linenr="35" column="23" str="]"/>
+    <tok fileIndex="0" linenr="35" column="24" str=","/>
+    <tok fileIndex="0" linenr="35" column="26" str="currMax"/>
+    <tok fileIndex="0" linenr="35" column="34" str="+"/>
+    <tok fileIndex="0" linenr="35" column="36" str="arr"/>
+    <tok fileIndex="0" linenr="35" column="39" str="["/>
+    <tok fileIndex="0" linenr="35" column="40" str="i"/>
+    <tok fileIndex="0" linenr="35" column="41" str="]"/>
+    <tok fileIndex="0" linenr="35" column="42" str=")"/>
+    <tok fileIndex="0" linenr="35" column="43" str=";"/>
+    <tok fileIndex="0" linenr="36" column="3" str="}"/>
+    <tok fileIndex="0" linenr="38" column="3" str="maxSoFar"/>
+    <tok fileIndex="0" linenr="38" column="12" str="="/>
+    <tok fileIndex="0" linenr="38" column="14" str="max"/>
+    <tok fileIndex="0" linenr="38" column="17" str="("/>
+    <tok fileIndex="0" linenr="38" column="18" str="maxSoFar"/>
+    <tok fileIndex="0" linenr="38" column="26" str=","/>
+    <tok fileIndex="0" linenr="38" column="28" str="currMax"/>
+    <tok fileIndex="0" linenr="38" column="35" str=")"/>
+    <tok fileIndex="0" linenr="38" column="36" str=";"/>
+    <tok fileIndex="0" linenr="40" column="3" str="if"/>
+    <tok fileIndex="0" linenr="40" column="6" str="("/>
+    <tok fileIndex="0" linenr="40" column="7" str="currMin"/>
+    <tok fileIndex="0" linenr="40" column="15" str="&gt;"/>
+    <tok fileIndex="0" linenr="40" column="17" str="0"/>
+    <tok fileIndex="0" linenr="40" column="18" str=")"/>
+    <tok fileIndex="0" linenr="41" column="3" str="{"/>
+    <tok fileIndex="0" linenr="42" column="4" str="currMin"/>
+    <tok fileIndex="0" linenr="42" column="12" str="="/>
+    <tok fileIndex="0" linenr="42" column="14" str="arr"/>
+    <tok fileIndex="0" linenr="42" column="17" str="["/>
+    <tok fileIndex="0" linenr="42" column="18" str="i"/>
+    <tok fileIndex="0" linenr="42" column="19" str="]"/>
+    <tok fileIndex="0" linenr="42" column="20" str=";"/>
+    <tok fileIndex="0" linenr="43" column="3" str="}"/>
+    <tok fileIndex="0" linenr="44" column="3" str="else"/>
+    <tok fileIndex="0" linenr="45" column="3" str="{"/>
+    <tok fileIndex="0" linenr="46" column="4" str="currMin"/>
+    <tok fileIndex="0" linenr="46" column="12" str="+="/>
+    <tok fileIndex="0" linenr="46" column="15" str="arr"/>
+    <tok fileIndex="0" linenr="46" column="18" str="["/>
+    <tok fileIndex="0" linenr="46" column="19" str="i"/>
+    <tok fileIndex="0" linenr="46" column="20" str="]"/>
+    <tok fileIndex="0" linenr="46" column="21" str=";"/>
+    <tok fileIndex="0" linenr="47" column="3" str="}"/>
+    <tok fileIndex="0" linenr="49" column="3" str="minSoFar"/>
+    <tok fileIndex="0" linenr="49" column="12" str="="/>
+    <tok fileIndex="0" linenr="49" column="14" str="min"/>
+    <tok fileIndex="0" linenr="49" column="17" str="("/>
+    <tok fileIndex="0" linenr="49" column="18" str="minSoFar"/>
+    <tok fileIndex="0" linenr="49" column="26" str=","/>
+    <tok fileIndex="0" linenr="49" column="28" str="currMin"/>
+    <tok fileIndex="0" linenr="49" column="35" str=")"/>
+    <tok fileIndex="0" linenr="49" column="36" str=";"/>
+    <tok fileIndex="0" linenr="50" column="2" str="}"/>
+    <tok fileIndex="0" linenr="52" column="2" str="long"/>
+    <tok fileIndex="0" linenr="52" column="7" str="absMaxSoFar"/>
+    <tok fileIndex="0" linenr="52" column="19" str="="/>
+    <tok fileIndex="0" linenr="52" column="21" str="abs"/>
+    <tok fileIndex="0" linenr="52" column="24" str="("/>
+    <tok fileIndex="0" linenr="52" column="25" str="maxSoFar"/>
+    <tok fileIndex="0" linenr="52" column="33" str=")"/>
+    <tok fileIndex="0" linenr="52" column="34" str=";"/>
+    <tok fileIndex="0" linenr="53" column="2" str="long"/>
+    <tok fileIndex="0" linenr="53" column="7" str="absMinSoFar"/>
+    <tok fileIndex="0" linenr="53" column="19" str="="/>
+    <tok fileIndex="0" linenr="53" column="21" str="abs"/>
+    <tok fileIndex="0" linenr="53" column="24" str="("/>
+    <tok fileIndex="0" linenr="53" column="25" str="minSoFar"/>
+    <tok fileIndex="0" linenr="53" column="33" str=")"/>
+    <tok fileIndex="0" linenr="53" column="34" str=";"/>
+    <tok fileIndex="0" linenr="54" column="2" str="MAX"/>
+    <tok fileIndex="0" linenr="54" column="6" str="="/>
+    <tok fileIndex="0" linenr="54" column="8" str="absMaxSoFar"/>
+    <tok fileIndex="0" linenr="54" column="20" str="&gt;"/>
+    <tok fileIndex="0" linenr="54" column="22" str="absMinSoFar"/>
+    <tok fileIndex="0" linenr="54" column="34" str="?"/>
+    <tok fileIndex="0" linenr="54" column="36" str="absMaxSoFar"/>
+    <tok fileIndex="0" linenr="54" column="48" str=":"/>
+    <tok fileIndex="0" linenr="54" column="50" str="absMinSoFar"/>
+    <tok fileIndex="0" linenr="54" column="61" str=";"/>
+    <tok fileIndex="0" linenr="56" column="2" str="return"/>
+    <tok fileIndex="0" linenr="56" column="9" str="MAX"/>
+    <tok fileIndex="0" linenr="56" column="13" str="*"/>
+    <tok fileIndex="0" linenr="56" column="15" str="MAX"/>
+    <tok fileIndex="0" linenr="56" column="18" str=";"/>
+    <tok fileIndex="0" linenr="57" column="1" str="}"/>
+    <tok fileIndex="0" linenr="59" column="1" str="int"/>
+    <tok fileIndex="0" linenr="59" column="5" str="main"/>
+    <tok fileIndex="0" linenr="59" column="9" str="("/>
+    <tok fileIndex="0" linenr="59" column="10" str=")"/>
+    <tok fileIndex="0" linenr="60" column="1" str="{"/>
+    <tok fileIndex="0" linenr="61" column="2" str="int"/>
+    <tok fileIndex="0" linenr="61" column="6" str="n"/>
+    <tok fileIndex="0" linenr="61" column="7" str=";"/>
+    <tok fileIndex="0" linenr="62" column="2" str="scanf"/>
+    <tok fileIndex="0" linenr="62" column="7" str="("/>
+    <tok fileIndex="0" linenr="62" column="8" str="&quot;%d&quot;"/>
+    <tok fileIndex="0" linenr="62" column="12" str=","/>
+    <tok fileIndex="0" linenr="62" column="14" str="&amp;"/>
+    <tok fileIndex="0" linenr="62" column="15" str="n"/>
+    <tok fileIndex="0" linenr="62" column="16" str=")"/>
+    <tok fileIndex="0" linenr="62" column="17" str=";"/>
+    <tok fileIndex="0" linenr="63" column="2" str="int"/>
+    <tok fileIndex="0" linenr="63" column="6" str="*"/>
+    <tok fileIndex="0" linenr="63" column="7" str="arr"/>
+    <tok fileIndex="0" linenr="63" column="11" str="="/>
+    <tok fileIndex="0" linenr="63" column="13" str="("/>
+    <tok fileIndex="0" linenr="63" column="14" str="int"/>
+    <tok fileIndex="0" linenr="63" column="18" str="*"/>
+    <tok fileIndex="0" linenr="63" column="19" str=")"/>
+    <tok fileIndex="0" linenr="63" column="20" str="malloc"/>
+    <tok fileIndex="0" linenr="63" column="26" str="("/>
+    <tok fileIndex="0" linenr="63" column="27" str="n"/>
+    <tok fileIndex="0" linenr="63" column="29" str="*"/>
+    <tok fileIndex="0" linenr="63" column="31" str="sizeof"/>
+    <tok fileIndex="0" linenr="63" column="37" str="("/>
+    <tok fileIndex="0" linenr="63" column="38" str="int"/>
+    <tok fileIndex="0" linenr="63" column="41" str=")"/>
+    <tok fileIndex="0" linenr="63" column="42" str=")"/>
+    <tok fileIndex="0" linenr="63" column="43" str=";"/>
+    <tok fileIndex="0" linenr="65" column="2" str="for"/>
+    <tok fileIndex="0" linenr="65" column="6" str="("/>
+    <tok fileIndex="0" linenr="65" column="7" str="int"/>
+    <tok fileIndex="0" linenr="65" column="11" str="i"/>
+    <tok fileIndex="0" linenr="65" column="13" str="="/>
+    <tok fileIndex="0" linenr="65" column="15" str="0"/>
+    <tok fileIndex="0" linenr="65" column="16" str=";"/>
+    <tok fileIndex="0" linenr="65" column="18" str="i"/>
+    <tok fileIndex="0" linenr="65" column="20" str="&lt;"/>
+    <tok fileIndex="0" linenr="65" column="22" str="n"/>
+    <tok fileIndex="0" linenr="65" column="23" str=";"/>
+    <tok fileIndex="0" linenr="65" column="25" str="i"/>
+    <tok fileIndex="0" linenr="65" column="26" str="++"/>
+    <tok fileIndex="0" linenr="65" column="28" str=")"/>
+    <tok fileIndex="0" linenr="66" column="2" str="{"/>
+    <tok fileIndex="0" linenr="67" column="3" str="scanf"/>
+    <tok fileIndex="0" linenr="67" column="8" str="("/>
+    <tok fileIndex="0" linenr="67" column="9" str="&quot;%d&quot;"/>
+    <tok fileIndex="0" linenr="67" column="13" str=","/>
+    <tok fileIndex="0" linenr="67" column="15" str="&amp;"/>
+    <tok fileIndex="0" linenr="67" column="16" str="arr"/>
+    <tok fileIndex="0" linenr="67" column="19" str="["/>
+    <tok fileIndex="0" linenr="67" column="20" str="i"/>
+    <tok fileIndex="0" linenr="67" column="21" str="]"/>
+    <tok fileIndex="0" linenr="67" column="22" str=")"/>
+    <tok fileIndex="0" linenr="67" column="23" str=";"/>
+    <tok fileIndex="0" linenr="68" column="2" str="}"/>
+    <tok fileIndex="0" linenr="70" column="2" str="long"/>
+    <tok fileIndex="0" linenr="70" column="7" str="result"/>
+    <tok fileIndex="0" linenr="70" column="14" str="="/>
+    <tok fileIndex="0" linenr="70" column="16" str="maxSubarrayValue"/>
+    <tok fileIndex="0" linenr="70" column="32" str="("/>
+    <tok fileIndex="0" linenr="70" column="33" str="n"/>
+    <tok fileIndex="0" linenr="70" column="34" str=","/>
+    <tok fileIndex="0" linenr="70" column="36" str="arr"/>
+    <tok fileIndex="0" linenr="70" column="39" str=")"/>
+    <tok fileIndex="0" linenr="70" column="40" str=";"/>
+    <tok fileIndex="0" linenr="71" column="2" str="printf"/>
+    <tok fileIndex="0" linenr="71" column="8" str="("/>
+    <tok fileIndex="0" linenr="71" column="9" str="&quot;%ld\n&quot;"/>
+    <tok fileIndex="0" linenr="71" column="16" str=","/>
+    <tok fileIndex="0" linenr="71" column="18" str="result"/>
+    <tok fileIndex="0" linenr="71" column="24" str=")"/>
+    <tok fileIndex="0" linenr="71" column="25" str=";"/>
+    <tok fileIndex="0" linenr="73" column="2" str="// Free dynamically allocated memory"/>
+    <tok fileIndex="0" linenr="74" column="2" str="free"/>
+    <tok fileIndex="0" linenr="74" column="6" str="("/>
+    <tok fileIndex="0" linenr="74" column="7" str="arr"/>
+    <tok fileIndex="0" linenr="74" column="10" str=")"/>
+    <tok fileIndex="0" linenr="74" column="11" str=";"/>
+    <tok fileIndex="0" linenr="76" column="2" str="return"/>
+    <tok fileIndex="0" linenr="76" column="9" str="0"/>
+    <tok fileIndex="0" linenr="76" column="10" str=";"/>
+    <tok fileIndex="0" linenr="77" column="1" str="}"/>
+  </rawtokens>
+  <suppressions>
+  </suppressions>
+<dump cfg="">
+  <standards>
+    <c version="c11"/>
+    <cpp version="c++11"/>
+  </standards>
+  <directivelist>
+    <directive file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="1" str="#include &lt;limits.h&gt;"/>
+    <directive file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="2" str="#include &lt;stdio.h&gt;"/>
+    <directive file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="3" str="#include &lt;stdlib.h&gt;"/>
+    <directive file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="6" str="#define max(a, b) ((a) &gt; (b) ? (a) : (b))"/>
+    <directive file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="8" str="#define min(a, b) ((a) &lt; (b) ? (a) : (b))"/>
+  </directivelist>
+  <macro-usage>
+    <macro name="min" file="d:/XDUMP/C_programming/Problem solving & Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" line="8" column="9" usefile="d:/XDUMP/C_programming/Problem solving & Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" useline="49" usecolumn="14" is-known-value="true"/>
+    <macro name="max" file="d:/XDUMP/C_programming/Problem solving & Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" line="6" column="9" usefile="d:/XDUMP/C_programming/Problem solving & Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" useline="35" usecolumn="14" is-known-value="true"/>
+    <macro name="max" file="d:/XDUMP/C_programming/Problem solving & Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" line="6" column="9" usefile="d:/XDUMP/C_programming/Problem solving & Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" useline="38" usecolumn="14" is-known-value="true"/>
+  </macro-usage>
+  <tokenlist>
+    <token id="0000021EB99F3DF0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="11" column="1" str="long" scope="0000021EB99F28C0" type="name"/>
+    <token id="0000021EB99F4FF0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="11" column="6" str="maxSubarrayValue" scope="0000021EB99F28C0" type="name" function="0000021EB9A3B030"/>
+    <token id="0000021EB99F49F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="11" column="22" str="(" scope="0000021EB99F28C0" link="0000021EB99F4BD0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F4690" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="11" column="23" str="int" scope="0000021EB99F28C0" type="name"/>
+    <token id="0000021EB99F40F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="11" column="27" str="n" scope="0000021EB99F28C0" type="name" varId="1" exprId="1" variable="0000021EB9A497A0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F4C30" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="11" column="28" str="," scope="0000021EB99F28C0"/>
+    <token id="0000021EB99F47B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="11" column="30" str="int" scope="0000021EB99F28C0" type="name" astParent="0000021EB99F4510"/>
+    <token id="0000021EB99F4510" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="11" column="34" str="*" scope="0000021EB99F28C0" type="op" isArithmeticalOp="true" astOperand1="0000021EB99F47B0" astOperand2="0000021EB99F4B70"/>
+    <token id="0000021EB99F4B70" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="11" column="35" str="arr" scope="0000021EB99F28C0" type="name" varId="2" exprId="2" variable="0000021EB9A497F8" astParent="0000021EB99F4510" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99F4BD0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="11" column="38" str=")" scope="0000021EB99F28C0" link="0000021EB99F49F0"/>
+    <token id="0000021EB99F5290" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="12" column="1" str="{" scope="0000021EB99F2140" link="0000021EB99FAC90"/>
+    <token id="0000021EB99F45D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="13" column="2" str="long" scope="0000021EB99F2140" type="name"/>
+    <token id="0000021EB99F4D50" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="13" column="7" str="MAX" scope="0000021EB99F2140" type="name" varId="3" exprId="3" variable="0000021EBAAE9330" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F3E50" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="13" column="11" str=";" scope="0000021EB99F2140" isSplittedVarDeclEq="true"/>
+    <token id="0000021EB9A04E40" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="13" column="7" str="MAX" scope="0000021EB99F2140" type="name" varId="3" exprId="3" variable="0000021EBAAE9330" astParent="0000021EB9A04240" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB9A04240" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="13" column="11" str="=" scope="0000021EB99F2140" type="op" isAssignmentOp="true" exprId="16" values="0000021EB996A830" astOperand1="0000021EB9A04E40" astOperand2="0000021EB99F4810" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F4810" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="13" column="13" str="0" scope="0000021EB99F2140" type="number" isInt="true" values="0000021EB996A810" astParent="0000021EB9A04240" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F50B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="13" column="14" str=";" scope="0000021EB99F2140"/>
+    <token id="0000021EB99F48D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="16" column="2" str="for" scope="0000021EB99F2140" type="name" astParent="0000021EB99F4390"/>
+    <token id="0000021EB99F4390" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="16" column="6" str="(" scope="0000021EB99F2140" link="0000021EB99F4DB0" exprId="17" astOperand1="0000021EB99F48D0" astOperand2="0000021EB99F4AB0"/>
+    <token id="0000021EB99F4E70" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="16" column="7" str="int" scope="0000021EB99F2140" type="name"/>
+    <token id="0000021EB99F5350" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="16" column="11" str="i" scope="0000021EB99F2140" type="name" varId="4" exprId="4" variable="0000021EBAAE7FF0" astParent="0000021EB99F4930" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F4930" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="16" column="13" str="=" scope="0000021EB99F2140" type="op" isAssignmentOp="true" exprId="18" values="0000021EB996A890" astParent="0000021EB99F4AB0" astOperand1="0000021EB99F5350" astOperand2="0000021EB99F4870" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F4870" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="16" column="15" str="1" scope="0000021EB99F2140" type="number" isInt="true" values="0000021EB996A870" astParent="0000021EB99F4930" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F4AB0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="16" column="16" str=";" scope="0000021EB99F2140" astParent="0000021EB99F4390" astOperand1="0000021EB99F4930" astOperand2="0000021EB99F5410"/>
+    <token id="0000021EB99F4630" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="16" column="18" str="i" scope="0000021EB99F2140" type="name" varId="4" exprId="4" variable="0000021EBAAE7FF0" values="0000021EB9A39150" astParent="0000021EB99F5230" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F5230" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="16" column="20" str="&lt;" scope="0000021EB99F2140" type="op" isComparisonOp="true" exprId="19" values="0000021EB9A48550" astParent="0000021EB99F5410" astOperand1="0000021EB99F4630" astOperand2="0000021EB99F52F0" valueType-type="bool" valueType-reference="None"/>
+    <token id="0000021EB99F52F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="16" column="22" str="n" scope="0000021EB99F2140" type="name" varId="1" exprId="1" variable="0000021EB9A497A0" astParent="0000021EB99F5230" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F5410" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="16" column="23" str=";" scope="0000021EB99F2140" astParent="0000021EB99F4AB0" astOperand1="0000021EB99F5230" astOperand2="0000021EB99F4B10"/>
+    <token id="0000021EB99F3C70" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="16" column="25" str="i" scope="0000021EB99F2140" type="name" varId="4" exprId="4" variable="0000021EBAAE7FF0" values="0000021EB9A38C70" astParent="0000021EB99F4B10" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F4B10" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="16" column="27" str="+=" scope="0000021EB99F2140" type="op" isAssignmentOp="true" exprId="20" astParent="0000021EB99F5410" astOperand1="0000021EB99F3C70" astOperand2="0000021EB99F4C90" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F4C90" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="16" column="30" str="2" scope="0000021EB99F2140" type="number" isInt="true" values="0000021EB996A8B0" astParent="0000021EB99F4B10" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F4DB0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="16" column="31" str=")" scope="0000021EB99F2140" link="0000021EB99F4390"/>
+    <token id="0000021EB99F5110" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="17" column="2" str="{" scope="0000021EB99F2A00" link="0000021EB99F41B0"/>
+    <token id="0000021EB99F4E10" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="18" column="3" str="arr" scope="0000021EB99F2A00" type="name" varId="2" exprId="2" variable="0000021EB9A497F8" astParent="0000021EB99F4F30" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99F4F30" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="18" column="6" str="[" scope="0000021EB99F2A00" link="0000021EB99F4F90" exprId="21" astParent="0000021EB99F3D90" astOperand1="0000021EB99F4E10" astOperand2="0000021EB99F3EB0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F3EB0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="18" column="7" str="i" scope="0000021EB99F2A00" type="name" varId="4" exprId="4" variable="0000021EBAAE7FF0" values="0000021EB9A39210" astParent="0000021EB99F4F30" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F4F90" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="18" column="8" str="]" scope="0000021EB99F2A00" link="0000021EB99F4F30"/>
+    <token id="0000021EB99F3D90" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="18" column="10" str="=" scope="0000021EB99F2A00" type="op" isAssignmentOp="true" exprId="22" astOperand1="0000021EB99F4F30" astOperand2="0000021EB99F4030" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F4030" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="18" column="12" str="-" scope="0000021EB99F2A00" type="op" isArithmeticalOp="true" exprId="23" astParent="0000021EB99F3D90" astOperand1="0000021EB99F46F0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F42D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="18" column="13" str="arr" scope="0000021EB99F2A00" type="name" varId="2" exprId="2" variable="0000021EB9A497F8" astParent="0000021EB99F46F0" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99F46F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="18" column="16" str="[" scope="0000021EB99F2A00" link="0000021EB99F5170" exprId="21" astParent="0000021EB99F4030" astOperand1="0000021EB99F42D0" astOperand2="0000021EB99F3F10" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F3F10" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="18" column="17" str="i" scope="0000021EB99F2A00" type="name" varId="4" exprId="4" variable="0000021EBAAE7FF0" values="0000021EB9A39250" astParent="0000021EB99F46F0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F5170" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="18" column="18" str="]" scope="0000021EB99F2A00" link="0000021EB99F46F0"/>
+    <token id="0000021EB99F4150" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="18" column="19" str=";" scope="0000021EB99F2A00"/>
+    <token id="0000021EB99F41B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="19" column="2" str="}" scope="0000021EB99F2A00" link="0000021EB99F5110"/>
+    <token id="0000021EB99F4270" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="21" column="2" str="long" scope="0000021EB99F2140" type="name"/>
+    <token id="0000021EB99F4330" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="21" column="7" str="maxSoFar" scope="0000021EB99F2140" type="name" varId="5" exprId="5" variable="0000021EBAAE8ED0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F43F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="21" column="16" str=";" scope="0000021EB99F2140" isSplittedVarDeclEq="true"/>
+    <token id="0000021EB9A050E0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="21" column="7" str="maxSoFar" scope="0000021EB99F2140" type="name" varId="5" exprId="5" variable="0000021EBAAE8ED0" astParent="0000021EB9A04420" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB9A04420" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="21" column="16" str="=" scope="0000021EB99F2140" type="op" isAssignmentOp="true" exprId="25" astOperand1="0000021EB9A050E0" astOperand2="0000021EB99F4750" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F4450" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="21" column="18" str="arr" scope="0000021EB99F2140" type="name" varId="2" exprId="2" variable="0000021EB9A497F8" astParent="0000021EB99F4750" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99F4750" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="21" column="21" str="[" scope="0000021EB99F2140" link="0000021EB99F55F0" exprId="26" astParent="0000021EB9A04420" astOperand1="0000021EB99F4450" astOperand2="0000021EB99F5710" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F5710" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="21" column="22" str="0" scope="0000021EB99F2140" type="number" isInt="true" values="0000021EB996A8D0" astParent="0000021EB99F4750" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F55F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="21" column="23" str="]" scope="0000021EB99F2140" link="0000021EB99F4750"/>
+    <token id="0000021EB99F69D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="21" column="24" str=";" scope="0000021EB99F2140"/>
+    <token id="0000021EB99F5B90" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="22" column="2" str="long" scope="0000021EB99F2140" type="name"/>
+    <token id="0000021EB99F62B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="22" column="7" str="currMax" scope="0000021EB99F2140" type="name" varId="6" exprId="6" variable="0000021EBAAE9480" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F6A30" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="22" column="15" str=";" scope="0000021EB99F2140" isSplittedVarDeclEq="true"/>
+    <token id="0000021EB9A054A0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="22" column="7" str="currMax" scope="0000021EB99F2140" type="name" varId="6" exprId="6" variable="0000021EBAAE9480" astParent="0000021EB9A05140" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB9A05140" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="22" column="15" str="=" scope="0000021EB99F2140" type="op" isAssignmentOp="true" exprId="27" values="0000021EB9A48A90" astOperand1="0000021EB9A054A0" astOperand2="0000021EB99F63D0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F6AF0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="22" column="17" str="arr" scope="0000021EB99F2140" type="name" varId="2" exprId="2" variable="0000021EB9A497F8" astParent="0000021EB99F63D0" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99F63D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="22" column="20" str="[" scope="0000021EB99F2140" link="0000021EB99F6250" exprId="26" values="0000021EB9A48990" astParent="0000021EB9A05140" astOperand1="0000021EB99F6AF0" astOperand2="0000021EB99F5770" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F5770" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="22" column="21" str="0" scope="0000021EB99F2140" type="number" isInt="true" values="0000021EB996A8F0" astParent="0000021EB99F63D0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F6250" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="22" column="22" str="]" scope="0000021EB99F2140" link="0000021EB99F63D0"/>
+    <token id="0000021EB99F6370" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="22" column="23" str=";" scope="0000021EB99F2140"/>
+    <token id="0000021EB99F6550" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="23" column="2" str="long" scope="0000021EB99F2140" type="name"/>
+    <token id="0000021EB99F6A90" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="23" column="7" str="currMin" scope="0000021EB99F2140" type="name" varId="7" exprId="7" variable="0000021EBAAE8C30" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F5D70" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="23" column="15" str=";" scope="0000021EB99F2140" isSplittedVarDeclEq="true"/>
+    <token id="0000021EB9A04C00" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="23" column="7" str="currMin" scope="0000021EB99F2140" type="name" varId="7" exprId="7" variable="0000021EBAAE8C30" astParent="0000021EB9A05980" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB9A05980" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="23" column="15" str="=" scope="0000021EB99F2140" type="op" isAssignmentOp="true" exprId="29" values="0000021EB9A48410" astOperand1="0000021EB9A04C00" astOperand2="0000021EB99F5CB0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F6070" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="23" column="17" str="arr" scope="0000021EB99F2140" type="name" varId="2" exprId="2" variable="0000021EB9A497F8" astParent="0000021EB99F5CB0" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99F5CB0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="23" column="20" str="[" scope="0000021EB99F2140" link="0000021EB99F6B50" exprId="26" values="0000021EB9A48370" astParent="0000021EB9A05980" astOperand1="0000021EB99F6070" astOperand2="0000021EB99F5650" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F5650" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="23" column="21" str="0" scope="0000021EB99F2140" type="number" isInt="true" values="0000021EB996A930" astParent="0000021EB99F5CB0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F6B50" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="23" column="22" str="]" scope="0000021EB99F2140" link="0000021EB99F5CB0"/>
+    <token id="0000021EB99F6310" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="23" column="23" str=";" scope="0000021EB99F2140"/>
+    <token id="0000021EB99F6430" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="24" column="2" str="long" scope="0000021EB99F2140" type="name"/>
+    <token id="0000021EB99F65B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="24" column="7" str="minSoFar" scope="0000021EB99F2140" type="name" varId="8" exprId="8" variable="0000021EBAAE9720" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F6BB0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="24" column="16" str=";" scope="0000021EB99F2140" isSplittedVarDeclEq="true"/>
+    <token id="0000021EB9A051A0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="24" column="7" str="minSoFar" scope="0000021EB99F2140" type="name" varId="8" exprId="8" variable="0000021EBAAE9720" astParent="0000021EB9A04480" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB9A04480" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="24" column="16" str="=" scope="0000021EB99F2140" type="op" isAssignmentOp="true" exprId="31" values="0000021EB9A485B0" astOperand1="0000021EB9A051A0" astOperand2="0000021EB99F60D0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F5DD0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="24" column="18" str="arr" scope="0000021EB99F2140" type="name" varId="2" exprId="2" variable="0000021EB9A497F8" astParent="0000021EB99F60D0" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99F60D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="24" column="21" str="[" scope="0000021EB99F2140" link="0000021EB99F56B0" exprId="26" values="0000021EB9A48AD0" astParent="0000021EB9A04480" astOperand1="0000021EB99F5DD0" astOperand2="0000021EB99F5D10" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F5D10" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="24" column="22" str="0" scope="0000021EB99F2140" type="number" isInt="true" values="0000021EB996A950" astParent="0000021EB99F60D0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F56B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="24" column="23" str="]" scope="0000021EB99F2140" link="0000021EB99F60D0"/>
+    <token id="0000021EB99F6C10" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="24" column="24" str=";" scope="0000021EB99F2140"/>
+    <token id="0000021EB99F5BF0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="27" column="2" str="for" scope="0000021EB99F2140" type="name" astParent="0000021EB99F6730"/>
+    <token id="0000021EB99F6730" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="27" column="6" str="(" scope="0000021EB99F2140" link="0000021EB99F54D0" exprId="33" astOperand1="0000021EB99F5BF0" astOperand2="0000021EB99F64F0"/>
+    <token id="0000021EB99F6910" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="27" column="7" str="int" scope="0000021EB99F2140" type="name"/>
+    <token id="0000021EB99F6490" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="27" column="11" str="i" scope="0000021EB99F2140" type="name" varId="9" exprId="9" variable="0000021EBAAE8D80" astParent="0000021EB99F5E30" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F5E30" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="27" column="13" str="=" scope="0000021EB99F2140" type="op" isAssignmentOp="true" exprId="34" values="0000021EB9A486D0" astParent="0000021EB99F64F0" astOperand1="0000021EB99F6490" astOperand2="0000021EB99F61F0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F61F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="27" column="15" str="1" scope="0000021EB99F2140" type="number" isInt="true" values="0000021EB9A48A10" astParent="0000021EB99F5E30" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F64F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="27" column="16" str=";" scope="0000021EB99F2140" astParent="0000021EB99F6730" astOperand1="0000021EB99F5E30" astOperand2="0000021EB99F5890"/>
+    <token id="0000021EB99F6610" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="27" column="18" str="i" scope="0000021EB99F2140" type="name" varId="9" exprId="9" variable="0000021EBAAE8D80" values="0000021EB9A39090" astParent="0000021EB99F5470" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F5470" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="27" column="20" str="&lt;" scope="0000021EB99F2140" type="op" isComparisonOp="true" exprId="35" values="0000021EB9A489B0" astParent="0000021EB99F5890" astOperand1="0000021EB99F6610" astOperand2="0000021EB99F6670" valueType-type="bool" valueType-reference="None"/>
+    <token id="0000021EB99F6670" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="27" column="22" str="n" scope="0000021EB99F2140" type="name" varId="1" exprId="1" variable="0000021EB9A497A0" astParent="0000021EB99F5470" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F5890" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="27" column="23" str=";" scope="0000021EB99F2140" astParent="0000021EB99F64F0" astOperand1="0000021EB99F5470" astOperand2="0000021EB99F6790"/>
+    <token id="0000021EB99F66D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="27" column="25" str="i" scope="0000021EB99F2140" type="name" varId="9" exprId="9" variable="0000021EBAAE8D80" astParent="0000021EB99F6790" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F6790" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="27" column="26" str="++" scope="0000021EB99F2140" type="op" exprId="36" astParent="0000021EB99F5890" astOperand1="0000021EB99F66D0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F54D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="27" column="28" str=")" scope="0000021EB99F2140" link="0000021EB99F6730"/>
+    <token id="0000021EB99F5530" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="28" column="2" str="{" scope="0000021EB99F1C40" link="0000021EB99F8A10"/>
+    <token id="0000021EB99F6130" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="29" column="3" str="if" scope="0000021EB99F1C40" type="name" astParent="0000021EB99F5590"/>
+    <token id="0000021EB99F5590" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="29" column="6" str="(" scope="0000021EB99F1C40" link="0000021EB99F57D0" exprId="37" astOperand1="0000021EB99F6130" astOperand2="0000021EB99F6850"/>
+    <token id="0000021EB99F67F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="29" column="7" str="currMax" scope="0000021EB99F1C40" type="name" varId="6" exprId="6" variable="0000021EBAAE9480" values="0000021EB9A484B0" astParent="0000021EB99F6850" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F6850" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="29" column="15" str="&lt;" scope="0000021EB99F1C40" type="op" isComparisonOp="true" exprId="38" values="0000021EB9A48770" astParent="0000021EB99F5590" astOperand1="0000021EB99F67F0" astOperand2="0000021EB99F68B0" valueType-type="bool" valueType-reference="None"/>
+    <token id="0000021EB99F68B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="29" column="17" str="0" scope="0000021EB99F1C40" type="number" isInt="true" values="0000021EB9A48A50" astParent="0000021EB99F6850" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F57D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="29" column="18" str=")" scope="0000021EB99F1C40" link="0000021EB99F5590"/>
+    <token id="0000021EB99F5E90" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="30" column="3" str="{" scope="0000021EB99F1D80" link="0000021EB99F5A10"/>
+    <token id="0000021EB99F5830" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="31" column="4" str="currMax" scope="0000021EB99F1D80" type="name" varId="6" exprId="6" variable="0000021EBAAE9480" astParent="0000021EB99F5FB0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F5FB0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="31" column="12" str="=" scope="0000021EB99F1D80" type="op" isAssignmentOp="true" exprId="39" astOperand1="0000021EB99F5830" astOperand2="0000021EB99F6190" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F59B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="31" column="14" str="arr" scope="0000021EB99F1D80" type="name" varId="2" exprId="2" variable="0000021EB9A497F8" astParent="0000021EB99F6190" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99F6190" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="31" column="17" str="[" scope="0000021EB99F1D80" link="0000021EB99F58F0" exprId="40" astParent="0000021EB99F5FB0" astOperand1="0000021EB99F59B0" astOperand2="0000021EB99F6970" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F6970" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="31" column="18" str="i" scope="0000021EB99F1D80" type="name" varId="9" exprId="9" variable="0000021EBAAE8D80" values="0000021EB9A487F0" astParent="0000021EB99F6190" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F58F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="31" column="19" str="]" scope="0000021EB99F1D80" link="0000021EB99F6190"/>
+    <token id="0000021EB99F5950" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="31" column="20" str=";" scope="0000021EB99F1D80"/>
+    <token id="0000021EB99F5A10" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="32" column="3" str="}" scope="0000021EB99F1D80" link="0000021EB99F5E90"/>
+    <token id="0000021EB99F5A70" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="33" column="3" str="else" scope="0000021EB99F1C40" type="name"/>
+    <token id="0000021EB99F5AD0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="34" column="3" str="{" scope="0000021EB99F1EC0" link="0000021EB99F7630"/>
+    <token id="0000021EB99F5EF0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="4" str="currMax" scope="0000021EB99F1EC0" type="name" varId="6" exprId="6" variable="0000021EBAAE9480" astParent="0000021EB99F5B30" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F5B30" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="12" str="=" scope="0000021EB99F1EC0" type="op" isAssignmentOp="true" exprId="41" values="0000021EB9A48610" astOperand1="0000021EB99F5EF0" astOperand2="0000021EB99F6EB0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F5F50" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="(" scope="0000021EB99F1EC0" isExpandedMacro="true" link="0000021EB99F6CD0" exprId="42"/>
+    <token id="0000021EB99F6010" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="arr" scope="0000021EB99F1EC0" type="name" varId="2" exprId="2" variable="0000021EB9A497F8" astParent="0000021EB99F8350" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99F8350" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="[" scope="0000021EB99F1EC0" link="0000021EB99F78D0" exprId="40" astParent="0000021EB99F7ED0" astOperand1="0000021EB99F6010" astOperand2="0000021EB99F75D0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F75D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="i" scope="0000021EB99F1EC0" type="name" varId="9" exprId="9" variable="0000021EBAAE8D80" values="0000021EB9A48970" astParent="0000021EB99F8350" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F78D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="]" scope="0000021EB99F1EC0" link="0000021EB99F8350"/>
+    <token id="0000021EB99F6CD0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str=")" scope="0000021EB99F1EC0" isExpandedMacro="true" link="0000021EB99F5F50"/>
+    <token id="0000021EB99F7ED0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="&gt;" scope="0000021EB99F1EC0" type="op" isComparisonOp="true" isExpandedMacro="true" exprId="44" values="0000021EB9A48730" astParent="0000021EB99F6EB0" astOperand1="0000021EB99F8350" astOperand2="0000021EB99F7F30" valueType-type="bool" valueType-reference="None"/>
+    <token id="0000021EB99F79F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="(" scope="0000021EB99F1EC0" isExpandedMacro="true" link="0000021EB99F7C30" exprId="45"/>
+    <token id="0000021EB99F7330" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="currMax" scope="0000021EB99F1EC0" type="name" varId="6" exprId="6" variable="0000021EBAAE9480" values="0000021EB9A38FF0" astParent="0000021EB99F7F30" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F7F30" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="+" scope="0000021EB99F1EC0" type="op" isArithmeticalOp="true" exprId="46" astParent="0000021EB99F7ED0" astOperand1="0000021EB99F7330" astOperand2="0000021EB99F81D0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F7BD0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="arr" scope="0000021EB99F1EC0" type="name" varId="2" exprId="2" variable="0000021EB9A497F8" astParent="0000021EB99F81D0" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99F81D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="[" scope="0000021EB99F1EC0" link="0000021EB99F7690" exprId="40" astParent="0000021EB99F7F30" astOperand1="0000021EB99F7BD0" astOperand2="0000021EB99F7090" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F7090" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="i" scope="0000021EB99F1EC0" type="name" varId="9" exprId="9" variable="0000021EBAAE8D80" values="0000021EB9A48810" astParent="0000021EB99F81D0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F7690" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="]" scope="0000021EB99F1EC0" link="0000021EB99F81D0"/>
+    <token id="0000021EB99F7C30" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str=")" scope="0000021EB99F1EC0" isExpandedMacro="true" link="0000021EB99F79F0"/>
+    <token id="0000021EB99F6EB0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="?" scope="0000021EB99F1EC0" isExpandedMacro="true" exprId="48" values="0000021EB9A48490" astParent="0000021EB99F5B30" astOperand1="0000021EB99F7ED0" astOperand2="0000021EB99F7F90" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F7FF0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="(" scope="0000021EB99F1EC0" isExpandedMacro="true" link="0000021EB99F77B0" exprId="49"/>
+    <token id="0000021EB99F7570" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="arr" scope="0000021EB99F1EC0" type="name" varId="2" exprId="2" variable="0000021EB9A497F8" astParent="0000021EB99F7510" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99F7510" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="[" scope="0000021EB99F1EC0" link="0000021EB99F7390" exprId="40" values="0000021EB9A39050" astParent="0000021EB99F7F90" astOperand1="0000021EB99F7570" astOperand2="0000021EB99F8230" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F8230" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="i" scope="0000021EB99F1EC0" type="name" varId="9" exprId="9" variable="0000021EBAAE8D80" values="0000021EB9A488B0" astParent="0000021EB99F7510" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F7390" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="]" scope="0000021EB99F1EC0" link="0000021EB99F7510"/>
+    <token id="0000021EB99F77B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str=")" scope="0000021EB99F1EC0" isExpandedMacro="true" link="0000021EB99F7FF0"/>
+    <token id="0000021EB99F7F90" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str=":" scope="0000021EB99F1EC0" isExpandedMacro="true" exprId="51" values="0000021EB9A39370" astParent="0000021EB99F6EB0" astOperand1="0000021EB99F7510" astOperand2="0000021EB99F6E50"/>
+    <token id="0000021EB99F7810" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="(" scope="0000021EB99F1EC0" isExpandedMacro="true" link="0000021EB99F70F0" exprId="52"/>
+    <token id="0000021EB99F6DF0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="currMax" scope="0000021EB99F1EC0" type="name" varId="6" exprId="6" variable="0000021EBAAE9480" values="0000021EB9A39110" astParent="0000021EB99F6E50" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F6E50" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="+" scope="0000021EB99F1EC0" type="op" isArithmeticalOp="true" exprId="46" values="0000021EB9A38E10" astParent="0000021EB99F7F90" astOperand1="0000021EB99F6DF0" astOperand2="0000021EB99F7D50" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F8050" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="arr" scope="0000021EB99F1EC0" type="name" varId="2" exprId="2" variable="0000021EB9A497F8" astParent="0000021EB99F7D50" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99F7D50" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="[" scope="0000021EB99F1EC0" link="0000021EB99F76F0" exprId="40" values="0000021EB9A38CD0" astParent="0000021EB99F6E50" astOperand1="0000021EB99F8050" astOperand2="0000021EB99F7990" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F7990" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="i" scope="0000021EB99F1EC0" type="name" varId="9" exprId="9" variable="0000021EBAAE8D80" values="0000021EB9A38DD0" astParent="0000021EB99F7D50" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F76F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str="]" scope="0000021EB99F1EC0" link="0000021EB99F7D50"/>
+    <token id="0000021EB99F70F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="14" str=")" scope="0000021EB99F1EC0" isExpandedMacro="true" link="0000021EB99F7810"/>
+    <token id="0000021EB99F7C90" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="35" column="43" str=";" scope="0000021EB99F1EC0"/>
+    <token id="0000021EB99F7630" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="36" column="3" str="}" scope="0000021EB99F1EC0" link="0000021EB99F5AD0"/>
+    <token id="0000021EB99F7B70" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="38" column="3" str="maxSoFar" scope="0000021EB99F1C40" type="name" varId="5" exprId="5" variable="0000021EBAAE8ED0" astParent="0000021EB99F7CF0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F7CF0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="38" column="12" str="=" scope="0000021EB99F1C40" type="op" isAssignmentOp="true" exprId="55" values="0000021EB9A48590" astOperand1="0000021EB99F7B70" astOperand2="0000021EB99F7E70" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F8290" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="38" column="14" str="(" scope="0000021EB99F1C40" isExpandedMacro="true" link="0000021EB99F6F10" exprId="56"/>
+    <token id="0000021EB99F7DB0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="38" column="14" str="maxSoFar" scope="0000021EB99F1C40" type="name" varId="5" exprId="5" variable="0000021EBAAE8ED0" astParent="0000021EB99F7930" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F6F10" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="38" column="14" str=")" scope="0000021EB99F1C40" isExpandedMacro="true" link="0000021EB99F8290"/>
+    <token id="0000021EB99F7930" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="38" column="14" str="&gt;" scope="0000021EB99F1C40" type="op" isComparisonOp="true" isExpandedMacro="true" exprId="57" values="0000021EB9A48570" astParent="0000021EB99F7E70" astOperand1="0000021EB99F7DB0" astOperand2="0000021EB99F7A50" valueType-type="bool" valueType-reference="None"/>
+    <token id="0000021EB99F80B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="38" column="14" str="(" scope="0000021EB99F1C40" isExpandedMacro="true" link="0000021EB99F73F0" exprId="58"/>
+    <token id="0000021EB99F7A50" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="38" column="14" str="currMax" scope="0000021EB99F1C40" type="name" varId="6" exprId="6" variable="0000021EBAAE9480" values="0000021EB9A48510" astParent="0000021EB99F7930" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F73F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="38" column="14" str=")" scope="0000021EB99F1C40" isExpandedMacro="true" link="0000021EB99F80B0"/>
+    <token id="0000021EB99F7E70" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="38" column="14" str="?" scope="0000021EB99F1C40" isExpandedMacro="true" exprId="59" values="0000021EB9A48890" astParent="0000021EB99F7CF0" astOperand1="0000021EB99F7930" astOperand2="0000021EB99F7B10" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F83B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="38" column="14" str="maxSoFar" scope="0000021EB99F1C40" type="name" varId="5" exprId="5" variable="0000021EBAAE8ED0" values="0000021EB9A39010" astParent="0000021EB99F7B10" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F7B10" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="38" column="14" str=":" scope="0000021EB99F1C40" isExpandedMacro="true" exprId="60" values="0000021EB9A393F0" astParent="0000021EB99F7E70" astOperand1="0000021EB99F83B0" astOperand2="0000021EB99F82F0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F8110" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="38" column="14" str="(" scope="0000021EB99F1C40" isExpandedMacro="true" link="0000021EB99F8410" exprId="61"/>
+    <token id="0000021EB99F82F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="38" column="14" str="currMax" scope="0000021EB99F1C40" type="name" varId="6" exprId="6" variable="0000021EBAAE9480" values="0000021EB9A390B0" astParent="0000021EB99F7B10" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F8410" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="38" column="14" str=")" scope="0000021EB99F1C40" isExpandedMacro="true" link="0000021EB99F8110"/>
+    <token id="0000021EB99F6C70" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="38" column="36" str=";" scope="0000021EB99F1C40"/>
+    <token id="0000021EB99F8170" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="40" column="3" str="if" scope="0000021EB99F1C40" type="name" astParent="0000021EB99F6D90"/>
+    <token id="0000021EB99F6D90" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="40" column="6" str="(" scope="0000021EB99F1C40" link="0000021EB99F7150" exprId="62" astOperand1="0000021EB99F8170" astOperand2="0000021EB99F6FD0"/>
+    <token id="0000021EB99F6F70" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="40" column="7" str="currMin" scope="0000021EB99F1C40" type="name" varId="7" exprId="7" variable="0000021EBAAE8C30" astParent="0000021EB99F6FD0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F6FD0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="40" column="15" str="&gt;" scope="0000021EB99F1C40" type="op" isComparisonOp="true" exprId="63" values="0000021EB9A48AF0" astParent="0000021EB99F6D90" astOperand1="0000021EB99F6F70" astOperand2="0000021EB99F7030" valueType-type="bool" valueType-reference="None"/>
+    <token id="0000021EB99F7030" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="40" column="17" str="0" scope="0000021EB99F1C40" type="number" isInt="true" values="0000021EB9A486F0" astParent="0000021EB99F6FD0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F7150" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="40" column="18" str=")" scope="0000021EB99F1C40" link="0000021EB99F6D90"/>
+    <token id="0000021EB99F71B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="41" column="3" str="{" scope="0000021EB99F2000" link="0000021EB99F9A30"/>
+    <token id="0000021EB99F7210" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="42" column="4" str="currMin" scope="0000021EB99F2000" type="name" varId="7" exprId="7" variable="0000021EBAAE8C30" astParent="0000021EB99F7270" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F7270" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="42" column="12" str="=" scope="0000021EB99F2000" type="op" isAssignmentOp="true" exprId="64" astOperand1="0000021EB99F7210" astOperand2="0000021EB99F7450" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F72D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="42" column="14" str="arr" scope="0000021EB99F2000" type="name" varId="2" exprId="2" variable="0000021EB9A497F8" astParent="0000021EB99F7450" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99F7450" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="42" column="17" str="[" scope="0000021EB99F2000" link="0000021EB99F9AF0" exprId="40" astParent="0000021EB99F7270" astOperand1="0000021EB99F72D0" astOperand2="0000021EB99F74B0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F74B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="42" column="18" str="i" scope="0000021EB99F2000" type="name" varId="9" exprId="9" variable="0000021EBAAE8D80" values="0000021EB9A39170" astParent="0000021EB99F7450" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F9AF0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="42" column="19" str="]" scope="0000021EB99F2000" link="0000021EB99F7450"/>
+    <token id="0000021EB99F9370" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="42" column="20" str=";" scope="0000021EB99F2000"/>
+    <token id="0000021EB99F9A30" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="43" column="3" str="}" scope="0000021EB99F2000" link="0000021EB99F71B0"/>
+    <token id="0000021EB99F88F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="44" column="3" str="else" scope="0000021EB99F1C40" type="name"/>
+    <token id="0000021EB99F8890" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="45" column="3" str="{" scope="0000021EB99F2280" link="0000021EB99F8B90"/>
+    <token id="0000021EB99F8650" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="46" column="4" str="currMin" scope="0000021EB99F2280" type="name" varId="7" exprId="7" variable="0000021EBAAE8C30" astParent="0000021EB99F9190" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F9190" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="46" column="12" str="+=" scope="0000021EB99F2280" type="op" isAssignmentOp="true" exprId="66" astOperand1="0000021EB99F8650" astOperand2="0000021EB99F93D0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F9670" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="46" column="15" str="arr" scope="0000021EB99F2280" type="name" varId="2" exprId="2" variable="0000021EB9A497F8" astParent="0000021EB99F93D0" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99F93D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="46" column="18" str="[" scope="0000021EB99F2280" link="0000021EB99F85F0" exprId="40" astParent="0000021EB99F9190" astOperand1="0000021EB99F9670" astOperand2="0000021EB99F8710" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F8710" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="46" column="19" str="i" scope="0000021EB99F2280" type="name" varId="9" exprId="9" variable="0000021EBAAE8D80" values="0000021EB9A390F0" astParent="0000021EB99F93D0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F85F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="46" column="20" str="]" scope="0000021EB99F2280" link="0000021EB99F93D0"/>
+    <token id="0000021EB99F99D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="46" column="21" str=";" scope="0000021EB99F2280"/>
+    <token id="0000021EB99F8B90" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="47" column="3" str="}" scope="0000021EB99F2280" link="0000021EB99F8890"/>
+    <token id="0000021EB99F92B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="49" column="3" str="minSoFar" scope="0000021EB99F1C40" type="name" varId="8" exprId="8" variable="0000021EBAAE9720" astParent="0000021EB99F9A90" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F9A90" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="49" column="12" str="=" scope="0000021EB99F1C40" type="op" isAssignmentOp="true" exprId="68" values="0000021EB9A489F0" astOperand1="0000021EB99F92B0" astOperand2="0000021EB99F9010" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F9B50" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="49" column="14" str="(" scope="0000021EB99F1C40" isExpandedMacro="true" link="0000021EB99F87D0" exprId="69"/>
+    <token id="0000021EB99F8770" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="49" column="14" str="minSoFar" scope="0000021EB99F1C40" type="name" varId="8" exprId="8" variable="0000021EBAAE9720" astParent="0000021EB99F8830" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F87D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="49" column="14" str=")" scope="0000021EB99F1C40" isExpandedMacro="true" link="0000021EB99F9B50"/>
+    <token id="0000021EB99F8830" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="49" column="14" str="&lt;" scope="0000021EB99F1C40" type="op" isComparisonOp="true" isExpandedMacro="true" exprId="70" values="0000021EB9A483D0" astParent="0000021EB99F9010" astOperand1="0000021EB99F8770" astOperand2="0000021EB99F86B0" valueType-type="bool" valueType-reference="None"/>
+    <token id="0000021EB99F91F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="49" column="14" str="(" scope="0000021EB99F1C40" isExpandedMacro="true" link="0000021EB99F8950" exprId="71"/>
+    <token id="0000021EB99F86B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="49" column="14" str="currMin" scope="0000021EB99F1C40" type="name" varId="7" exprId="7" variable="0000021EBAAE8C30" values="0000021EB9A488F0" astParent="0000021EB99F8830" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F8950" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="49" column="14" str=")" scope="0000021EB99F1C40" isExpandedMacro="true" link="0000021EB99F91F0"/>
+    <token id="0000021EB99F9010" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="49" column="14" str="?" scope="0000021EB99F1C40" isExpandedMacro="true" exprId="72" values="0000021EB9A48650" astParent="0000021EB99F9A90" astOperand1="0000021EB99F8830" astOperand2="0000021EB99F89B0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F9490" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="49" column="14" str="minSoFar" scope="0000021EB99F1C40" type="name" varId="8" exprId="8" variable="0000021EBAAE9720" values="0000021EB9A39070" astParent="0000021EB99F89B0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F89B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="49" column="14" str=":" scope="0000021EB99F1C40" isExpandedMacro="true" exprId="73" values="0000021EB9A39330" astParent="0000021EB99F9010" astOperand1="0000021EB99F9490" astOperand2="0000021EB99F8E90" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F9730" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="49" column="14" str="(" scope="0000021EB99F1C40" isExpandedMacro="true" link="0000021EB99F8EF0" exprId="74"/>
+    <token id="0000021EB99F8E90" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="49" column="14" str="currMin" scope="0000021EB99F1C40" type="name" varId="7" exprId="7" variable="0000021EBAAE8C30" values="0000021EB9A38FD0" astParent="0000021EB99F89B0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F8EF0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="49" column="14" str=")" scope="0000021EB99F1C40" isExpandedMacro="true" link="0000021EB99F9730"/>
+    <token id="0000021EB99F9C10" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="49" column="36" str=";" scope="0000021EB99F1C40"/>
+    <token id="0000021EB99F8A10" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="50" column="2" str="}" scope="0000021EB99F1C40" link="0000021EB99F5530"/>
+    <token id="0000021EB99F8A70" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="52" column="2" str="long" scope="0000021EB99F2140" type="name"/>
+    <token id="0000021EB99F9610" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="52" column="7" str="absMaxSoFar" scope="0000021EB99F2140" type="name" varId="10" exprId="10" variable="0000021EBAAE9560" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F8F50" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="52" column="19" str=";" scope="0000021EB99F2140" isSplittedVarDeclEq="true"/>
+    <token id="0000021EB9A05380" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="52" column="7" str="absMaxSoFar" scope="0000021EB99F2140" type="name" varId="10" exprId="10" variable="0000021EBAAE9560" astParent="0000021EB9A04CC0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB9A04CC0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="52" column="19" str="=" scope="0000021EB99F2140" type="op" isAssignmentOp="true" exprId="75" values="0000021EB9A48790" astOperand1="0000021EB9A05380" astOperand2="0000021EB99F8530" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F96D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="52" column="21" str="abs" scope="0000021EB99F2140" type="name" astParent="0000021EB99F8530"/>
+    <token id="0000021EB99F8530" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="52" column="24" str="(" scope="0000021EB99F2140" link="0000021EB99F8AD0" exprId="76" values="0000021EB9A485D0" astParent="0000021EB9A04CC0" astOperand1="0000021EB99F96D0" astOperand2="0000021EB99F8FB0" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-originalTypeName="int"/>
+    <token id="0000021EB99F8FB0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="52" column="25" str="maxSoFar" scope="0000021EB99F2140" type="name" varId="5" exprId="5" variable="0000021EBAAE8ED0" values="0000021EB9A48930" astParent="0000021EB99F8530" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F8AD0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="52" column="33" str=")" scope="0000021EB99F2140" link="0000021EB99F8530"/>
+    <token id="0000021EB99F8B30" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="52" column="34" str=";" scope="0000021EB99F2140"/>
+    <token id="0000021EB99F8C50" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="53" column="2" str="long" scope="0000021EB99F2140" type="name"/>
+    <token id="0000021EB99F8CB0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="53" column="7" str="absMinSoFar" scope="0000021EB99F2140" type="name" varId="11" exprId="11" variable="0000021EBAAE91E0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F9790" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="53" column="19" str=";" scope="0000021EB99F2140" isSplittedVarDeclEq="true"/>
+    <token id="0000021EB9A05860" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="53" column="7" str="absMinSoFar" scope="0000021EB99F2140" type="name" varId="11" exprId="11" variable="0000021EBAAE91E0" astParent="0000021EB9A048A0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB9A048A0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="53" column="19" str="=" scope="0000021EB99F2140" type="op" isAssignmentOp="true" exprId="77" values="0000021EB9A483B0" astOperand1="0000021EB9A05860" astOperand2="0000021EB99F8D10" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F97F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="53" column="21" str="abs" scope="0000021EB99F2140" type="name" astParent="0000021EB99F8D10"/>
+    <token id="0000021EB99F8D10" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="53" column="24" str="(" scope="0000021EB99F2140" link="0000021EB99F90D0" exprId="78" values="0000021EB9A485F0" astParent="0000021EB9A048A0" astOperand1="0000021EB99F97F0" astOperand2="0000021EB99F8D70" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-originalTypeName="int"/>
+    <token id="0000021EB99F8D70" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="53" column="25" str="minSoFar" scope="0000021EB99F2140" type="name" varId="8" exprId="8" variable="0000021EBAAE9720" values="0000021EB9A484D0" astParent="0000021EB99F8D10" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F90D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="53" column="33" str=")" scope="0000021EB99F2140" link="0000021EB99F8D10"/>
+    <token id="0000021EB99F8DD0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="53" column="34" str=";" scope="0000021EB99F2140"/>
+    <token id="0000021EB99F8E30" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="54" column="2" str="MAX" scope="0000021EB99F2140" type="name" varId="3" exprId="3" variable="0000021EBAAE9330" astParent="0000021EB99F9550" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F9550" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="54" column="6" str="=" scope="0000021EB99F2140" type="op" isAssignmentOp="true" exprId="79" values="0000021EB9A48670" astOperand1="0000021EB99F8E30" astOperand2="0000021EB99F9250" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F9BB0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="54" column="8" str="absMaxSoFar" scope="0000021EB99F2140" type="name" varId="10" exprId="10" variable="0000021EBAAE9560" values="0000021EB9A486B0" astParent="0000021EB99F9130" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F9130" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="54" column="20" str="&gt;" scope="0000021EB99F2140" type="op" isComparisonOp="true" exprId="80" values="0000021EB9A48430" astParent="0000021EB99F9250" astOperand1="0000021EB99F9BB0" astOperand2="0000021EB99F9910" valueType-type="bool" valueType-reference="None"/>
+    <token id="0000021EB99F9910" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="54" column="22" str="absMinSoFar" scope="0000021EB99F2140" type="name" varId="11" exprId="11" variable="0000021EBAAE91E0" values="0000021EB9A48390" astParent="0000021EB99F9130" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F9250" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="54" column="34" str="?" scope="0000021EB99F2140" exprId="81" values="0000021EB9A487D0" astParent="0000021EB99F9550" astOperand1="0000021EB99F9130" astOperand2="0000021EB99F95B0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F9310" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="54" column="36" str="absMaxSoFar" scope="0000021EB99F2140" type="name" varId="10" exprId="10" variable="0000021EBAAE9560" values="0000021EB9A487B0" astParent="0000021EB99F95B0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F95B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="54" column="48" str=":" scope="0000021EB99F2140" exprId="82" values="0000021EB9A484F0" astParent="0000021EB99F9250" astOperand1="0000021EB99F9310" astOperand2="0000021EB99F9850" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F9850" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="54" column="50" str="absMinSoFar" scope="0000021EB99F2140" type="name" varId="11" exprId="11" variable="0000021EBAAE91E0" values="0000021EB9A48850" astParent="0000021EB99F95B0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F98B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="54" column="61" str=";" scope="0000021EB99F2140"/>
+    <token id="0000021EB99F9970" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="56" column="2" str="return" scope="0000021EB99F2140" type="name" astOperand1="0000021EB99F8470" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F8590" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="56" column="9" str="MAX" scope="0000021EB99F2140" type="name" varId="3" exprId="3" variable="0000021EBAAE9330" values="0000021EB9A48630" astParent="0000021EB99F8470" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F8470" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="56" column="13" str="*" scope="0000021EB99F2140" type="op" isArithmeticalOp="true" exprId="83" astParent="0000021EB99F9970" astOperand1="0000021EB99F8590" astOperand2="0000021EB99F84D0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F84D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="56" column="15" str="MAX" scope="0000021EB99F2140" type="name" varId="3" exprId="3" variable="0000021EBAAE9330" values="0000021EB9A48870" astParent="0000021EB99F8470" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FAD50" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="56" column="18" str=";" scope="0000021EB99F2140"/>
+    <token id="0000021EB99FAC90" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="57" column="1" str="}" scope="0000021EB99F2140" link="0000021EB99F5290"/>
+    <token id="0000021EB99FA630" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="59" column="1" str="int" scope="0000021EB99F28C0" type="name"/>
+    <token id="0000021EB99FB050" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="59" column="5" str="main" scope="0000021EB99F28C0" type="name" function="0000021EB9A46170"/>
+    <token id="0000021EB99FB290" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="59" column="9" str="(" scope="0000021EB99F28C0" link="0000021EB99FA990" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FA990" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="59" column="10" str=")" scope="0000021EB99F28C0" link="0000021EB99FB290"/>
+    <token id="0000021EB99FAFF0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="60" column="1" str="{" scope="0000021EB99F23C0" link="0000021EB9A04AE0"/>
+    <token id="0000021EB99FA330" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="61" column="2" str="int" scope="0000021EB99F23C0" type="name"/>
+    <token id="0000021EB99FAC30" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="61" column="6" str="n" scope="0000021EB99F23C0" type="name" varId="12" exprId="12" variable="0000021EBAAE8F40" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FA930" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="61" column="7" str=";" scope="0000021EB99F23C0"/>
+    <token id="0000021EB99FA090" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="62" column="2" str="scanf" scope="0000021EB99F23C0" type="name" astParent="0000021EB99FB0B0"/>
+    <token id="0000021EB99FB0B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="62" column="7" str="(" scope="0000021EB99F23C0" link="0000021EB99FB2F0" exprId="84" astOperand1="0000021EB99FA090" astOperand2="0000021EB99FA690" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-originalTypeName="int"/>
+    <token id="0000021EB99FA4B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="62" column="8" str="&quot;%d&quot;" scope="0000021EB99F23C0" type="string" strlen="2" values="0000021EB9A48A70" astParent="0000021EB99FA690" valueType-type="char" valueType-pointer="1" valueType-constness="1" valueType-reference="None"/>
+    <token id="0000021EB99FA690" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="62" column="12" str="," scope="0000021EB99F23C0" astParent="0000021EB99FB0B0" astOperand1="0000021EB99FA4B0" astOperand2="0000021EB99FA7B0"/>
+    <token id="0000021EB99FA7B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="62" column="14" str="&amp;" scope="0000021EB99F23C0" type="op" exprId="85" values="0000021EB9A48530" astParent="0000021EB99FA690" astOperand1="0000021EB99F9CD0" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99F9CD0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="62" column="15" str="n" scope="0000021EB99F23C0" type="name" varId="12" exprId="12" variable="0000021EBAAE8F40" values="0000021EB9A39310" astParent="0000021EB99FA7B0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FB2F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="62" column="16" str=")" scope="0000021EB99F23C0" link="0000021EB99FB0B0"/>
+    <token id="0000021EB99FA6F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="62" column="17" str=";" scope="0000021EB99F23C0"/>
+    <token id="0000021EB99FA510" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="2" str="int" scope="0000021EB99F23C0" type="name" astParent="0000021EB99FAAB0"/>
+    <token id="0000021EB99FAAB0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="6" str="*" scope="0000021EB99F23C0" type="op" isArithmeticalOp="true" astOperand1="0000021EB99FA510" astOperand2="0000021EB99FAF30"/>
+    <token id="0000021EB99FAF30" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="7" str="arr" scope="0000021EB99F23C0" type="name" varId="13" exprId="13" variable="0000021EBAAE9170" astParent="0000021EB99FAAB0" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99FAE70" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="11" str=";" scope="0000021EB99F23C0" isSplittedVarDeclEq="true"/>
+    <token id="0000021EB9A045A0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="7" str="arr" scope="0000021EB99F23C0" type="name" varId="13" exprId="13" variable="0000021EBAAE9170" astParent="0000021EB9A043C0" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB9A043C0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="11" str="=" scope="0000021EB99F23C0" type="op" isAssignmentOp="true" exprId="86" astOperand1="0000021EB9A045A0" astOperand2="0000021EB99FA390" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99FA390" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="13" str="(" scope="0000021EB99F23C0" isCast="true" link="0000021EB99FA9F0" exprId="87" astParent="0000021EB9A043C0" astOperand1="0000021EB99FA270" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99FA1B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="14" str="int" scope="0000021EB99F23C0" type="name"/>
+    <token id="0000021EB99FA3F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="18" str="*" scope="0000021EB99F23C0" type="op" isArithmeticalOp="true" exprId="88"/>
+    <token id="0000021EB99FA9F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="19" str=")" scope="0000021EB99F23C0" link="0000021EB99FA390"/>
+    <token id="0000021EB99FA210" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="20" str="malloc" scope="0000021EB99F23C0" type="name" astParent="0000021EB99FA270"/>
+    <token id="0000021EB99FA270" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="26" str="(" scope="0000021EB99F23C0" link="0000021EB99FAA50" exprId="89" astParent="0000021EB99FA390" astOperand1="0000021EB99FA210" astOperand2="0000021EB99FB230" valueType-type="void" valueType-pointer="1" valueType-reference="None" valueType-originalTypeName="void *"/>
+    <token id="0000021EB99FAF90" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="27" str="n" scope="0000021EB99F23C0" type="name" varId="12" exprId="12" variable="0000021EBAAE8F40" astParent="0000021EB99FB230" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FB230" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="29" str="*" scope="0000021EB99F23C0" type="op" isArithmeticalOp="true" exprId="90" values="0000021EB9A48450" astParent="0000021EB99FA270" astOperand1="0000021EB99FAF90" astOperand2="0000021EB99FB110" valueType-type="long" valueType-sign="unsigned" valueType-reference="None" valueType-originalTypeName="size_t"/>
+    <token id="0000021EB99F9EB0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="31" str="sizeof" scope="0000021EB99F23C0" type="name" astParent="0000021EB99FB110"/>
+    <token id="0000021EB99FB110" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="37" str="(" scope="0000021EB99F23C0" link="0000021EB99FB170" exprId="91" values="0000021EB9A489D0" astParent="0000021EB99FB230" astOperand1="0000021EB99F9EB0" astOperand2="0000021EB99FA450" valueType-type="long" valueType-sign="unsigned" valueType-reference="None" valueType-originalTypeName="size_t"/>
+    <token id="0000021EB99FA450" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="38" str="int" scope="0000021EB99F23C0" type="name" astParent="0000021EB99FB110" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FB170" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="41" str=")" scope="0000021EB99F23C0" link="0000021EB99FB110"/>
+    <token id="0000021EB99FAA50" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="42" str=")" scope="0000021EB99F23C0" link="0000021EB99FA270"/>
+    <token id="0000021EB99FA870" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="63" column="43" str=";" scope="0000021EB99F23C0"/>
+    <token id="0000021EB99FAED0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="65" column="2" str="for" scope="0000021EB99F23C0" type="name" astParent="0000021EB99F9C70"/>
+    <token id="0000021EB99F9C70" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="65" column="6" str="(" scope="0000021EB99F23C0" link="0000021EB99FA810" exprId="92" astOperand1="0000021EB99FAED0" astOperand2="0000021EB99FB3B0"/>
+    <token id="0000021EB99F9F10" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="65" column="7" str="int" scope="0000021EB99F23C0" type="name"/>
+    <token id="0000021EB99FB1D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="65" column="11" str="i" scope="0000021EB99F23C0" type="name" varId="14" exprId="14" variable="0000021EBAAE8E60" astParent="0000021EB99FA750" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FA750" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="65" column="13" str="=" scope="0000021EB99F23C0" type="op" isAssignmentOp="true" exprId="93" values="0000021EB9A48AB0" astParent="0000021EB99FB3B0" astOperand1="0000021EB99FB1D0" astOperand2="0000021EB99FA150" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FA150" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="65" column="15" str="0" scope="0000021EB99F23C0" type="number" isInt="true" values="0000021EB9A48910" astParent="0000021EB99FA750" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FB3B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="65" column="16" str=";" scope="0000021EB99F23C0" astParent="0000021EB99F9C70" astOperand1="0000021EB99FA750" astOperand2="0000021EB99F9D30"/>
+    <token id="0000021EB99FB350" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="65" column="18" str="i" scope="0000021EB99F23C0" type="name" varId="14" exprId="14" variable="0000021EBAAE8E60" values="0000021EB9A39190" astParent="0000021EB99FA5D0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FA5D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="65" column="20" str="&lt;" scope="0000021EB99F23C0" type="op" isComparisonOp="true" exprId="94" values="0000021EB9A488D0" astParent="0000021EB99F9D30" astOperand1="0000021EB99FB350" astOperand2="0000021EB99FB410" valueType-type="bool" valueType-reference="None"/>
+    <token id="0000021EB99FB410" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="65" column="22" str="n" scope="0000021EB99F23C0" type="name" varId="12" exprId="12" variable="0000021EBAAE8F40" astParent="0000021EB99FA5D0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99F9D30" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="65" column="23" str=";" scope="0000021EB99F23C0" astParent="0000021EB99FB3B0" astOperand1="0000021EB99FA5D0" astOperand2="0000021EB99FA570"/>
+    <token id="0000021EB99F9D90" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="65" column="25" str="i" scope="0000021EB99F23C0" type="name" varId="14" exprId="14" variable="0000021EBAAE8E60" astParent="0000021EB99FA570" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FA570" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="65" column="26" str="++" scope="0000021EB99F23C0" type="op" exprId="95" astParent="0000021EB99F9D30" astOperand1="0000021EB99F9D90" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FA810" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="65" column="28" str=")" scope="0000021EB99F23C0" link="0000021EB99F9C70"/>
+    <token id="0000021EB99F9DF0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="66" column="2" str="{" scope="0000021EB99F2500" link="0000021EB99FADB0"/>
+    <token id="0000021EB99F9F70" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="67" column="3" str="scanf" scope="0000021EB99F2500" type="name" astParent="0000021EB99F9E50"/>
+    <token id="0000021EB99F9E50" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="67" column="8" str="(" scope="0000021EB99F2500" link="0000021EB99FABD0" exprId="96" astOperand1="0000021EB99F9F70" astOperand2="0000021EB99F9FD0" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-originalTypeName="int"/>
+    <token id="0000021EB99FA8D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="67" column="9" str="&quot;%d&quot;" scope="0000021EB99F2500" type="string" strlen="2" values="0000021EB9A48A30" astParent="0000021EB99F9FD0" valueType-type="char" valueType-pointer="1" valueType-constness="1" valueType-reference="None"/>
+    <token id="0000021EB99F9FD0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="67" column="13" str="," scope="0000021EB99F2500" astParent="0000021EB99F9E50" astOperand1="0000021EB99FA8D0" astOperand2="0000021EB99FA030"/>
+    <token id="0000021EB99FA030" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="67" column="15" str="&amp;" scope="0000021EB99F2500" type="op" exprId="97" values="0000021EB9A48750" astParent="0000021EB99F9FD0" astOperand1="0000021EB99FA2D0" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99FA0F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="67" column="16" str="arr" scope="0000021EB99F2500" type="name" varId="13" exprId="13" variable="0000021EBAAE9170" astParent="0000021EB99FA2D0" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99FA2D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="67" column="19" str="[" scope="0000021EB99F2500" link="0000021EB99FAB70" exprId="98" astParent="0000021EB99FA030" astOperand1="0000021EB99FA0F0" astOperand2="0000021EB99FAB10" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FAB10" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="67" column="20" str="i" scope="0000021EB99F2500" type="name" varId="14" exprId="14" variable="0000021EBAAE8E60" astParent="0000021EB99FA2D0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FAB70" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="67" column="21" str="]" scope="0000021EB99F2500" link="0000021EB99FA2D0"/>
+    <token id="0000021EB99FABD0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="67" column="22" str=")" scope="0000021EB99F2500" link="0000021EB99F9E50"/>
+    <token id="0000021EB99FACF0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="67" column="23" str=";" scope="0000021EB99F2500"/>
+    <token id="0000021EB99FADB0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="68" column="2" str="}" scope="0000021EB99F2500" link="0000021EB99F9DF0"/>
+    <token id="0000021EB99FAE10" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="70" column="2" str="long" scope="0000021EB99F23C0" type="name"/>
+    <token id="0000021EB99FBA10" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="70" column="7" str="result" scope="0000021EB99F23C0" type="name" varId="15" exprId="15" variable="0000021EBAAE8B50" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FB470" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="70" column="14" str=";" scope="0000021EB99F23C0" isSplittedVarDeclEq="true"/>
+    <token id="0000021EB9A04360" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="70" column="7" str="result" scope="0000021EB99F23C0" type="name" varId="15" exprId="15" variable="0000021EBAAE8B50" astParent="0000021EB9A044E0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB9A044E0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="70" column="14" str="=" scope="0000021EB99F23C0" type="op" isAssignmentOp="true" exprId="99" astOperand1="0000021EB9A04360" astOperand2="0000021EB99FB8F0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FBAD0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="70" column="16" str="maxSubarrayValue" scope="0000021EB99F23C0" type="name" function="0000021EB9A3B030" astParent="0000021EB99FB8F0"/>
+    <token id="0000021EB99FB8F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="70" column="32" str="(" scope="0000021EB99F23C0" link="0000021EB99FB890" exprId="100" astParent="0000021EB9A044E0" astOperand1="0000021EB99FBAD0" astOperand2="0000021EB99FBB90" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FB6B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="70" column="33" str="n" scope="0000021EB99F23C0" type="name" varId="12" exprId="12" variable="0000021EBAAE8F40" astParent="0000021EB99FBB90" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FBB90" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="70" column="34" str="," scope="0000021EB99F23C0" astParent="0000021EB99FB8F0" astOperand1="0000021EB99FB6B0" astOperand2="0000021EB99FBA70"/>
+    <token id="0000021EB99FBA70" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="70" column="36" str="arr" scope="0000021EB99F23C0" type="name" varId="13" exprId="13" variable="0000021EBAAE9170" astParent="0000021EB99FBB90" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99FB890" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="70" column="39" str=")" scope="0000021EB99F23C0" link="0000021EB99FB8F0"/>
+    <token id="0000021EB99FB830" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="70" column="40" str=";" scope="0000021EB99F23C0"/>
+    <token id="0000021EB99FBB30" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="71" column="2" str="printf" scope="0000021EB99F23C0" type="name" astParent="0000021EB99FB950"/>
+    <token id="0000021EB99FB950" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="71" column="8" str="(" scope="0000021EB99F23C0" link="0000021EB99FB710" exprId="101" astOperand1="0000021EB99FBB30" astOperand2="0000021EB99FB9B0" valueType-type="int" valueType-sign="signed" valueType-reference="None" valueType-originalTypeName="int"/>
+    <token id="0000021EB99FB590" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="71" column="9" str="&quot;%ld\n&quot;" scope="0000021EB99F23C0" type="string" strlen="4" values="0000021EB9A48710" astParent="0000021EB99FB9B0" valueType-type="char" valueType-pointer="1" valueType-constness="1" valueType-reference="None"/>
+    <token id="0000021EB99FB9B0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="71" column="16" str="," scope="0000021EB99F23C0" astParent="0000021EB99FB950" astOperand1="0000021EB99FB590" astOperand2="0000021EB99FB4D0"/>
+    <token id="0000021EB99FB4D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="71" column="18" str="result" scope="0000021EB99F23C0" type="name" varId="15" exprId="15" variable="0000021EBAAE8B50" astParent="0000021EB99FB9B0" valueType-type="long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB99FB710" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="71" column="24" str=")" scope="0000021EB99F23C0" link="0000021EB99FB950"/>
+    <token id="0000021EB99FB650" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="71" column="25" str=";" scope="0000021EB99F23C0"/>
+    <token id="0000021EB99FB530" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="74" column="2" str="free" scope="0000021EB99F23C0" type="name" astParent="0000021EB99FB5F0"/>
+    <token id="0000021EB99FB5F0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="74" column="6" str="(" scope="0000021EB99F23C0" link="0000021EB99FB7D0" exprId="102" astOperand1="0000021EB99FB530" astOperand2="0000021EB99FB770" valueType-type="void" valueType-reference="None" valueType-originalTypeName="void"/>
+    <token id="0000021EB99FB770" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="74" column="7" str="arr" scope="0000021EB99F23C0" type="name" varId="13" exprId="13" variable="0000021EBAAE9170" astParent="0000021EB99FB5F0" valueType-type="int" valueType-sign="signed" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0000021EB99FB7D0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="74" column="10" str=")" scope="0000021EB99F23C0" link="0000021EB99FB5F0"/>
+    <token id="0000021EB9A05800" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="74" column="11" str=";" scope="0000021EB99F23C0"/>
+    <token id="0000021EB9A05500" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="76" column="2" str="return" scope="0000021EB99F23C0" type="name" astOperand1="0000021EB9A057A0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB9A057A0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="76" column="9" str="0" scope="0000021EB99F23C0" type="number" isInt="true" values="0000021EB9A483F0" astParent="0000021EB9A05500" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0000021EB9A04900" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="76" column="10" str=";" scope="0000021EB99F23C0"/>
+    <token id="0000021EB9A04AE0" file="d:/XDUMP/C_programming/Problem solving &amp; Exercises/HackerRank/Certificates/Problem Solving (Intermediate)/maximum-subarray-value/solution.c" linenr="77" column="1" str="}" scope="0000021EB99F23C0" link="0000021EB99FAFF0"/>
+  </tokenlist>
+  <scopes>
+    <scope id="0000021EB99F28C0" type="Global">
+      <functionList>
+        <function id="0000021EB9A3B030" token="0000021EB99F4FF0" tokenDef="0000021EB99F4FF0" name="maxSubarrayValue" type="Function" access="Public">
+          <arg nr="1" variable="0000021EB9A497A0"/>
+          <arg nr="2" variable="0000021EB9A497F8"/>
+        </function>
+        <function id="0000021EB9A46170" token="0000021EB99FB050" tokenDef="0000021EB99FB050" name="main" type="Function" access="Public"/>
+      </functionList>
+    </scope>
+    <scope id="0000021EB99F2140" type="Function" className="maxSubarrayValue" bodyStart="0000021EB99F5290" bodyEnd="0000021EB99FAC90" nestedIn="0000021EB99F28C0" function="0000021EB9A3B030">
+      <varlist>
+        <var id="0000021EBAAE9330"/>
+        <var id="0000021EBAAE8ED0"/>
+        <var id="0000021EBAAE9480"/>
+        <var id="0000021EBAAE8C30"/>
+        <var id="0000021EBAAE9720"/>
+        <var id="0000021EBAAE9560"/>
+        <var id="0000021EBAAE91E0"/>
+      </varlist>
+    </scope>
+    <scope id="0000021EB99F2A00" type="For" bodyStart="0000021EB99F5110" bodyEnd="0000021EB99F41B0" nestedIn="0000021EB99F2140">
+      <varlist>
+        <var id="0000021EBAAE7FF0"/>
+      </varlist>
+    </scope>
+    <scope id="0000021EB99F1C40" type="For" bodyStart="0000021EB99F5530" bodyEnd="0000021EB99F8A10" nestedIn="0000021EB99F2140">
+      <varlist>
+        <var id="0000021EBAAE8D80"/>
+      </varlist>
+    </scope>
+    <scope id="0000021EB99F1D80" type="If" bodyStart="0000021EB99F5E90" bodyEnd="0000021EB99F5A10" nestedIn="0000021EB99F1C40"/>
+    <scope id="0000021EB99F1EC0" type="Else" bodyStart="0000021EB99F5AD0" bodyEnd="0000021EB99F7630" nestedIn="0000021EB99F1C40"/>
+    <scope id="0000021EB99F2000" type="If" bodyStart="0000021EB99F71B0" bodyEnd="0000021EB99F9A30" nestedIn="0000021EB99F1C40"/>
+    <scope id="0000021EB99F2280" type="Else" bodyStart="0000021EB99F8890" bodyEnd="0000021EB99F8B90" nestedIn="0000021EB99F1C40"/>
+    <scope id="0000021EB99F23C0" type="Function" className="main" bodyStart="0000021EB99FAFF0" bodyEnd="0000021EB9A04AE0" nestedIn="0000021EB99F28C0" function="0000021EB9A46170">
+      <varlist>
+        <var id="0000021EBAAE8F40"/>
+        <var id="0000021EBAAE9170"/>
+        <var id="0000021EBAAE8B50"/>
+      </varlist>
+    </scope>
+    <scope id="0000021EB99F2500" type="For" bodyStart="0000021EB99F9DF0" bodyEnd="0000021EB99FADB0" nestedIn="0000021EB99F23C0">
+      <varlist>
+        <var id="0000021EBAAE8E60"/>
+      </varlist>
+    </scope>
+  </scopes>
+  <variables>
+    <var id="0000021EB9A497A0" nameToken="0000021EB99F40F0" typeStartToken="0000021EB99F4690" typeEndToken="0000021EB99F4690" access="Argument" scope="0000021EB99F2140" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0000021EB9A497F8" nameToken="0000021EB99F4B70" typeStartToken="0000021EB99F47B0" typeEndToken="0000021EB99F4510" access="Argument" scope="0000021EB99F2140" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="true" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0000021EBAAE7FF0" nameToken="0000021EB99F5350" typeStartToken="0000021EB99F4E70" typeEndToken="0000021EB99F4E70" access="Local" scope="0000021EB99F2A00" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0000021EBAAE8B50" nameToken="0000021EB99FBA10" typeStartToken="0000021EB99FAE10" typeEndToken="0000021EB99FAE10" access="Local" scope="0000021EB99F23C0" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0000021EBAAE8C30" nameToken="0000021EB99F6A90" typeStartToken="0000021EB99F6550" typeEndToken="0000021EB99F6550" access="Local" scope="0000021EB99F2140" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0000021EBAAE8D80" nameToken="0000021EB99F6490" typeStartToken="0000021EB99F6910" typeEndToken="0000021EB99F6910" access="Local" scope="0000021EB99F1C40" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0000021EBAAE8E60" nameToken="0000021EB99FB1D0" typeStartToken="0000021EB99F9F10" typeEndToken="0000021EB99F9F10" access="Local" scope="0000021EB99F2500" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0000021EBAAE8ED0" nameToken="0000021EB99F4330" typeStartToken="0000021EB99F4270" typeEndToken="0000021EB99F4270" access="Local" scope="0000021EB99F2140" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0000021EBAAE8F40" nameToken="0000021EB99FAC30" typeStartToken="0000021EB99FA330" typeEndToken="0000021EB99FA330" access="Local" scope="0000021EB99F23C0" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0000021EBAAE9170" nameToken="0000021EB99FAF30" typeStartToken="0000021EB99FA510" typeEndToken="0000021EB99FAAB0" access="Local" scope="0000021EB99F23C0" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="true" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0000021EBAAE91E0" nameToken="0000021EB99F8CB0" typeStartToken="0000021EB99F8C50" typeEndToken="0000021EB99F8C50" access="Local" scope="0000021EB99F2140" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0000021EBAAE9330" nameToken="0000021EB99F4D50" typeStartToken="0000021EB99F45D0" typeEndToken="0000021EB99F45D0" access="Local" scope="0000021EB99F2140" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0000021EBAAE9480" nameToken="0000021EB99F62B0" typeStartToken="0000021EB99F5B90" typeEndToken="0000021EB99F5B90" access="Local" scope="0000021EB99F2140" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0000021EBAAE9560" nameToken="0000021EB99F9610" typeStartToken="0000021EB99F8A70" typeEndToken="0000021EB99F8A70" access="Local" scope="0000021EB99F2140" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+    <var id="0000021EBAAE9720" nameToken="0000021EB99F65B0" typeStartToken="0000021EB99F6430" typeEndToken="0000021EB99F6430" access="Local" scope="0000021EB99F2140" constness="0" isArray="false" isClass="false" isConst="false" isExtern="false" isPointer="false" isReference="false" isStatic="false" isVolatile="false"/>
+  </variables>
+  <valueflow>
+    <values id="0000021EB996A830">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB996A810">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB996A890">
+      <value intvalue="1" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB996A870">
+      <value intvalue="1" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A39150">
+      <value intvalue="1" bound="Point" possible="true" path="0"/>
+      <value intvalue="3" bound="Point" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48550">
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+      <value intvalue="2" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A38C70">
+      <value intvalue="1" bound="Point" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB996A8B0">
+      <value intvalue="2" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A39210">
+      <value intvalue="1" bound="Point" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A39250">
+      <value intvalue="1" bound="Point" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB996A8D0">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48A90">
+      <value symbolic="0000021EB9A050E0" symbolic-delta="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48990">
+      <value symbolic="0000021EB9A050E0" symbolic-delta="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB996A8F0">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48410">
+      <value symbolic="0000021EB9A050E0" symbolic-delta="0" bound="Point" known="true" path="0"/>
+      <value symbolic="0000021EB9A054A0" symbolic-delta="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48370">
+      <value symbolic="0000021EB9A050E0" symbolic-delta="0" bound="Point" known="true" path="0"/>
+      <value symbolic="0000021EB9A054A0" symbolic-delta="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB996A930">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A485B0">
+      <value symbolic="0000021EB9A050E0" symbolic-delta="0" bound="Point" known="true" path="0"/>
+      <value symbolic="0000021EB9A054A0" symbolic-delta="0" bound="Point" known="true" path="0"/>
+      <value symbolic="0000021EB9A04C00" symbolic-delta="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48AD0">
+      <value symbolic="0000021EB9A050E0" symbolic-delta="0" bound="Point" known="true" path="0"/>
+      <value symbolic="0000021EB9A054A0" symbolic-delta="0" bound="Point" known="true" path="0"/>
+      <value symbolic="0000021EB9A04C00" symbolic-delta="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB996A950">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A486D0">
+      <value intvalue="1" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48A10">
+      <value intvalue="1" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A39090">
+      <value intvalue="1" bound="Point" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A489B0">
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+      <value intvalue="2" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A484B0">
+      <value symbolic="0000021EB99F63D0" symbolic-delta="0" bound="Point" possible="true" path="0"/>
+      <value symbolic="0000021EB9A050E0" symbolic-delta="0" bound="Point" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48770">
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+      <value intvalue="2" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48A50">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A487F0">
+      <value symbolic="0000021EB99F6670" symbolic-delta="0" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48610">
+      <value symbolic="0000021EB99F8350" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F7F30" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48970">
+      <value symbolic="0000021EB99F6670" symbolic-delta="0" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48730">
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+      <value intvalue="2" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A38FF0">
+      <value intvalue="-1" bound="Upper" condition-line="29" impossible="true" path="0"/>
+      <value intvalue="0" bound="Lower" condition-line="29" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48810">
+      <value symbolic="0000021EB99F6670" symbolic-delta="0" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48490">
+      <value symbolic="0000021EB99F8350" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F7F30" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A39050">
+      <value symbolic="0000021EB99F7F30" symbolic-delta="1" bound="Lower" condition-line="35" possible="true" path="0"/>
+      <value symbolic="0000021EB99F7F30" symbolic-delta="0" bound="Upper" condition-line="35" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A488B0">
+      <value symbolic="0000021EB99F6670" symbolic-delta="0" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A39370">
+      <value symbolic="0000021EB99F7F30" symbolic-delta="1" bound="Lower" condition-line="35" possible="true" path="0"/>
+      <value symbolic="0000021EB99F7F30" symbolic-delta="0" bound="Upper" condition-line="35" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F8350" symbolic-delta="-1" bound="Upper" condition-line="35" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F8350" symbolic-delta="0" bound="Lower" condition-line="35" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A39110">
+      <value intvalue="-1" bound="Upper" condition-line="29" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A38E10">
+      <value symbolic="0000021EB99F8350" symbolic-delta="-1" bound="Upper" condition-line="35" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F8350" symbolic-delta="0" bound="Lower" condition-line="35" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A38CD0">
+      <value symbolic="0000021EB99F7F30" symbolic-delta="1" bound="Lower" condition-line="35" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F7F30" symbolic-delta="0" bound="Upper" condition-line="35" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A38DD0">
+      <value symbolic="0000021EB99F6670" symbolic-delta="0" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48590">
+      <value symbolic="0000021EB99F7DB0" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F7A50" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48570">
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+      <value intvalue="2" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48510">
+      <value symbolic="0000021EB99F6190" symbolic-delta="0" bound="Point" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48890">
+      <value symbolic="0000021EB99F7DB0" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F7A50" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A39010">
+      <value symbolic="0000021EB99F7A50" symbolic-delta="1" bound="Lower" condition-line="38" possible="true" path="0"/>
+      <value symbolic="0000021EB99F7A50" symbolic-delta="0" bound="Upper" condition-line="38" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A393F0">
+      <value symbolic="0000021EB99F7A50" symbolic-delta="1" bound="Lower" condition-line="38" possible="true" path="0"/>
+      <value symbolic="0000021EB99F7A50" symbolic-delta="0" bound="Upper" condition-line="38" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F7DB0" symbolic-delta="-1" bound="Upper" condition-line="38" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F7DB0" symbolic-delta="0" bound="Lower" condition-line="38" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A390B0">
+      <value symbolic="0000021EB99F7DB0" symbolic-delta="-1" bound="Upper" condition-line="38" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F7DB0" symbolic-delta="0" bound="Lower" condition-line="38" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48AF0">
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+      <value intvalue="2" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A486F0">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A39170">
+      <value symbolic="0000021EB99F6670" symbolic-delta="0" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A390F0">
+      <value symbolic="0000021EB99F6670" symbolic-delta="0" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A489F0">
+      <value symbolic="0000021EB99F8770" symbolic-delta="1" bound="Lower" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F86B0" symbolic-delta="1" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A483D0">
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+      <value intvalue="2" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A488F0">
+      <value symbolic="0000021EB99F7450" symbolic-delta="0" bound="Point" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48650">
+      <value symbolic="0000021EB99F8770" symbolic-delta="1" bound="Lower" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F86B0" symbolic-delta="1" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A39070">
+      <value symbolic="0000021EB99F86B0" symbolic-delta="-1" bound="Upper" condition-line="49" possible="true" path="0"/>
+      <value symbolic="0000021EB99F86B0" symbolic-delta="0" bound="Lower" condition-line="49" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A39330">
+      <value symbolic="0000021EB99F86B0" symbolic-delta="-1" bound="Upper" condition-line="49" possible="true" path="0"/>
+      <value symbolic="0000021EB99F86B0" symbolic-delta="0" bound="Lower" condition-line="49" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F8770" symbolic-delta="1" bound="Lower" condition-line="49" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F8770" symbolic-delta="0" bound="Upper" condition-line="49" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A38FD0">
+      <value symbolic="0000021EB99F8770" symbolic-delta="1" bound="Lower" condition-line="49" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F8770" symbolic-delta="0" bound="Upper" condition-line="49" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48790">
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A485D0">
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48930">
+      <value symbolic="0000021EB99F4750" symbolic-delta="0" bound="Point" possible="true" path="0"/>
+      <value symbolic="0000021EB9A054A0" symbolic-delta="0" bound="Point" possible="true" path="0"/>
+      <value symbolic="0000021EB9A04C00" symbolic-delta="0" bound="Point" possible="true" path="0"/>
+      <value symbolic="0000021EB9A051A0" symbolic-delta="0" bound="Point" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A483B0">
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A485F0">
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A484D0">
+      <value symbolic="0000021EB99F60D0" symbolic-delta="0" bound="Point" possible="true" path="0"/>
+      <value symbolic="0000021EB9A050E0" symbolic-delta="0" bound="Point" possible="true" path="0"/>
+      <value symbolic="0000021EB9A054A0" symbolic-delta="0" bound="Point" possible="true" path="0"/>
+      <value symbolic="0000021EB9A04C00" symbolic-delta="0" bound="Point" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48670">
+      <value symbolic="0000021EB99F9BB0" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F8530" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F9910" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F8D10" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A486B0">
+      <value symbolic="0000021EB99F8530" symbolic-delta="0" bound="Point" known="true" path="0"/>
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48430">
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+      <value intvalue="2" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48390">
+      <value symbolic="0000021EB99F8D10" symbolic-delta="0" bound="Point" known="true" path="0"/>
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A487D0">
+      <value symbolic="0000021EB99F9BB0" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F8530" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F9910" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F8D10" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A487B0">
+      <value symbolic="0000021EB99F8530" symbolic-delta="0" bound="Point" known="true" path="0"/>
+      <value symbolic="0000021EB99F9910" symbolic-delta="1" bound="Lower" condition-line="54" possible="true" path="0"/>
+      <value symbolic="0000021EB99F9910" symbolic-delta="0" bound="Upper" condition-line="54" impossible="true" path="0"/>
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A484F0">
+      <value symbolic="0000021EB99F8530" symbolic-delta="0" bound="Point" known="true" path="0"/>
+      <value symbolic="0000021EB99F8D10" symbolic-delta="0" bound="Point" known="true" path="0"/>
+      <value symbolic="0000021EB99F9910" symbolic-delta="1" bound="Lower" condition-line="54" possible="true" path="0"/>
+      <value symbolic="0000021EB99F9910" symbolic-delta="0" bound="Upper" condition-line="54" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F9BB0" symbolic-delta="-1" bound="Upper" condition-line="54" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F9BB0" symbolic-delta="0" bound="Lower" condition-line="54" possible="true" path="0"/>
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48850">
+      <value symbolic="0000021EB99F8D10" symbolic-delta="0" bound="Point" known="true" path="0"/>
+      <value symbolic="0000021EB99F9BB0" symbolic-delta="-1" bound="Upper" condition-line="54" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F9BB0" symbolic-delta="0" bound="Lower" condition-line="54" possible="true" path="0"/>
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48630">
+      <value symbolic="0000021EB99F9250" symbolic-delta="0" bound="Point" known="true" path="0"/>
+      <value symbolic="0000021EB99F9BB0" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F8530" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F9910" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F8D10" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48870">
+      <value symbolic="0000021EB99F9250" symbolic-delta="0" bound="Point" known="true" path="0"/>
+      <value symbolic="0000021EB99F9BB0" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F8530" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F9910" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+      <value symbolic="0000021EB99F8D10" symbolic-delta="-1" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48A70">
+      <value tokvalue="0000021EB99FA4B0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48530">
+      <value lifetime="0000021EB99F9CD0" lifetime-scope="Local" lifetime-kind="Address" bound="Point" possible="true" path="0"/>
+      <value uninit="1" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A39310">
+      <value uninit="1" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48450">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A489D0">
+      <value intvalue="4" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48AB0">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48910">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A39190">
+      <value intvalue="0" bound="Point" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A488D0">
+      <value intvalue="-1" bound="Upper" impossible="true" path="0"/>
+      <value intvalue="2" bound="Lower" impossible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48A30">
+      <value tokvalue="0000021EB99FA8D0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48750">
+      <value lifetime="0000021EB99FA2D0" lifetime-scope="Local" lifetime-kind="Address" bound="Point" possible="true" path="0"/>
+    </values>
+    <values id="0000021EB9A48710">
+      <value tokvalue="0000021EB99FB590" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0000021EB9A483F0">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+  </valueflow>
+</dump>
+</dumps>

@@ -1,0 +1,112 @@
+
+Nice Teams (C Language)
+
+A coach of a school chess club wants to start a mentoring program for newer players. Each player has an integer rating representing skill level. The coach would like to pair up students whose ratings differ by no less than a given minimum. What is the maximum number of pairs that can be formed?
+
+ 
+
+Example
+
+n = 6
+
+rating = [1, 2, 3, 4, 5, 6]
+
+minDiff = 4
+
+ 
+
+There are n = 6 players. Two pairs of players have a difference of 4 or more: those with ratings (1, 5) and (2, 6).
+ 
+
+Function Description
+
+Complete the function maxPairs in the editor below. The function must return an integer that represents the maximum number of pairs that the coach can form.
+
+ 
+
+max Pairs has the following parameter(s):
+
+    rating:  an array of integers denoting the ratings of the players
+
+    minDiff: the minimum difference in skill levels of the players in a pair
+
+ 
+
+Constraints
+
+    1 < n < 105
+    0 < minDiff < 109
+    1 < rating[i] < 109
+
+ 
+Input Format For Custom Testing
+
+The first line contains an integer, n, denoting the number of players.
+
+Each line i of the n subsequent lines (where 1 ≤ i < n) contains an integer skillLevel[i], the skill level of the player i.
+
+The last line of the input contains the integer minDiff, the minimum difference in skill levels of the players in a pair.
+Sample Case 0
+
+Sample Input For Custom Testing
+
+4 
+1 
+1 
+1 
+1 
+1
+
+Sample Output
+
+0
+
+Explanation
+
+n = 4
+
+rating = [1, 1, 1, 1]
+
+minDiff = 1
+
+ 
+
+There is no pair of players whose ratings differ by at least 1.
+Sample Case 1
+
+Sample Input For Custom Testing
+
+6 
+3 
+4 
+5 
+2 
+1 
+1 
+3
+
+Sample Output
+
+2
+
+Explanation
+
+n = 6
+
+rating = [3, 4, 5, 2, 1, 1]
+
+minDiff = 3
+
+ 
+
+Pairs that satisfy the conditions:
+
+    the players at indices (3, 4) with ratings (5, 2)
+
+    the players at indices (2, 5) with ratings (4, 1)
+
+
+function declaration:
+int maxPairs(int skillLevel_count, int* skillLevel, int minDiff) {
+
+}

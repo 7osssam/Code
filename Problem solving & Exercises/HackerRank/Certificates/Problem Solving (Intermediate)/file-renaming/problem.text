@@ -1,0 +1,82 @@
+File Renaming (C Language)
+
+You want to rename a certain file on your computer. However, because of a glitch, you can't rename it to whatever you want—you can only delete characters from the old file name. In other words, the new file name must be a subsequence of the original file name. Given the original file name, as well as the file name you'd like to change it to, how many ways are there to create the new file name by just removing characters?
+
+ 
+
+Note: Because the number of ways may be large, return the answer modulo 10^9+7.
+
+ 
+
+For example, let's say you want the new file name to be newName = "aba". Currently, the oldName = "ababa". There are a total of 4 subsequences within the old file name that would form the new file name:
+
+    "ababa"
+
+    "ababa"
+
+    "ababa"
+
+    "ababa"
+
+ 
+
+Therefore, the answer is 4 modulo 10^9+7
+ 
+
+Function Description
+
+Complete the function renameFile in the editor below. The function must return an integer denoting the number of ways to find newName within oldName modulo 10^9+7.
+
+ 
+
+renameFile has the following parameters:
+
+    newName, a string
+
+    oldName, a string
+
+ 
+
+Constraints
+
+    1 < length of oldName < 10^5
+
+ 
+Input Format For Custom Testing
+
+The first line contains a string, newName, denoting the desired new file name.
+
+The second line contains a string, oldName, denoting the original file name.
+Sample Case 0
+
+Sample Input For Custom Testing
+
+ccc
+cccc
+
+Sample Output
+
+4
+
+Explanation
+
+There are 4 ways to achieve newName = "ccc" by deleting characters from oldName = "cccc". These are "cccc", "cccc", "cccc", "cccc". Therefore, the answer is 4.
+Sample Case 1
+
+Sample Input For Custom Testing
+
+abc
+abba
+
+Sample Output
+
+0
+
+Explanation
+
+There is no way to get newName = "abc" from deleting characters from oldName = "abba". Therefore, the answer is 0.
+
+function:
+int renameFile(char* newName, char* oldName) {
+
+}
