@@ -103,7 +103,7 @@ static void LibEmpty_Message(void)
 static void WrongOption_Message(void)
 {
 	TerminalColor_RED();
-	printf(" Wrong Option! try again ");
+	printf("\n Wrong Option! try again ");
 	TerminalColor_RESET();
 }
 
@@ -134,7 +134,7 @@ void Menu(void)
 	printf("Enter an option (1-6): ");
 	int scanfResult = scanf("%d", &option);
 
-	if (scanfResult == 1) // if the user entered a number not a character
+	if (scanfResult == true) // if the user entered a number not a character
 	{
 		if (1 <= option && option <= 6)
 		{
