@@ -136,10 +136,12 @@ void Menu(void)
 			switch (option)
 			{
 				case 1:
+					system("cls"); // for Windows terminal
 					Print_Library_books();
 					break;
 				case 2:
 					Add_Book();
+					system("cls"); // for Windows terminal
 					break;
 				case 3:
 					SearchOnLibrary(DELETE_BOOK_ID);
@@ -214,13 +216,25 @@ void Add_Book(void)
 	scanf("%99s", Library.Books[Book_index].Author_name);
 
 	printf("Enter Published Year: ");
-	scanf("%d", &Library.Books[Book_index].Published_year);
+	if (scanf("%d", &Library.Books[Book_index].Published_year) != true)
+	{
+		WrongOption_Message();
+		return; // exit the function
+	}
 
 	printf("Enter Number of Copies: ");
-	scanf("%d", &Library.Books[Book_index].Number_of_Copies);
+	if (scanf("%d", &Library.Books[Book_index].Number_of_Copies) != true)
+	{
+		WrongOption_Message();
+		return; // exit the function
+	}
 
 	printf("Enter Price: ");
-	scanf("%f", &Library.Books[Book_index].Price);
+	if (scanf("%f", &Library.Books[Book_index].Price) != true)
+	{
+		WrongOption_Message();
+		return; // exit the function
+	}
 
 	// set the index to AVAILABLE after adding the book successfully
 	HashTableAvailablity[Book_index] = AVAILABLE;
@@ -230,8 +244,7 @@ void Add_Book(void)
 
 void Print_Library_books(void)
 {
-	system("cls"); // for Windows terminal
-	//system("clear"); // for Bash terminal
+	//system("cls"); // for Windows terminal
 	if (LibCounter == 0)
 	{
 		LibEmpty_Message();
@@ -280,6 +293,7 @@ void SearchOnLibrary(Book_operation_t operation)
 			if (strcmp(input_Book_title, Library.Books[i].Book_title) == STRCMP_EQUAL)
 			{
 				BookFoundFlag = 1; // set the flag to 1 to indicate that the book is found
+				system("cls");	   // for Windows terminal
 				TerminalColor_YELLOW();
 				switch (operation)
 				{
