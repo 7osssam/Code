@@ -50,19 +50,7 @@ static void TerminalColor_RESET(void)
 /******************************************************************
  * 						Private Functions			 			  *
  ******************************************************************/
-static int LinearSearch(const int* arr, int target, int arr_size)
-{
-	for (int i = 0; i < arr_size; i++)
-	{
-		if (arr[i] == target) // if the element is found
-		{
-			return i; // return the index of the element
-		}
-	}
-	return -1; // if the element is not found
-}
-
-static bool CheckForDuplicates(char* input_Book_title)
+static bool CheckForDuplicates(char* input_Book_title, int* updated_Book_index)
 {
 	for (int i = 0; i < MAXIMUM_NUMBER_OF_BOOKS; i++)
 	{
@@ -70,6 +58,7 @@ static bool CheckForDuplicates(char* input_Book_title)
 		{
 			if (strcmp(input_Book_title, Library.Books[i].Book_title) == STRCMP_EQUAL)
 			{
+				*updated_Book_index = i; // store the index of the book
 				return AVAILABLE;
 			}
 		}
@@ -79,20 +68,17 @@ static bool CheckForDuplicates(char* input_Book_title)
 
 static int CheckHashTable(void)
 {
-	int available_index = 0;
+	int available_index = LIBRARY_IS_FULL; // initialize the index to -1
 
-	if (LibCounter == 0)
+	for (int i = 0; i < MAXIMUM_NUMBER_OF_BOOKS; i++)
 	{
-		return available_index; // return the first index
+		if (HashTableAvailablity[i] == NOT_AVAILABLE) // if we found an empty index in the hash table
+		{
+			available_index = i; // store the first free index
+			break;				 // break the loop
+		}
 	}
-	else
-	{
-		/* Search for NOT_AVAILABLE in the HashTableAvailablity array if found return the index of the free space
-	 	* if not found return -1 */
-		available_index = LinearSearch(HashTableAvailablity, NOT_AVAILABLE, MAXIMUM_NUMBER_OF_BOOKS);
-
-		return available_index;
-	}
+	return available_index; // return the index
 }
 
 static void LibFull_Message(void)
@@ -124,18 +110,18 @@ void Menu(void)
 	int option;
 
 	TerminalColor_BLUE();
-	printf("==================================\n");
+	printf("==================================\n||");
 
-	printf("\n    Library Management System   \n");
+	printf("\n||    Library Management System   \n||");
 	TerminalColor_YELLOW();
 	printf("        Books Available: %d\n", LibCounter);
 	TerminalColor_BLUE();
-	printf("1. Print Library Books\n");
-	printf("2. Add Book\n");
-	printf("3. Delete Book\n");
-	printf("4. Buy Book\n");
-	printf("5. Borrow Book\n");
-	printf("6. Exit\n");
+	printf("|| 1. Print Library Books\n");
+	printf("|| 2. Add Book\n");
+	printf("|| 3. Delete Book\n");
+	printf("|| 4. Buy Book\n");
+	printf("|| 5. Borrow Book\n");
+	printf("|| 6. Exit\n");
 
 	printf("==================================\n");
 	TerminalColor_RESET();
@@ -196,10 +182,18 @@ void Add_Book(void)
 
 	int Book_index = CheckHashTable();
 
+	/* this is already handled in the previous if statement
+ 	if (Book_index == LIBRARY_IS_FULL)
+	{
+		LibFull_Message();
+		return; // exit the function
+	}
+	*/
+
 	printf("Enter Book Title: ");
 	scanf("%99s", input_Book_title);
 
-	if (CheckForDuplicates(input_Book_title) == AVAILABLE)
+	if (CheckForDuplicates(input_Book_title, &Book_index) == AVAILABLE)
 	{
 		Library.Books[Book_index].Number_of_Copies++; // increment the number of copies of the book
 
@@ -236,6 +230,8 @@ void Add_Book(void)
 
 void Print_Library_books(void)
 {
+	system("cls"); // for Windows terminal
+	//system("clear"); // for Bash terminal
 	if (LibCounter == 0)
 	{
 		LibEmpty_Message();
@@ -284,7 +280,7 @@ void SearchOnLibrary(Book_operation_t operation)
 			if (strcmp(input_Book_title, Library.Books[i].Book_title) == STRCMP_EQUAL)
 			{
 				BookFoundFlag = 1; // set the flag to 1 to indicate that the book is found
-
+				TerminalColor_YELLOW();
 				switch (operation)
 				{
 					case DELETE_BOOK_ID:
@@ -308,18 +304,21 @@ void SearchOnLibrary(Book_operation_t operation)
 							TerminalColor_RESET();
 							return; // exit the function
 						}
-						printf("\n%s has been borrowed successfully!\n", Library.Books[i].Book_title);
 						Library.Books[i].Number_of_Copies--;
+						printf("\n%s has been borrowed successfully!\n", Library.Books[i].Book_title);
+						printf("Number of copies are %d now :)\n", Library.Books[i].Number_of_Copies);
 						break;
 
 					case BUY_BOOK_ID:
-						printf("\n%s has been bought successfully!\n", Library.Books[i].Book_title);
 						Library.Books[i].Number_of_Copies++;
+						printf("\n%s has been bought successfully!\n", Library.Books[i].Book_title);
+						printf("Number of copies are %d now :)\n", Library.Books[i].Number_of_Copies);
 						break;
 
 					default:
 						break;
 				}
+				TerminalColor_RESET();
 			}
 		}
 	}
