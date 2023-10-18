@@ -47,6 +47,11 @@ static void TerminalColor_RESET(void)
 	printf("\033[0m\n"); // reset color to default
 }
 
+static void TerminalColor_GREEN(void)
+{
+	printf("\033[32m");
+}
+
 /******************************************************************
  * 						Private Functions			 			  *
  ******************************************************************/
@@ -113,7 +118,7 @@ void Menu(void)
 	printf("==================================\n||");
 
 	printf("\n||    Library Management System   \n||");
-	TerminalColor_YELLOW();
+	TerminalColor_GREEN();
 	printf("        Books Available: %d\n", LibCounter);
 	TerminalColor_BLUE();
 	printf("|| 1. Print Library Books\n");
