@@ -30,7 +30,6 @@ SpacesBeforeTrailingComments: 1       # Number of spaces before trailing comment
 ColumnLimit:     110                 # Maximum line length.
 CommentPragmas:  '^ IWYU pragma:'    # Regular expression for comments with special meaning.
 BreakBeforeBinaryOperators: None     # Break before binary operators.
-IncludeBlocks:   Preserve            # Preserve include blocks.
 CompactNamespaces: false              # Do not compact namespaces.
 SortIncludes: false                   # Do not sort includes.
 
@@ -48,7 +47,7 @@ AllowShortLoopsOnASingleLine: false   # Do not allow short loops on a single lin
 BreakBeforeBraces: Custom             # Specify custom brace wrapping.
 
 # Brace Wrapping
-BraceWrapping:
+BraceWrapping: {
   AfterCaseLabel: true                # Put opening brace after case label.
   AfterClass: true                    # Put opening brace after class declaration.
   AfterControlStatement: Always       # Put opening brace after control statement.
@@ -65,14 +64,14 @@ BraceWrapping:
   SplitEmptyFunction: true            # Split empty function body braces.
   SplitEmptyRecord: true              # Split empty class/struct/union body braces.
   SplitEmptyNamespace: true           # Split empty namespace body braces.
-
+}
 # Pointer and Qualifier Alignment
 PointerAlignment: Left                # Align pointers to the left.
 QualifierAlignment: Left              # Align qualifiers to the left.
-AlignTrailingComments:
+AlignTrailingComments: {
   Kind: Always                        # Always align trailing comments.
   OverEmptyLines: 3                   # Allow alignment over empty lines.
-
+}
 # Parentheses and Spaces
 SpaceBeforeAssignmentOperators: true  # Add space before assignment operators.
 SpaceBeforeCaseColon: false           # Do not add space before case colon.
@@ -80,11 +79,12 @@ SpaceBeforeCpp11BracedList: false     # Do not add space before C++11 braced lis
 SpaceBeforeCtorInitializerColon: true # Add space before constructor initializer colon.
 SpaceBeforeInheritanceColon: true     # Add space before inheritance colon.
 SpaceBeforeParens: Custom             # Specify custom spacing before parentheses.
-SpaceBeforeParensOptions:
+SpaceBeforeParensOptions: {
   AfterControlStatements: true        # Add space after control statements.
   AfterFunctionDefinitionName: false  # Do not add space after function definition name.
   AfterFunctionDeclarationName: false # Do not add space after function declaration name.
   AfterIfMacros: false                # Do not add space after if macros.
+}
 SpaceBeforeRangeBasedForLoopColon: false  # Do not add space before range-based for loop colon.
 SpaceBeforeSquareBrackets: false      # Do not add space before square brackets.
 SpaceInEmptyBlock: false              # Do not add space in an empty block.
@@ -100,26 +100,26 @@ SpacesInSquareBrackets: false        # Do not add spaces in square brackets.
 AccessModifierOffset: -4             # Offset for access modifiers.
 AlignAfterOpenBracket: Align          # Align parameters on the open bracket.
 AlignConsecutiveAssignments: None     # Do not align equals signs of consecutive assignments.
-AlignConsecutiveMacros:               # Align the value of consecutive macros.
+AlignConsecutiveMacros: {               # Align the value of consecutive macros.
   Enabled: true                       # Enable alignment of consecutive macros.
   AcrossEmptyLines: true              # Align across empty lines.
   AcrossComments: true                # Align across comments.
   AlignCompound: true                 # Align compound statements.
   PadOperators: true                  # Pad operators.
-AlignConsecutiveBitFields:
+}
+AlignConsecutiveBitFields: {
   Enabled: true                       # Enable alignment of consecutive bit fields.
   AcrossEmptyLines: true              # Align across empty lines.
   AcrossComments: true                # Align across comments.
   AlignCompound: true                 # Align compound statements.
   PadOperators: true                  # Pad operators.
+  }
 AlignConsecutiveDeclarations: true    # Align the variable names of consecutive declarations.
 AlignEscapedNewlinesLeft: Left        # Align escaped newlines to the left.
 AlignOperands: Align                 # Horizontally align operands of binary and ternary expressions.
-AlignTrailingComments: true          # Align trailing comments.
 AllowAllArgumentsOnNextLine: true    # Allow all arguments on the next line.
 AllowAllConstructorInitializersOnNextLine: true  # Allow all constructor initializers on the next line.
 AllowAllParametersOfDeclarationOnNextLine: true  # Allow all parameters of declaration on the next line.
-AllowShortIfStatementsOnASingleLine: Never  # Do not allow short if statements on a single line.
 AlwaysBreakTemplateDeclarations: Yes  # Always break after a template declaration.
 AttributeMacros: ['__capability', '__unused']  # List of attribute macros.
 BinPackArguments: true               # Bin pack function call arguments.
@@ -130,14 +130,13 @@ BreakConstructorInitializers: AfterColon  # Break constructor initializers after
 BreakInheritanceList: AfterColon      # Break inheritance list after the colon and comma.
 BreakStringLiterals: true            # Allow breaking long string literals into multiple lines.
 BreakBeforeConceptDeclarations: true  # Break before concept declarations.
-CompactNamespaces: false              # Do not compact namespaces.
 ConstructorInitializerAllOnOneLineOrOnePerLine: false  # Do not require initializers to be on their own lines when breaking.
 DisableFormat: false                 # Do not completely disable formatting.
 EmptyLineBeforeAccessModifier: LogicalBlock  # Add empty line before access modifier for logical blocks.
 FixNamespaceComments: true            # Add missing namespace end comments for short namespaces and fix invalid existing ones.
 ForEachMacros: [ foreach, Q_FOREACH, BOOST_FOREACH ]  # List of macros to interpret as foreach loops.
 IncludeBlocks: Preserve               # Preserve order of #include blocks.
-IncludeCategories:
+IncludeCategories: 
   - Regex: '^"(llvm|llvm-c|clang|clang-c)/'   # Regex pattern and priority for include categories.
     Priority: 2
     SortPriority: 0
