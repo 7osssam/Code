@@ -15,6 +15,21 @@ Interviews/
 *.ini
 *.ico
 
+
+# c++ and c output files
+*.out
+*.o
+*.exe
+*.obj
+*.dll
+*.s
+*.i
+
+
+#Protous backup folder
+Project Backups/
+*.workspace
+
 ########################################################!
 
 ### Executable ###
