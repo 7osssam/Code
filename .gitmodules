@@ -1,0 +1,3 @@
+[submodule "Projects/Vector-C-Library"]
+	path = Projects/Vector-C-Library
+	url = https://github.com/7osssam/Vector-C-Library
