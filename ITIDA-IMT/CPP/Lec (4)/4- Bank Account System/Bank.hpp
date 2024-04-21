@@ -11,14 +11,6 @@ private:
 	std::vector<BankAccount> accounts;
 
 public:
-	// Default constructor
-	Bank() = default;
-
-	// copy constructor
-	Bank(const Bank& copy) : accounts(copy.accounts)
-	{
-	}
-
 	void   addAccount(const BankAccount& account);
 	double getTotalBalance() const;
 	void   displayAllAccounts() const;
@@ -26,7 +18,7 @@ public:
 	void SortAccounts();
 
 	// getter for accounts
-	const std::vector<BankAccount>& getAccounts() const;
+	std::vector<BankAccount> getAccounts() const;
 };
 
 #endif // BANK_HPP
