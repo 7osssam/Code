@@ -9,9 +9,13 @@ void Bank::addAccount(const BankAccount& account)
 double Bank::getTotalBalance() const
 {
 	double totalBalance = 0.0;
-	for (const auto& account: accounts)
+
+	if (!accounts.empty())
 	{
-		totalBalance += account.getAccountBalance();
+		for (const auto& account: accounts)
+		{
+			totalBalance += account.getAccountBalance();
+		}
 	}
 	return totalBalance;
 }
@@ -19,11 +23,18 @@ double Bank::getTotalBalance() const
 void Bank::displayAllAccounts() const
 {
 	std::cout << "All Accounts:\n";
-	for (const auto& account: accounts)
+	if (!accounts.empty())
 	{
-		std::cout << "==================================" << std::endl;
-		account.displayAccountInfo();
-		std::cout << "==================================" << std::endl;
+		for (const auto& account: accounts)
+		{
+			std::cout << "==================================" << std::endl;
+			account.displayAccountInfo();
+			std::cout << "==================================" << std::endl;
+		}
+	}
+	else
+	{
+		std::cout << "No accounts found\n";
 	}
 }
 
@@ -38,7 +49,7 @@ void Bank::SortAccounts()
 }
 
 // getter for accounts
-const std::vector<BankAccount>& Bank::getAccounts() const
+std::vector<BankAccount> Bank::getAccounts() const
 {
 	return accounts;
 }
