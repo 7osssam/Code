@@ -1,13 +1,5 @@
-#include "BankAccount.hpp"
 #include <iostream>
-
-// Default constructor
-BankAccount::BankAccount(int accountNumber, const std::string& accountHolder, const std::string& accountType,
-						 double accountBalance) :
-	accountNumber(accountNumber), accountHolder(accountHolder), accountType(accountType),
-	accountBalance(accountBalance)
-{
-}
+#include "BankAccount.hpp"
 
 // Setters and Getters
 int BankAccount::getAccountNumber() const
@@ -31,7 +23,7 @@ double BankAccount::getAccountBalance() const
 }
 
 // Service functions
-void BankAccount::deposit(double& amount)
+void BankAccount::deposit(double amount)
 {
 	if (amount > 0)
 	{
@@ -44,7 +36,7 @@ void BankAccount::deposit(double& amount)
 	}
 }
 
-bool BankAccount::withdraw(double& amount)
+bool BankAccount::withdraw(double amount)
 {
 	if (amount > 0)
 	{
