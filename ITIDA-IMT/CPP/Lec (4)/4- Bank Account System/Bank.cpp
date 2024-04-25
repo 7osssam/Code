@@ -3,7 +3,10 @@
 
 void Bank::addAccount(const BankAccount& account)
 {
-	accounts.push_back(account);
+	//accounts.push_back(account);
+
+	//using move constructor to avoid copying the account object
+	accounts.push_back(std::move(account));
 }
 
 double Bank::getTotalBalance() const

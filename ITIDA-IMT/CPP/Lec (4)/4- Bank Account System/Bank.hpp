@@ -11,6 +11,15 @@ private:
 	std::vector<BankAccount> accounts;
 
 public:
+	// Default constructor
+	Bank() = default;
+
+	// Move constructor
+	Bank(Bank&& obj) : accounts(std::move(obj.accounts))
+	{
+		obj.accounts.clear();
+	}
+
 	void   addAccount(const BankAccount& account);
 	double getTotalBalance() const;
 	void   displayAllAccounts() const;
