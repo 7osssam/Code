@@ -1,0 +1,29 @@
+#ifndef __SAVINGSACCOUNT_H__
+#define __SAVINGSACCOUNT_H__
+
+#include "BankAccount.hpp" // Base class
+
+class SavingsAccount : public BankAccount
+{
+private:
+	double interestRate;
+
+public:
+	SavingsAccount(int accountNumber, std::string accountHolder, double balance, double interestRate) :
+		BankAccount(accountNumber, accountHolder, balance), interestRate(interestRate)
+	{
+	}
+
+	void calculateInterest()
+	{
+		balance += balance * interestRate;
+	}
+
+	void displayInfo() override
+	{
+		BankAccount::displayInfo(); // print account number and balance info
+		std::cout << "============" << std::endl;
+		std::cout << "Interest Rate: " << interestRate << std::endl;
+	}
+};
+#endif // __SAVINGSACCOUNT_H__
