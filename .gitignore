@@ -30,6 +30,9 @@ Interviews/
 Project Backups/
 *.workspace
 
+# temp folder
+temp/
+
 ########################################################!
 
 ### Executable ###
