@@ -1,3 +1,7 @@
 [submodule "Projects/Vector-C-Library"]
 	path = Projects/Vector-C-Library
 	url = https://github.com/7osssam/Vector-C-Library
+
+[submodule "Projects/Random-Quote-generator"]
+	path = Projects/Random-Quote-generator
+	url = https://github.com/7osssam/Random-Quote-generator
