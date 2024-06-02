@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
 
-add_executable(Lab_1_signal_slots 
+add_executable(Lab_1_signal_slots
   main.cpp
   sourse.h sourse.cpp
   destination.h destination.cpp
@@ -20,7 +20,7 @@ add_executable(Lab_1_signal_slots
 target_link_libraries(Lab_1_signal_slots  Qt${QT_VERSION_MAJOR}::Core)
 
 include(GNUInstallDirs)
-install(TARGETS Lab_1_signal_slots 
+install(TARGETS Lab_1_signal_slots
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
