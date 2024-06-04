@@ -13,7 +13,7 @@ C Projects:
 
 
 C++ Projects:
-<!-- D:\XDUMP\Code\Projects\Library_management_system-qt -->
+<!-- Library_management_system-qt -->
 <!-- https://github.com/7osssam/Library_management_system-qt/tree/e9f2dd074ea49cd0af8b4708fb86aebdcd99430b -->
  - [Library Management System (Qt)](https://github.com/7osssam/Library_management_system-qt/tree/e9f2dd074ea49cd0af8b4708fb86aebdcd99430b)
 
