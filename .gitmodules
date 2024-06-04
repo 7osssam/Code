@@ -5,3 +5,7 @@
 [submodule "Projects/Random-Quote-generator"]
 	path = Projects/Random-Quote-generator
 	url = https://github.com/7osssam/Random-Quote-generator
+
+[submodule "Projects/Library_management_system-qt"]
+	path = Projects/Library_management_system-qt
+	url = https://github.com/7osssam/Library_management_system-qt
