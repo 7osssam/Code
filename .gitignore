@@ -34,6 +34,10 @@ Project Backups/
 temp/
 00- Content/
 
+# CMake  
+build/
+compile_commands.json
+
 ########################################################!
 
 ### Executable ###
